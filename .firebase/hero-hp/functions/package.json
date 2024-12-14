@@ -1,0 +1,33 @@
+{
+  "name": "home-user-hero-hp",
+  "type": "module",
+  "version": "0.0.1",
+  "dependencies": {
+    "@astrojs/check": "^0.5.7",
+    "@astrojs/node": "^8.2.5",
+    "@astrojs/react": "^3.1.0",
+    "@astrojs/tailwind": "^5.1.0",
+    "@fontsource-variable/playfair-display": "^5.0.24",
+    "@lottiefiles/lottie-interactivity": "^1.6.2",
+    "@lottiefiles/lottie-player": "^2.0.4",
+    "@types/react": "^18.2.37",
+    "@types/react-dom": "^18.2.15",
+    "astro": "^4.5.16",
+    "astro-bootstrap": "^0.6.2",
+    "astro-integration-lottie": "^0.2.3",
+    "firebase": "^10.10.0",
+    "lottie-react": "^2.4.0",
+    "lottie-web": "^5.12.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.4.2",
+    "firebase-frameworks": "^0.10.4",
+    "firebase-functions": "^4.3.0",
+    "firebase-admin": "^11.0.1"
+  },
+  "main": "server.js",
+  "engines": {
+    "node": "18"
+  }
+}

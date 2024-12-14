@@ -1,0 +1,168 @@
+/* default */
+*{
+    margin:0;
+    padding:0;
+    text-align: center;
+}
+h1{
+    font-size: 2.0rem;
+}
+h2{
+    font-size: 1.5rem;
+}
+h3{
+    font-size: 1.0rem;
+}
+
+
+.header{
+    width: 100%;
+    z-index:9999;
+}
+.navbar li a {
+    font-family: Arial;
+}
+.navbar li a:hover{
+    font-size: 17px;
+    font-family: Arial;
+    color:blueviolet;
+}
+
+.apps{
+    display: flex;
+    padding:20px;
+    margin: 0 auto;
+}
+.app{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.tappable {
+    width: 100px;
+    padding: auto;
+    margin: auto;
+    filter:drop-shadow(0 5px 0 rgba(0, 0, 0, .16));
+    
+    transform:translate(0, -5px);
+    transition:filter 0.3s, transform 0.3s;
+  }
+
+  .tappable:hover {
+    filter:drop-shadow(0 0 0 rgb(0, 0, 0,.16));
+    transform:initial;
+  }
+  .explanation{
+    margin:10px 50px;
+}
+.untappable-card {
+    background-color: #fff;
+    box-shadow:0 2px 14px rgba(0, 0, 0, 0.24);
+    color: #212121;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  .untappable-card ul li{
+    margin:20px 0;
+  }
+  .untappable-card ul li p{
+    margin:10px 0;
+  }
+
+/* mobile */
+@media screen and (max-width: 640px) {
+    .header {
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        
+
+        background-color: transparent;
+    }
+
+    .logo {
+        display: flex;
+    }
+
+    .icon {
+        height: 70px;
+    }
+
+    
+
+    .navbar {
+        background-color: transparent;
+       /* text-align: center; */
+    }
+
+    .navbar ul {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .navbar ul li {
+        display: inline-block;
+        width: 18%;
+        min-width: 90px;
+    }
+
+    .navbar ul li a {
+        text-decoration: none;
+        color: black;
+        display: block;
+        padding: 10px;
+    }
+    
+    
+    
+}
+
+@media not screen and (max-width: 640px)  {
+    .header {
+        position: fixed;
+        display: flex;
+        justify-content: space-between;
+        background-color: transparent;
+    }
+    
+    .logo {
+        display: flex;
+    }
+    
+    .icon {
+        height: 70px;
+    }
+    
+    
+    
+    .navbar {
+        background-color: transparent;
+        
+    }
+    
+    .navbar ul {
+        display: flex;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .navbar ul li {
+        list-style: none;
+        display: inline-block;
+        width: 18%;
+        min-width: 90px;
+    }
+    
+    .navbar ul li a {
+        text-decoration: none;
+        color: black;
+        display: block;
+        padding: 10px;
+    }
+    
+    
+}

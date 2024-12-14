@@ -1,0 +1,42 @@
+---
+import "../styles/style.css";
+import { ViewTransitions } from "astro:transitions";
+---
+
+<head>
+   <ViewTransitions />
+</head>
+<main class="scroll">
+   <section>
+      <div style="height: 3000px;">
+         <div style="position:sticky;top:150px;">
+            <div style="height:500px;">
+               <p
+                  style=" position: relative;
+               top: 50%;
+               transform: translateY(-50%);font-family: cursive;font-size: 30px;margin:10px;"
+               >
+               Believe in Yourself.<br/> <br/>
+               Change Yourself.
+               </p>
+            </div>
+         </div>
+      </div>
+      <div style="height: 3000px;">
+         <div style="position:sticky;top:150px;">
+            <div class="apps">
+               
+            <a href="/riddle" style="margin: 10px;"
+               ><img
+                  transition:name="riddle"
+                  transition:persist="true"
+                  src="RiddleIcon_splash.png"
+                  class="tappable"
+               /></a
+            >
+            
+            </div>
+         </div>
+      </div>
+   </section>
+</main>
