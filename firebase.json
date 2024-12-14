@@ -11,6 +11,21 @@
     ],
     "frameworksBackend": {
       "region": "us-central1"
+    },
+    "public": "dist",
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  },
+  "emulators": {
+    "hosting": {
+      "port": 5000
+    },
+    "functions": {
+      "port": 5001
     }
   }
 }

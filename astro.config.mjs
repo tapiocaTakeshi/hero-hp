@@ -12,7 +12,20 @@ import node from "@astrojs/node";
 export default defineConfig({
   // Enable React to support React JSX components.
   integrations: [react(), tailwind(),lottie()],
-  output: 'server',
+  output: 'static',
+  build: {
+    format: 'directory',
+    client: './dist',
+  },
+  server: {
+    port: 3000,
+    proxy: {
+      '/api': {
+        target: 'http://localhost:5001',
+        changeOrigin: true,
+      }
+    }
+  },
   adapter: node({
     mode: "standalone"
   })
