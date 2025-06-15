@@ -1,0 +1,224 @@
+:root {
+  --primary-color: #000000;
+  --secondary-color: #666666;
+  --accent-color: #007bff;
+  --background-color: #ffffff;
+  --text-color: #1a1a1a;
+  --light-gray: #f8f9fa;
+  --border-color: #e5e5e5;
+  --shadow-color: rgba(0, 0, 0, 0.08);
+  --transition-speed: 0.4s;
+  --border-radius: 12px;
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 3rem;
+  --spacing-xl: 4rem;
+  
+  /* Glass design variables */
+  --glass-bg: rgba(255, 255, 255, 0.25);
+  --glass-bg-hover: rgba(255, 255, 255, 0.35);
+  --glass-border: rgba(255, 255, 255, 0.3);
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  --glass-shadow-hover: 0 12px 40px rgba(0, 0, 0, 0.15);
+  --glass-blur: blur(20px);
+  --glass-blur-strong: blur(30px);
+}
+
+html {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Ensure proper scrolling */
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 100%;
+  /* Fix scroll on iOS */
+  -webkit-overflow-scrolling: touch;
+  /* Glass background */
+  background: linear-gradient(135deg,
+    rgba(240, 248, 255, 0.8) 0%,
+    rgba(255, 255, 255, 0.9) 25%,
+    rgba(248, 250, 252, 0.8) 50%,
+    rgba(255, 255, 255, 0.9) 75%,
+    rgba(240, 248, 255, 0.8) 100%);
+  background-attachment: fixed;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: var(--text-color);
+  background: transparent;
+  overflow-x: hidden;
+  overflow-y: auto;
+  font-weight: 400;
+  /* Ensure body can scroll properly */
+  height: 100%;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Account for fixed header and ensure proper scroll */
+main {
+  padding-top: 80px;
+  position: relative;
+  overflow: visible;
+  min-height: calc(100vh - 80px);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: var(--spacing-sm);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+}
+
+h3 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 600;
+}
+
+p, ul, ol {
+  margin-bottom: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: all var(--transition-speed) ease;
+}
+
+a:hover {
+  color: var(--primary-color);
+  transform: translateY(-1px);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+button, .button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0.9) 50%,
+    rgba(0, 0, 0, 0.8) 100%);
+  color: white;
+  border: none;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: 20px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-speed) ease;
+  box-shadow:
+    0 4px 16px rgba(0, 0, 0, 0.2),
+    0 1px 0 rgba(255, 255, 255, 0.1) inset;
+  letter-spacing: 0.01em;
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+button:hover, .button:hover {
+  background: linear-gradient(135deg,
+    rgba(102, 102, 102, 0.9) 0%,
+    rgba(102, 102, 102, 1) 50%,
+    rgba(102, 102, 102, 0.9) 100%);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.25),
+    0 1px 0 rgba(255, 255, 255, 0.2) inset;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Utility classes */
+.text-center {
+  text-align: center;
+}
+
+.mt-1 { margin-top: 0.5rem; }
+.mt-2 { margin-top: 1rem; }
+.mt-3 { margin-top: 1.5rem; }
+.mt-4 { margin-top: 2rem; }
+.mt-5 { margin-top: 3rem; }
+
+.mb-1 { margin-bottom: 0.5rem; }
+.mb-2 { margin-bottom: 1rem; }
+.mb-3 { margin-bottom: 1.5rem; }
+.mb-4 { margin-bottom: 2rem; }
+.mb-5 { margin-bottom: 3rem; }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+  
+  h1 {
+    font-size: 2.2rem;
+  }
+  
+  h2 {
+    font-size: 1.8rem;
+  }
+  
+  h3 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+  
+  h1 {
+    font-size: 1.8rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+  
+  h3 {
+    font-size: 1.2rem;
+  }
+  
+  .container {
+    padding: 0 0.75rem;
+  }
+}

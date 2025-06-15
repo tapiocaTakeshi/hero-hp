@@ -1,0 +1,259 @@
+---
+import "../styles/style.css";
+---
+
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-logo">
+      <img src="He-ro_icon.png" alt="Hero Logo" class="footer-icon" />
+    </div>
+    
+    <div class="footer-links">
+      <div class="footer-section">
+        <h3>Navigation</h3>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/news">News</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Apps</h3>
+        <ul>
+          <li><a href="/riddle">Riddle</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Legal</h3>
+        <ul>
+          <li><a href="/privacypolicy_riddle">Privacy Policy</a></li>
+          <li><a href="/specialcommercialtransactionlaw_riddle">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer-bottom">
+    <p>&copy; 2025 Hero. All rights reserved.</p>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background: linear-gradient(135deg,
+      rgba(248, 250, 252, 0.3) 0%,
+      rgba(255, 255, 255, 0.2) 50%,
+      rgba(248, 250, 252, 0.3) 100%);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    padding: 3rem 2rem 1.5rem;
+    margin-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow:
+      0 -4px 16px rgba(0, 0, 0, 0.08),
+      0 1px 0 rgba(255, 255, 255, 0.3) inset;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 2rem;
+    background: linear-gradient(135deg,
+      rgba(255, 255, 255, 0.15) 0%,
+      rgba(255, 255, 255, 0.05) 50%,
+      rgba(255, 255, 255, 0.15) 100%);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 24px;
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow:
+      0 4px 16px rgba(0, 0, 0, 0.08),
+      0 1px 0 rgba(255, 255, 255, 0.2) inset;
+  }
+  
+  .footer-logo {
+    flex: 1;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .footer-icon {
+    width: 80px;
+    height: auto;
+    margin-bottom: 1rem;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.15));
+    border-radius: 16px;
+    background: linear-gradient(135deg,
+      rgba(255, 255, 255, 0.2) 0%,
+      rgba(255, 255, 255, 0.05) 100%);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 8px;
+    box-shadow:
+      0 2px 8px rgba(0, 0, 0, 0.08),
+      0 1px 0 rgba(255, 255, 255, 0.2) inset;
+  }
+  
+  .footer-icon:hover {
+    transform: scale(1.05) rotateY(5deg);
+    filter: drop-shadow(0 4px 16px rgba(0, 0, 0, 0.2));
+    box-shadow:
+      0 4px 16px rgba(0, 0, 0, 0.12),
+      0 1px 0 rgba(255, 255, 255, 0.3) inset;
+  }
+  
+  .footer-links {
+    flex: 2;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  
+  .footer-section {
+    flex: 1;
+    min-width: 150px;
+    background: linear-gradient(135deg,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0.05) 100%);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow:
+      0 2px 8px rgba(0, 0, 0, 0.05),
+      0 1px 0 rgba(255, 255, 255, 0.15) inset;
+    transition: all 0.3s ease;
+  }
+  
+  .footer-section:hover {
+    transform: translateY(-2px);
+    box-shadow:
+      0 4px 16px rgba(0, 0, 0, 0.08),
+      0 1px 0 rgba(255, 255, 255, 0.2) inset;
+  }
+  
+  .footer-section h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #333;
+    text-align: left;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg,
+      rgba(51, 51, 51, 1) 0%,
+      rgba(102, 102, 102, 1) 50%,
+      rgba(51, 51, 51, 1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+  }
+  
+  .footer-section li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer-section a {
+    color: #6c757d;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    padding: 0.25rem 0.5rem;
+    border-radius: 8px;
+    display: inline-block;
+    background: linear-gradient(135deg,
+      rgba(255, 255, 255, 0.05) 0%,
+      rgba(255, 255, 255, 0.02) 100%);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .footer-section a:hover {
+    color: #007bff;
+    text-decoration: none;
+    transform: translateX(4px);
+    background: linear-gradient(135deg,
+      rgba(0, 123, 255, 0.1) 0%,
+      rgba(0, 123, 255, 0.05) 100%);
+    box-shadow:
+      0 2px 8px rgba(0, 123, 255, 0.15),
+      0 1px 0 rgba(255, 255, 255, 0.2) inset;
+  }
+  
+  .footer-bottom {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    background: linear-gradient(135deg,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0.05) 100%);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow:
+      0 2px 8px rgba(0, 0, 0, 0.05),
+      0 1px 0 rgba(255, 255, 255, 0.15) inset;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+  }
+  
+  .footer-bottom p {
+    color: #6c757d;
+    font-size: 0.9rem;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    margin: 0;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+    }
+    
+    .footer-logo {
+      align-items: center;
+      margin-bottom: 1.5rem;
+    }
+    
+    .footer-links {
+      justify-content: space-around;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .footer {
+      padding: 2rem 1rem 1rem;
+    }
+    
+    .footer-section {
+      min-width: 100%;
+      margin-bottom: 1.5rem;
+    }
+    
+    .footer-section h3 {
+      text-align: center;
+    }
+    
+    .footer-section ul {
+      text-align: center;
+    }
+  }
+</style>

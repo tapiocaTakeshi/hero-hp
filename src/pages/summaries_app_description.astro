@@ -1,0 +1,103 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+import '../styles/style.css';
+import { ViewTransitions } from "astro:transitions";
+---
+
+<html lang="ja">
+<head>
+  <ViewTransitions />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  {/* TODO: Add a specific favicon for Summaries if available */}
+  <link rel="icon" type="image/x-icon" href="/favicon.svg" />
+  <title>Summariesアプリのご紹介</title>
+  <style>
+    .app-description-container {
+      padding: 2rem 1rem;
+      max-width: 800px;
+      margin: 2rem auto;
+      background-color: #f9f9f9;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .app-logo {
+      max-width: 120px;
+      height: auto;
+      margin-bottom: 1.5rem;
+    }
+    h1 {
+      color: #333;
+      margin-bottom: 1rem;
+    }
+    p {
+      color: #555;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+     ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 1.5rem;
+    }
+    li {
+      background-color: #fff;
+      margin-bottom: 0.5rem;
+      padding: 0.8rem;
+      border-radius: 4px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+    }
+    h2 {
+       margin-top: 2rem;
+       color: #333;
+       margin-bottom: 1rem; /* Added margin-bottom for spacing */
+    }
+    .privacy-link { /* Style for the privacy policy link */
+        margin-top: 2rem;
+        font-size: 0.9em;
+        color: #666;
+    }
+    .privacy-link a {
+        color: #007bff;
+        text-decoration: none;
+    }
+    .privacy-link a:hover {
+        text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <Header />
+  <main>
+      <div class="app-description-container">
+        {/* Make sure the SummariesLogo.png is in the public folder */}
+        <img src="/SummariesLogo.png" alt="Summaries App Logo" class="app-logo" />
+        <h1>Summariesアプリのご紹介</h1>
+        <p>
+          Summariesへようこそ！Summariesは、読みたい本を簡単に予約し、オーディオブックとしても楽しめる革新的なアプリです。
+        </p>
+        <p>
+          豊富なライブラリから次のお気に入りの一冊を見つけ、いつでもどこでも読書やリスニングを始めましょう。通勤中、リラックスタイム、どんなシーンでもSummariesがあなたの知的な好奇心を満たします。
+        </p>
+        <section>
+          <h2>主な特徴</h2>
+          <ul>
+            <li>簡単な書籍予約システム</li>
+            <li>書籍とオーディオブックのシームレスな再生</li>
+            <li>多様なジャンルの豊富なコレクション</li>
+            <li>オフラインでの利用も可能</li>
+            <li>パーソナライズされたおすすめ機能</li>
+          </ul>
+        </section>
+        {/* Link to Privacy Policy */}
+        <p class="privacy-link">
+          <a href="/privacypolicy_summaries">プライバシーポリシーはこちら</a>
+        </p>
+      </div>
+  </main>
+  <Footer />
+</body>
+</html>

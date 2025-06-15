@@ -1,0 +1,450 @@
+---
+import { ViewTransitions } from "astro:transitions";
+import "../styles/style.css";
+---
+
+<head>
+   <ViewTransitions />
+</head>
+<main class="about-main">
+   <section class="hero-section">
+      <div class="container">
+         <h1 class="section-title">私について</h1>
+         <p class="section-subtitle">私のプロジェクト、ミッション、そしてHeroの背後にあるビジョンについて学ぶ</p>
+      </div>
+   </section>
+
+   <section class="company-section">
+      <div class="container">
+         <div class="company-info">
+            <div class="company-image">
+               <img src="https://via.placeholder.com/600x400" alt="Company Office" />
+            </div>
+            <div class="company-content">
+               <h2>私たちの物語</h2>
+               <p>
+                  2020年に設立されたHeroは、人々の生活に変化をもたらす革新的なソリューションを作るというシンプルなミッションから始まりました。個人的なプロジェクトとして始まったものが、質の高い技術とデザインを提供することに焦点を当てた取り組みへと発展しました。
+               </p>
+               <p>
+                  ソロ開発者および登録された個人事業主として、私は意味のある体験を作り、実際のニーズに対応するソリューションを構築することに専念してきました。この独立したアプローチにより、私が作るすべてのものに俊敏性と個人的なタッチをもたらすことができます。
+               </p>
+=======
+               <p>
+                  今日、私は境界を押し広げ、挑戦を受け入れ、私がするすべてのことで卓越性を追求し続けています。この旅はまだ始まったばかりであり、私は前途に興奮しています。
+               </p>
+=======
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <section class="business-info-section">
+      <div class="container">
+         <h2 class="section-title">事業情報</h2>
+         <div class="business-info-container">
+            <div class="business-info-card">
+               <h3>事業者情報 (Business Details)</h3>
+               <table class="business-info-table">
+                  <tr>
+                     <th>屋号 (Business Name)</th>
+                     <td>Hero</td>
+                  </tr>
+                  <tr>
+                     <th>代表者 (Representative)</th>
+                     <td>Higuchi Yuya</td>
+                  </tr>
+                  <tr>
+                     <th>所在地 (Address)</th>
+                     <td>123 Business Avenue, Shibuya<br>Tokyo, Japan 150-0002</td>
+                  </tr>
+                  <tr>
+                     <th>連絡先 (Contact)</th>
+                     <td>Email: info@hero-company.com<br>Phone: +81 3-1234-5678</td>
+                  </tr>
+                  <tr>
+                     <th>設立 (Established)</th>
+                     <td>2020年</td>
+                  </tr>
+                  <tr>
+                     <th>事業内容 (Business Activities)</th>
+                     <td>アプリ開発、ウェブサイト制作<br>(App Development, Website Creation)</td>
+                  </tr>
+               </table>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <section class="mission-section">
+      <div class="container">
+         <div class="mission-vision">
+            <div class="mission-box">
+               <h2>私のミッション</h2>
+               <p>
+                  革新的な技術ソリューションを通じて、実世界の問題を解決し、日常の体験を向上させることで、個人や組織に力を与えること。
+               </p>
+            </div>
+            <div class="vision-box">
+               <h2>私のビジョン</h2>
+               <p>
+                  献身的な個人の職人技を通じて、世界にインスピレーションを与え、つながり、ポジティブな変化をもたらす変革的なデジタル体験を創造すること。
+               </p>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <section class="values-section">
+      <div class="container">
+         <h2 class="section-title">私の核心的価値観</h2>
+         <div class="values-grid">
+            <div class="value-card">
+               <div class="value-icon">🚀</div>
+               <h3>革新</h3>
+               <p>私は常に問題を解決し、価値を創造するための新しいアイデアやアプローチを追求しています。</p>
+            </div>
+            <div class="value-card">
+               <div class="value-icon">🤝</div>
+               <h3>つながり</h3>
+               <p>私はユーザーやクライアントとの強い関係を構築し、彼らのニーズに真に応える解決策を作り出すことを信じています。</p>
+            </div>
+            <div class="value-card">
+               <div class="value-icon">💡</div>
+               <h3>卓越性</h3>
+               <p>私は製品の品質からカスタマーサービスまで、私がするすべてのことで最高の基準を目指しています。</p>
+            </div>
+            <div class="value-card">
+               <div class="value-icon">❤️</div>
+               <h3>誠実さ</h3>
+               <p>私はすべての交流において、誠実さ、透明性、倫理的責任を持って行動します。</p>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <section class="team-section">
+      <div class="container">
+         <h2 class="section-title">チームの紹介</h2>
+         <p class="section-subtitle">現在は他のメンバーがいないソロプロジェクトです</p>
+         <div class="team-grid">
+            <div class="team-member">
+               <div class="member-image">
+                  <img src="https://via.placeholder.com/300x300" alt="Higuchi Yuya" />
+               </div>
+               <h3>Higuchi Yuya</h3>
+               <p class="member-role">創設者 & 開発者</p>
+               <p class="member-bio">情熱と献身を持って、デザインから開発までのすべての側面を扱い、このプロジェクトを実現するために独立して働いています。</p>
+            </div>
+         </div>
+      </div>
+   </section>
+</main>
+
+<style>
+   .about-main {
+      padding-top: 80px;
+   }
+
+   .section-title {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #333;
+      position: relative;
+      display: inline-block;
+      text-align: center;
+   }
+
+   .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 50px;
+      height: 3px;
+      background-color: var(--primary-color);
+   }
+
+   .section-subtitle {
+      font-size: 1.2rem;
+      color: var(--secondary-color);
+      max-width: 700px;
+      margin: 0 auto 3rem;
+      text-align: center;
+   }
+
+   /* Hero Section */
+   .hero-section {
+      padding: 4rem 0 2rem;
+      text-align: center;
+      background-color: var(--light-gray);
+   }
+
+   /* Company Section */
+   .company-section {
+      padding: 4rem 0;
+   }
+
+   .company-info {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 3rem;
+   }
+
+   .company-image {
+      flex: 1;
+      min-width: 300px;
+   }
+
+   .company-image img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+   }
+
+   .company-content {
+      flex: 1;
+      min-width: 300px;
+   }
+
+   .company-content h2 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      color: var(--text-color);
+   }
+
+   .company-content p {
+      margin-bottom: 1.5rem;
+      line-height: 1.7;
+      color: #555;
+   }
+
+   /* Business Info Section */
+   .business-info-section {
+      padding: 4rem 0;
+      background-color: #f8f9fa;
+   }
+
+   .business-info-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 2rem;
+   }
+
+   .business-info-card {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      padding: 2rem;
+      width: 100%;
+      max-width: 800px;
+   }
+
+   .business-info-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+      color: var(--text-color);
+      text-align: center;
+   }
+
+   .business-info-table {
+      width: 100%;
+      border-collapse: collapse;
+   }
+
+   .business-info-table th,
+   .business-info-table td {
+      padding: 1rem;
+      text-align: left;
+      border-bottom: 1px solid #e9ecef;
+   }
+
+   .business-info-table th {
+      width: 40%;
+      font-weight: 600;
+      color: #495057;
+   }
+
+   .business-info-table td {
+      color: #6c757d;
+   }
+
+   /* Mission Section */
+   .mission-section {
+      padding: 4rem 0;
+      background-color: var(--light-gray);
+   }
+
+   .mission-vision {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+   }
+
+   .mission-box, .vision-box {
+      flex: 1;
+      min-width: 300px;
+      padding: 2rem;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+   }
+
+   .mission-box h2, .vision-box h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+      color: var(--text-color);
+   }
+
+   .mission-box p, .vision-box p {
+      line-height: 1.7;
+      color: #555;
+   }
+
+   /* Values Section */
+   .values-section {
+      padding: 4rem 0;
+      text-align: center;
+   }
+
+   .values-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+   }
+
+   .value-card {
+      padding: 2rem;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+   }
+
+   .value-card:hover {
+      transform: translateY(-5px);
+   }
+
+   .value-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+   }
+
+   .value-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: var(--text-color);
+   }
+
+   .value-card p {
+      color: #555;
+      line-height: 1.6;
+   }
+
+   /* Team Section */
+   .team-section {
+      padding: 4rem 0;
+      background-color: var(--light-gray);
+      text-align: center;
+   }
+
+   .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 2.5rem;
+      margin-top: 3rem;
+   }
+
+   .team-member {
+      background-color: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+   }
+
+   .team-member:hover {
+      transform: translateY(-5px);
+   }
+
+   .member-image {
+      width: 100%;
+      height: 250px;
+      overflow: hidden;
+   }
+
+   .member-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+   }
+
+   .team-member:hover .member-image img {
+      transform: scale(1.05);
+   }
+
+   .team-member h3 {
+      font-size: 1.5rem;
+      margin: 1.5rem 0 0.5rem;
+      color: var(--text-color);
+   }
+
+   .member-role {
+      font-size: 1rem;
+      color: var(--primary-color);
+      font-weight: 500;
+      margin-bottom: 1rem;
+   }
+
+   .member-bio {
+      padding: 0 1.5rem 1.5rem;
+      color: #555;
+      line-height: 1.6;
+   }
+
+   /* Responsive styles */
+   @media (max-width: 768px) {
+      .section-title {
+         font-size: 2rem;
+      }
+
+      .company-info, .mission-vision {
+         flex-direction: column;
+      }
+
+      .company-image {
+         margin-bottom: 2rem;
+      }
+
+      .values-grid, .team-grid {
+         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      }
+   }
+
+   @media (max-width: 480px) {
+      .section-title {
+         font-size: 1.8rem;
+      }
+
+      .section-subtitle {
+         font-size: 1rem;
+      }
+
+      .company-content h2, .mission-box h2, .vision-box h2 {
+         font-size: 1.5rem;
+      }
+
+      .values-grid, .team-grid {
+         grid-template-columns: 1fr;
+      }
+
+      .value-card, .team-member {
+         max-width: 350px;
+         margin: 0 auto;
+      }
+   }
+</style>

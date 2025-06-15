@@ -1,0 +1,403 @@
+---
+import { ViewTransitions } from "astro:transitions";
+import "../styles/style.css";
+---
+
+<head>
+   <ViewTransitions />
+   <!-- Web3Forms hCaptcha script (optional, but recommended) -->
+   <script src="https://web3forms.com/client/script.js" async defer></script>
+</head>
+<main class="contact-main">
+   <section class="hero-section">
+      <div class="container">
+         <h1 class="section-title">お問い合わせ</h1>
+         <p class="section-subtitle">ご連絡をお待ちしております。ご質問やお問い合わせがありましたら、お気軽にご連絡ください。</p>
+      </div>
+   </section>
+
+   <section class="contact-section">
+      <div class="container">
+         <div class="contact-wrapper">
+            <div class="contact-info">
+               <div class="info-card">
+                  <div class="info-icon">📍</div>
+                  <h3>所在地</h3>
+                  <p>四日市市西町9-15-2</p>
+                  <p>三重, 日本 510-0089</p>
+               </div>
+               
+               <div class="info-card">
+                  <div class="info-icon">📞</div>
+                  <h3>電話番号</h3>
+                  <p>+81 90-9221-5699</p>
+               </div>
+               
+               <div class="info-card">
+                  <div class="info-icon">✉️</div>
+                  <h3>メールアドレス</h3>
+                  <p>higuchiyuya.riddle@gmail.com</p>
+                  <p>higuchiyuya@he-ro.jp</p>
+               </div>
+               
+               <div class="info-card">
+                  <div class="info-icon">🌐</div>
+                  <h3>ソーシャルメディア</h3>
+                  <div class="social-links">
+                     <a href="#" class="social-link">Twitter</a>
+                     <a href="#" class="social-link">Facebook</a>
+                     <a href="#" class="social-link">Instagram</a>
+                     <a href="#" class="social-link">LinkedIn</a>
+                  </div>
+               </div>
+            </div>
+            
+            <div class="contact-form-container">
+               <h2>メッセージを送る</h2>
+               <!-- Updated form for Web3Forms -->
+               <form action="https://api.web3forms.com/submit" method="POST" class="contact-form" id="contactForm">
+
+                  <!-- IMPORTANT: Replace YOUR_ACCESS_KEY_HERE with your actual Web3Forms access key -->
+                  <input type="hidden" name="access_key" value="b2eb3e61-368a-47c8-8f09-76d29a531253"> 
+                  <!-- Optional: Subject for the email -->
+                  <input type="hidden" name="subject" value="ウェブサイトからのお問い合わせ">
+                  <!-- Optional: Redirect URL after submission -->
+                  <!-- <input type="hidden" name="redirect" value="https://yourdomain.com/thanks"> -->
+                  <!-- Optional: From Name shown in the email -->
+                  <input type="hidden" name="from_name" value="He-Ro Company Website">
+                  <!-- Optional: Reply To Email address -->
+                  <input type="hidden" name="replyto" data-form-input="email"> 
+                  
+                  <!-- Make checkbox value explicit for submission -->
+                  <input type="hidden" name="request_type" value="no_account_deletion"> 
+
+                  <div class="form-group">
+                     <label for="name">お名前</label>
+                     <input type="text" id="name" name="name" required placeholder="お名前を入力してください">
+                  </div>
+                  
+                  <div class="form-group">
+                     <label for="email">メールアドレス</label>
+                     <input type="email" id="email" name="email" required placeholder="メールアドレスを入力してください">
+                  </div>
+
+                  <div class="form-group">
+                    <label>サービス</label>
+                    <div class="radio-group">
+                       <label><input type="radio" name="service" value="riddle" required> リドル</label>
+                       <label><input type="radio" name="service" value="summaries"> サマリーズ</label>
+                    </div>
+                 </div>
+
+                 <div class="form-group">
+                    <label for="request_type_checkbox">お問い合わせ種別</label> 
+                    <label class="checkbox-label">
+                       <!-- Changed name to avoid conflict with hidden input -->
+                       <input type="checkbox" id="request_type_checkbox" name="request_type_checkbox" value="account_deletion" onchange="this.previousElementSibling.value = this.checked ? this.value : 'no_account_deletion'">
+                       アカウント削除を希望する
+                    </label>
+                 </div>
+                  
+                  <div class="form-group">
+                     <label for="phone">電話番号（任意）</label>
+                     <input type="tel" id="phone" name="phone" placeholder="電話番号を入力してください">
+                  </div>
+                  
+                  <div class="form-group">
+                     <label for="subject_input">件名</label> <!-- Changed id/name to avoid conflict -->
+                     <input type="text" id="subject_input" name="subject_input" required placeholder="件名を入力してください">
+                  </div>
+                  
+                  <div class="form-group">
+                     <label for="message">メッセージ</label>
+                     <textarea id="message" name="message" rows="5" required placeholder="メッセージを入力してください"></textarea>
+                  </div>
+
+                  <!-- Optional: Add hCaptcha integration -->
+                  <!-- <div class="h-captcha" data-captcha="true"></div> -->
+                  
+                  <button type="submit" class="submit-button">メッセージを送信</button>
+               </form>
+               <!-- Web3Forms result message area -->
+               <p id="result" style="margin-top: 1rem; text-align: center;"></p>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <section class="map-section">
+      <div class="container">
+         <h2 class="section-title">所在地</h2>
+         <div class="map-container">
+            <!-- Replace with actual map embed code -->
+            <div class="map-placeholder">
+               <img src="https://via.placeholder.com/1200x400?text=Map+Location" alt="Map Location" />
+            </div>
+         </div>
+      </div>
+   </section>
+</main>
+
+<style>
+   .contact-main {
+      padding-top: 80px;
+   }
+
+   .section-title {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #333;
+      position: relative;
+      display: inline-block;
+      text-align: center;
+   }
+
+   .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 50px;
+      height: 3px;
+      background-color: var(--primary-color);
+   }
+
+   .section-subtitle {
+      font-size: 1.2rem;
+      color: var(--secondary-color);
+      max-width: 700px;
+      margin: 0 auto 3rem;
+      text-align: center;
+   }
+
+   /* Hero Section */
+   .hero-section {
+      padding: 4rem 0 2rem;
+      text-align: center;
+      background-color: var(--light-gray);
+   }
+
+   /* Contact Section */
+   .contact-section {
+      padding: 4rem 0;
+   }
+
+   .contact-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 3rem;
+   }
+
+   .contact-info {
+      flex: 1;
+      min-width: 300px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 1.5rem;
+   }
+
+   .info-card {
+      background-color: #fff;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+   }
+
+   .info-card:hover {
+      transform: translateY(-5px);
+   }
+
+   .info-icon {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+   }
+
+   .info-card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+      color: var(--text-color);
+   }
+
+   .info-card p {
+      color: #555;
+      margin-bottom: 0.5rem;
+   }
+
+   .social-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      justify-content: center;
+   }
+
+   .social-link {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      background-color: var(--light-gray);
+      color: var(--text-color);
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background-color 0.3s ease, color 0.3s ease;
+   }
+
+   .social-link:hover {
+      background-color: var(--primary-color);
+      color: white;
+   }
+
+   /* Contact Form */
+   .contact-form-container {
+      flex: 1;
+      min-width: 300px;
+      background-color: #fff;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+   }
+
+   .contact-form-container h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+      color: var(--text-color);
+      text-align: center;
+   }
+
+   .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+   }
+
+   .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+   }
+
+   .form-group label {
+      font-weight: 500;
+      color: var(--text-color);
+   }
+
+   .form-group input[type="text"],
+   .form-group input[type="email"],
+   .form-group input[type="tel"],
+   .form-group textarea {
+      padding: 0.8rem;
+      border: 1px solid var(--border-color);
+      border-radius: 4px;
+      font-size: 1rem;
+      transition: border-color 0.3s ease;
+   }
+
+   .form-group input[type="text"]:focus,
+   .form-group input[type="email"]:focus,
+   .form-group input[type="tel"]:focus,
+   .form-group textarea:focus {
+      outline: none;
+      border-color: var(--primary-color);
+   }
+
+   .radio-group label,
+   .checkbox-label {
+       display: flex;
+       align-items: center;
+       gap: 0.5rem;
+       font-weight: normal;
+   }
+
+    .radio-group input[type="radio"],
+    .checkbox-label input[type="checkbox"] {
+       margin-right: 0.3rem;
+       accent-color: var(--primary-color);
+    }
+
+   .submit-button {
+      background-color: var(--primary-color);
+      color: white;
+      border: none;
+      padding: 1rem;
+      border-radius: 4px;
+      font-size: 1rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+   }
+
+   .submit-button:hover {
+      background-color: #0056b3;
+   }
+
+    .submit-button:disabled {
+        background-color: #ccc;
+        cursor: not-allowed;
+    }
+
+   /* Map Section */
+   .map-section {
+      padding: 4rem 0;
+      background-color: var(--light-gray);
+      text-align: center;
+   }
+
+   .map-container {
+      margin-top: 2rem;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+   }
+
+   .map-placeholder {
+      width: 100%;
+      height: 400px;
+      background-color: #e9e9e9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
+
+   .map-placeholder img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+   }
+
+   /* Responsive styles */
+   @media (max-width: 768px) {
+      .section-title {
+         font-size: 2rem;
+      }
+
+      .contact-wrapper {
+         flex-direction: column;
+      }
+
+      .contact-info {
+         grid-template-columns: 1fr;
+      }
+   }
+
+   @media (max-width: 480px) {
+      .section-title {
+         font-size: 1.8rem;
+      }
+
+      .section-subtitle {
+         font-size: 1rem;
+      }
+
+      .contact-form-container {
+         padding: 1.5rem;
+      }
+
+      .contact-form-container h2 {
+         font-size: 1.5rem;
+      }
+
+      .map-container {
+         height: 300px;
+      }
+   }
+</style>

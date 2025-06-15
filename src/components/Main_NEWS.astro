@@ -1,16 +1,222 @@
----
-import ViewTransitions from "astro/components/ViewTransitions.astro";
+声聞こえ、やんと全然---
+import { ViewTransitions } from "astro:transitions";
 import "../styles/style.css";
 ---
 
 <head>
    <ViewTransitions />
 </head>
-<main >
-   <div
-      class="untappable-card"
-      style="position:absolute; left:0px; right:0px; top:150px;"
-   >
-      <>
-   </div>
+<main class="news-main">
+   <section class="news-section">
+      <div class="container">
+         <h1 class="section-title">最新ニュース</h1>
+         
+         <div class="news-grid">
+            <!-- News Item 1 -->
+            <article class="news-card">
+               <div class="news-image">
+                  <img src="https://via.placeholder.com/600x400" alt="News Image" />
+               </div>
+               <div class="news-content">
+                  <span class="news-date">2025年3月5日</span>
+                  <h2 class="news-title">新製品ラインの発表</h2>
+                  <p class="news-excerpt">
+                     最新の製品ラインの発表をお知らせします。最先端の技術と革新的な機能で業界に革命をもたらすよう設計されています。
+                  </p>
+                  <a href="#" class="read-more">詳細を見る</a>
+               </div>
+            </article>
+            
+            <!-- News Item 2 -->
+            <article class="news-card">
+               <div class="news-image">
+                  <img src="https://via.placeholder.com/600x400" alt="News Image" />
+               </div>
+               <div class="news-content">
+                  <span class="news-date">2025年2月20日</span>
+                  <h2 class="news-title">国際市場への展開</h2>
+                  <p class="news-excerpt">
+                     新しい国際市場への展開を発表できることを誇りに思います。ヨーロッパとアジア全域のお客様にサービスを提供します。
+                  </p>
+                  <a href="#" class="read-more">詳細を見る</a>
+               </div>
+            </article>
+            
+            <!-- News Item 3 -->
+            <article class="news-card">
+               <div class="news-image">
+                  <img src="https://via.placeholder.com/600x400" alt="News Image" />
+               </div>
+               <div class="news-content">
+                  <span class="news-date">2025年1月15日</span>
+                  <h2 class="news-title">年次業界カンファレンスのハイライト</h2>
+                  <p class="news-excerpt">
+                     最近、年次業界カンファレンスに参加し、最新のイノベーションを紹介し、パートナーやお客様と交流しました。
+                  </p>
+                  <a href="#" class="read-more">詳細を見る</a>
+               </div>
+            </article>
+            
+            <!-- News Item 4 -->
+            <article class="news-card">
+               <div class="news-image">
+                  <img src="https://via.placeholder.com/600x400" alt="News Image" />
+               </div>
+               <div class="news-content">
+                  <span class="news-date">2024年12月10日</span>
+                  <h2 class="news-title">年末レビューと将来の展望</h2>
+                  <p class="news-excerpt">
+                     もう一つの成功した年を締めくくるにあたり、私の成果を振り返り、来年に向けて計画されているエキサイティングな開発についてのビジョンを共有します。
+                  </p>
+                  <a href="#" class="read-more">詳細を見る</a>
+               </div>
+            </article>
+         </div>
+      </div>
+   </section>
 </main>
+
+<style>
+   .news-main {
+      padding-top: 80px;
+      min-height: 100vh;
+   }
+
+   .news-section {
+      padding: 3rem 0;
+   }
+
+   .section-title {
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+      color: #333;
+      position: relative;
+      display: inline-block;
+      text-align: center;
+   }
+
+   .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 50px;
+      height: 3px;
+      background-color: var(--primary-color);
+   }
+
+   .news-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+   }
+
+   .news-card {
+      background-color: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+   }
+
+   .news-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+   }
+
+   .news-image {
+      width: 100%;
+      height: 200px;
+      overflow: hidden;
+   }
+
+   .news-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+   }
+
+   .news-card:hover .news-image img {
+      transform: scale(1.05);
+   }
+
+   .news-content {
+      padding: 1.5rem;
+      text-align: left;
+   }
+
+   .news-date {
+      display: block;
+      font-size: 0.9rem;
+      color: var(--secondary-color);
+      margin-bottom: 0.5rem;
+   }
+
+   .news-title {
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+      color: var(--text-color);
+      line-height: 1.4;
+   }
+
+   .news-excerpt {
+      color: #555;
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+   }
+
+   .read-more {
+      display: inline-block;
+      color: var(--primary-color);
+      font-weight: 500;
+      text-decoration: none;
+      position: relative;
+   }
+
+   .read-more::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--primary-color);
+      transition: width 0.3s ease;
+   }
+
+   .read-more:hover::after {
+      width: 100%;
+   }
+
+   /* Responsive styles */
+   @media (max-width: 768px) {
+      .section-title {
+         font-size: 2rem;
+      }
+
+      .news-grid {
+         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      }
+   }
+
+   @media (max-width: 480px) {
+      .section-title {
+         font-size: 1.8rem;
+      }
+
+      .news-grid {
+         grid-template-columns: 1fr;
+      }
+
+      .news-content {
+         padding: 1.2rem;
+      }
+
+      .news-title {
+         font-size: 1.2rem;
+      }
+   }
+</style>

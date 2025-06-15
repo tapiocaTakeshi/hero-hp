@@ -1,0 +1,52 @@
+---
+// src/pages/csae.astro
+import Main_CSAE from "../components/Main_CSAE.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>CSAE - 児童の性的虐待と搾取</title>
+  </head>
+  <body class="bg-white dark:bg-gray-800">
+    <Header />
+    <Main_CSAE />
+    <Footer />
+    <script>
+      // It's best to inline this in `head` to avoid FOUC (flash of unstyled content) when anything is importing `global.css`.
+      if (localStorage.getItem("hs_theme") === "dark") {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+
+      const getThemePreference = () => {
+        if (typeof localStorage !== "undefined" && localStorage.getItem("hs_theme")) {
+          return localStorage.getItem("hs_theme");
+        }
+        return window.matchMedia("(prefers-color-scheme: dark)").matches
+          ? "dark"
+          : "light";
+      };
+
+      const isDark = getThemePreference() === "dark";
+      document.documentElement.classList[isDark ? "add" : "remove"]("dark");
+
+      if (typeof localStorage !== "undefined") {
+        const observer = new MutationObserver(() => {
+          const isDark = document.documentElement.classList.contains("dark");
+          localStorage.setItem("hs_theme", isDark ? "dark" : "light");
+        });
+        observer.observe(document.documentElement, {
+          attributes: true,
+          attributeFilter: ["class"],
+        });
+      }
+    </script>
+  </body>
+</html>

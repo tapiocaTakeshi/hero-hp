@@ -1,7 +1,7 @@
 import { renderers } from './renderers.mjs';
-import { l as levels, g as getEventPrefix, L as Logger, A as AstroIntegrationLogger, manifest } from './manifest_0PMtJsxn.mjs';
+import { l as levels, g as getEventPrefix, L as Logger, A as AstroIntegrationLogger, manifest } from './manifest_C90IrI3u.mjs';
 import { appendForwardSlash as appendForwardSlash$1, joinPaths, trimSlashes, fileExtension, slash, prependForwardSlash as prependForwardSlash$1, removeTrailingForwardSlash, collapseDuplicateSlashes } from '@astrojs/internal-helpers/path';
-import { A as AstroError, R as ResponseSentError, n as MiddlewareNoDataOrNextCalled, o as MiddlewareNotAResponse, p as ROUTE_TYPE_HEADER, q as REROUTE_DIRECTIVE_HEADER, G as GetStaticPathsRequired, t as InvalidGetStaticPathsReturn, u as InvalidGetStaticPathsEntry, v as GetStaticPathsExpectedParams, w as GetStaticPathsInvalidRouteParam, P as PageNumberParamNotFound, D as DEFAULT_404_COMPONENT, N as NoMatchingStaticPathFound, x as PrerenderDynamicEndpointPathCollide, y as ReservedSlotName, z as renderSlotToString, B as renderJSX, C as chunkToString, H as LocalsNotAnObject, J as clientLocalsSymbol, K as clientAddressSymbol$1, O as ClientAddressNotAvailable, S as StaticClientAddressNotAvailable, Q as ASTRO_VERSION, T as responseSentSymbol$1, V as AstroResponseHeadersReassigned, W as renderPage, X as renderEndpoint, Y as REROUTABLE_STATUS_CODES } from './chunks/astro_BjFoP488.mjs';
+import { A as AstroError, R as ResponseSentError, l as MiddlewareNoDataOrNextCalled, n as MiddlewareNotAResponse, o as ROUTE_TYPE_HEADER, p as REROUTE_DIRECTIVE_HEADER, G as GetStaticPathsRequired, q as InvalidGetStaticPathsReturn, t as InvalidGetStaticPathsEntry, u as GetStaticPathsExpectedParams, v as GetStaticPathsInvalidRouteParam, P as PageNumberParamNotFound, D as DEFAULT_404_COMPONENT, N as NoMatchingStaticPathFound, w as PrerenderDynamicEndpointPathCollide, x as ReservedSlotName, y as renderSlotToString, z as renderJSX, B as chunkToString, C as LocalsNotAnObject, H as clientLocalsSymbol, J as clientAddressSymbol$1, K as ClientAddressNotAvailable, S as StaticClientAddressNotAvailable, O as ASTRO_VERSION, Q as responseSentSymbol$1, T as AstroResponseHeadersReassigned, V as renderPage, W as renderEndpoint, X as REROUTABLE_STATUS_CODES } from './chunks/astro_S4pxCBSH.mjs';
 import { serialize, parse } from 'cookie';
 import 'html-escaper';
 import 'clsx';
@@ -2288,19 +2288,31 @@ const serverEntrypointModule = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.de
   start
 }, Symbol.toStringTag, { value: 'Module' }));
 
-const _page0 = () => import('./chunks/node_Cm5yykfD.mjs');
-const _page1 = () => import('./chunks/news_BPDkEn8u.mjs');
-const _page2 = () => import('./chunks/privacypolicy_riddle_DFV7Swfq.mjs');
-const _page3 = () => import('./chunks/riddle_D67Z-IOX.mjs');
-const _page4 = () => import('./chunks/specialcommercialtransactionlaw_riddle_ivrqHIvr.mjs');
-const _page5 = () => import('./chunks/index_BMUt95Sh.mjs');
+const _page0 = () => import('./chunks/node_OBJxJWH8.mjs');
+const _page1 = () => import('./chunks/about_DsawLuqy.mjs');
+const _page2 = () => import('./chunks/contact_CI_FY6LB.mjs');
+const _page3 = () => import('./chunks/csae_D3GYK203.mjs');
+const _page4 = () => import('./chunks/news_BD8HdUIU.mjs');
+const _page5 = () => import('./chunks/privacypolicy_riddle_B_5KdbOu.mjs');
+const _page6 = () => import('./chunks/privacypolicy_summaries_B9K3Zp-B.mjs');
+const _page7 = () => import('./chunks/riddle_BREKC5Ov.mjs');
+const _page8 = () => import('./chunks/specialcommercialtransactionlaw_riddle_Bxr8AneW.mjs');
+const _page9 = () => import('./chunks/summaries_app_description_C58In2ZM.mjs');
+const _page10 = () => import('./chunks/termsofservice_riddle_B3zBhbqH.mjs');
+const _page11 = () => import('./chunks/index_N59aVPWb.mjs');
 const pageMap = new Map([
     ["node_modules/astro/dist/assets/endpoint/node.js", _page0],
-    ["src/pages/news.astro", _page1],
-    ["src/pages/privacypolicy_riddle.astro", _page2],
-    ["src/pages/riddle.astro", _page3],
-    ["src/pages/specialcommercialtransactionlaw_riddle.astro", _page4],
-    ["src/pages/index.astro", _page5]
+    ["src/pages/about.astro", _page1],
+    ["src/pages/contact.astro", _page2],
+    ["src/pages/csae.astro", _page3],
+    ["src/pages/news.astro", _page4],
+    ["src/pages/privacypolicy_riddle.astro", _page5],
+    ["src/pages/privacypolicy_summaries.astro", _page6],
+    ["src/pages/riddle.astro", _page7],
+    ["src/pages/specialcommercialtransactionlaw_riddle.astro", _page8],
+    ["src/pages/summaries_app_description.astro", _page9],
+    ["src/pages/termsofservice_riddle.astro", _page10],
+    ["src/pages/index.astro", _page11]
 ]);
 
 const _manifest = Object.assign(manifest, {
