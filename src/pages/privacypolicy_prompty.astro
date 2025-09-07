@@ -1,0 +1,30 @@
+---
+import Main_PP_PROMPTY from "../components/Main_PP_PROMPTY.astro"
+import Header from "../components/Header.astro";
+import { ViewTransitions } from "astro:transitions";
+
+---
+<html lang="ja" >
+	<head>
+		<ViewTransitions />
+		<link rel="icon" href="/Prompty/icon_removebg-preview.png">
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+		<meta name="generator" content={Astro.generator} />
+		<title>Prompty - プライバシーポリシー</title>
+    <style>
+      body {
+        padding-top: 5rem;
+      }
+      @media (max-width: 767px) {
+        body {
+          padding-top: 4rem;
+        }
+      }
+    </style>
+	</head>
+  <body style="background-color:#ffff;text-align:center;overflow-y:scroll;" class="dark:bg-gray-900">
+  <Header />
+  <Main_PP_PROMPTY/>
+ </body>
+</html>

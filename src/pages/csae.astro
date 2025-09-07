@@ -2,7 +2,6 @@
 // src/pages/csae.astro
 import Main_CSAE from "../components/Main_CSAE.astro";
 import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
 ---
 
 <html lang="ja">
@@ -16,7 +15,6 @@ import Footer from "../components/Footer.astro";
   <body class="bg-white dark:bg-gray-800">
     <Header />
     <Main_CSAE />
-    <Footer />
     <script>
       // It's best to inline this in `head` to avoid FOUC (flash of unstyled content) when anything is importing `global.css`.
       if (localStorage.getItem("hs_theme") === "dark") {

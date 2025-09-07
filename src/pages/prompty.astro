@@ -1,33 +1,31 @@
 ---
-import Main_RIDDLE from "../components/Main_RIDDLE.astro"
-import Header from "../components/Header.astro"; // Changed to use RiddleHeader
+import Main_PROMPTY from "../components/Main_PROMPTY.astro"
+import Header from "../components/Header.astro";
 import { ViewTransitions } from "astro:transitions";
-
 
 ---
 <html lang="ja" >
 	<head>
 		<ViewTransitions />
-		<link rel="icon" href="/Riddle/android-chrome-icon-512x512.png">
+		<link rel="icon" href="/Prompty/icon_removebg-preview.png">
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
 		<meta name="generator" content={Astro.generator} />
-		<title>riddle</title>
+		<title>Prompty - AI プロンプト生成・管理アプリ</title>
     <style>
-      /* Add top padding to the body to account for the fixed RiddleHeader height */
-      /* Adjust based on RiddleHeader's actual height (h-16 or h-20 in RiddleHeader.astro) */
+      /* Add top padding to the body to account for the fixed Header height */
       body {
-        padding-top: 5rem; /* Assuming 80px for md:h-20 in RiddleHeader */
+        padding-top: 5rem; /* Assuming 80px for md:h-20 in Header */
       }
       @media (max-width: 767px) { /* md breakpoint in Tailwind */
         body {
-          padding-top: 4rem; /* Assuming 64px for h-16 in RiddleHeader */
+          padding-top: 4rem; /* Assuming 64px for h-16 in Header */
         }
       }
     </style>
 	</head>
   <body style="background-color:#ffff;text-align:center;overflow-y:scroll;" class="dark:bg-gray-900">
   <Header />
-  <Main_RIDDLE/>
+  <Main_PROMPTY/>
  </body>
 </html>

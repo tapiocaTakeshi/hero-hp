@@ -5,103 +5,226 @@ import "../styles/style.css";
 <main class="home-main">
    <section class="hero-section">
       <div class="section-content">
-         <div class="motivational-text scroll-fade">
-            <h2 class="hero-tagline">Change Yourself.</h2>
-         </div>
-      </div>
-   </section>
-
-   <section class="apps-section">
-      <div class="section-content">
-         <div class="apps-showcase scroll-fade">
-            <h3 class="apps-title">Our Apps</h3>
-         </div>
-      </div>
-   </section>
-
-   <section class="riddle-section">
-      <div class="video-background">
-         <video
-            autoplay
-            muted
-            loop
-            playsinline
-            class="background-video"
-         >
-            <source src="/20250605_0048_Bright Ideas Animated_simple_compose_01jwxt1pppfn3vnby1xhwk0nsv.mp4" type="video/mp4">
-         </video>
-         <div class="video-overlay"></div>
-      </div>
-      <div class="section-content">
-         <div class="app-showcase scroll-fade">
-            <div class="animated-content">
-               <div class="app-logo-container">
-                  <img
-                     transition:name="riddle"
-                     src="/RiddleLogo.png"
-                     class="tappable animated-logo"
-                     alt="Riddle App"
-                     style="border-radius: 22.5%; object-fit: contain;"
-                  />
-               </div>
-               <div class="app-info animated-text">
-                  <h3 class="app-name">Riddle</h3>
-                  <p class="app-tagline">Change your thinking.</p>
-                  <p class="app-description">挑戦的なパズルと脳トレで、あなたの思考力を解き放とう</p>
-               </div>
-               <a href="/riddle" class="cta-button">
-                  Riddleを探索
+         <div class="hero-content scroll-fade">
+            <h1 class="hero-main-title">
+               <span class="hero-title-text">Change Yourself.</span>
+            </h1>
+            <p class="hero-description">革新的なアプリで、あなたの日常を変革しよう。思考力、読書体験、創造性を最大化する3つのアプリをご紹介します。</p>
+            <div class="hero-cta">
+               <a href="#apps-section" class="cta-button primary" aria-label="アプリを見る">
+                  <span class="cta-icon">🚀</span>
+                  アプリを探索
+               </a>
+               <a href="/contact" class="cta-button secondary" aria-label="お問い合わせ">
+                  お問い合わせ
                </a>
             </div>
          </div>
       </div>
    </section>
 
-   <section class="summaries-section">
-      <div class="video-background">
-         <video
-            autoplay
-            muted
-            loop
-            playsinline
-            class="background-video"
-         >
-            <source src="/20250605_0052_Rainbow Adventure Unfolds_simple_compose_01jwxta4e4fjhaxd1q7yr0v2sg.mp4" type="video/mp4">
-         </video>
-         <div class="video-overlay"></div>
-      </div>
+   <section class="apps-section" id="apps-section">
       <div class="section-content">
-         <div class="app-showcase scroll-fade">
-            <div class="animated-content">
-               <div class="app-logo-container">
-                  <img
-                     src="/SummariesLogo.png"
-                     class="tappable animated-logo"
-                     alt="Summaries App"
-                     style="border-radius: 22.5%;"
-                  />
+         <div class="apps-intro scroll-fade">
+            <h2 class="apps-title">Our Apps</h2>
+            <p class="apps-description">あなたの成長をサポートする3つの革新的なアプリ</p>
+         </div>
+         <div class="apps-preview scroll-fade">
+            <div class="app-preview-grid">
+               <div class="app-preview-card" data-app="riddle">
+                  <img src="/RiddleLogo.png" alt="Riddle" class="app-preview-icon">
+                  <h3>Riddle</h3>
+                  <p>思考力を解き放つ</p>
                </div>
-               <div class="app-info animated-text">
-                  <h3 class="app-name">Summaries</h3>
-                  <p class="app-tagline">Change your reading.</p>
-                  <p class="app-description">インテリジェントな要約で、コンテンツの読み方を変革しよう</p>
+               <div class="app-preview-card" data-app="prompty">
+                  <img src="/Prompty/icon_removebg-preview.png" alt="Prompty" class="app-preview-icon">
+                  <h3>Prompty</h3>
+                  <p>AIプロンプト生成</p>
                </div>
-               <a href="/summaries_app_description" class="cta-button">
-                  Summariesを発見
-               </a>
+               <div class="app-preview-card" data-app="summaries">
+                  <img src="/SummariesLogo.png" alt="Summaries" class="app-preview-icon">
+                  <h3>Summaries</h3>
+                  <p>読書体験を変革</p>
+               </div>
             </div>
          </div>
       </div>
    </section>
 
-   <section class="contact-section-wrapper">
+   <section class="riddle-section" id="riddle-section">
+      <div class="section-content">
+         <div class="app-showcase scroll-fade">
+            <div class="app-detail-content">
+               <div class="app-header">
+                  <div class="app-logo-container">
+                     <img
+                        transition:name="riddle"
+                        src="/RiddleLogo.png"
+                        class="app-logo"
+                        alt="Riddle App Logo"
+                     />
+                  </div>
+                  <div class="app-title-section">
+                     <h2 class="app-name">Riddle</h2>
+                     <p class="app-tagline">Change your thinking.</p>
+                  </div>
+               </div>
+               
+               <div class="app-content">
+                  <p class="app-description">
+                     挑戦的なパズルと脳トレで、あなたの思考力を解き放ちましょう。論理的思考、創造性、問題解決能力を鍛える革新的なクイズアプリです。
+                  </p>
+                  
+                  <div class="app-features">
+                     <div class="feature-item">
+                        <span class="feature-icon">🧩</span>
+                        <span>豊富なパズルコレクション</span>
+                     </div>
+                     <div class="feature-item">
+                        <span class="feature-icon">🎯</span>
+                        <span>段階的な難易度設計</span>
+                     </div>
+                     <div class="feature-item">
+                        <span class="feature-icon">📊</span>
+                        <span>進捗追跡機能</span>
+                     </div>
+                  </div>
+                  
+                  <div class="app-cta">
+                     <a href="/riddle" class="cta-button primary" aria-label="Riddleアプリの詳細を見る">
+                        <span class="cta-icon">🧩</span>
+                        今すぐ挑戦する
+                     </a>
+                     <a href="#prompty-section" class="cta-button outline" aria-label="次のアプリを見る">
+                        次のアプリ →
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <section class="prompty-section" id="prompty-section">
+      <div class="section-content">
+         <div class="app-showcase scroll-fade">
+            <div class="app-detail-content">
+               <div class="app-header">
+                  <div class="app-logo-container">
+                     <img
+                        src="/Prompty/icon_removebg-preview.png"
+                        class="app-logo"
+                        alt="Prompty App Logo"
+                     />
+                  </div>
+                  <div class="app-title-section">
+                     <h2 class="app-name">Prompty</h2>
+                     <p class="app-tagline">Change your prompt.</p>
+                  </div>
+               </div>
+               
+               <div class="app-content">
+                  <p class="app-description">
+                     プロフェッショナルなAIプロンプト生成で、あなたの創造力を最大化しましょう。効果的なプロンプトで、AIとの対話をより有意義にします。
+                  </p>
+                  
+                  <div class="app-features">
+                     <div class="feature-item">
+                        <span class="feature-icon">✨</span>
+                        <span>AI最適化プロンプト</span>
+                     </div>
+                     <div class="feature-item">
+                        <span class="feature-icon">🎨</span>
+                        <span>創造性支援機能</span>
+                     </div>
+                     <div class="feature-item">
+                        <span class="feature-icon">💡</span>
+                        <span>テンプライト豊富</span>
+                     </div>
+                  </div>
+                  
+                  <div class="app-cta">
+                     <a href="/prompty" class="cta-button primary" aria-label="Promptyアプリの詳細を見る">
+                        <span class="cta-icon">✨</span>
+                        創造力を解放する
+                     </a>
+                     <a href="#summaries-section" class="cta-button outline" aria-label="次のアプリを見る">
+                        次のアプリ →
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <section class="summaries-section" id="summaries-section">
+      <div class="section-content">
+         <div class="app-showcase scroll-fade">
+            <div class="app-detail-content">
+               <div class="app-header">
+                  <div class="app-logo-container">
+                     <img
+                        src="/SummariesLogo.png"
+                        class="app-logo"
+                        alt="Summaries App Logo"
+                     />
+                  </div>
+                  <div class="app-title-section">
+                     <h2 class="app-name">Summaries</h2>
+                     <p class="app-tagline">Change your reading.</p>
+                  </div>
+               </div>
+               
+               <div class="app-content">
+                  <p class="app-description">
+                     インテリジェントな要約機能で、コンテンツの読み方を変革しましょう。効率的な学習と情報収集を実現する革新的なアプリです。
+                  </p>
+                  
+                  <div class="app-features">
+                     <div class="feature-item">
+                        <span class="feature-icon">📚</span>
+                        <span>AI要約エンジン</span>
+                     </div>
+                     <div class="feature-item">
+                        <span class="feature-icon">⚡</span>
+                        <span>高速処理</span>
+                     </div>
+                     <div class="feature-item">
+                        <span class="feature-icon">🎯</span>
+                        <span>カスタム要約レベル</span>
+                     </div>
+                  </div>
+                  
+                  <div class="app-cta">
+                     <a href="/summaries_app_description" class="cta-button primary" aria-label="Summariesアプリの詳細を見る">
+                        <span class="cta-icon">📚</span>
+                        読書体験を変える
+                     </a>
+                     <a href="#contact-section" class="cta-button outline" aria-label="お問い合わせへ移動">
+                        お問い合わせ →
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <section class="contact-section-wrapper" id="contact-section">
       <div class="section-content">
          <div class="contact-section scroll-fade">
-            <h3 class="contact-title">お問い合わせ</h3>
-            <p class="contact-description">ご質問やご相談がございましたら、お気軽にお問い合わせください。</p>
-            <a href="/contact" class="contact-button">
-               Contact Us
-            </a>
+            <h2 class="contact-title">お問い合わせ</h2>
+            <p class="contact-description">
+               ご質問やご相談がございましたら、お気軽にお問い合わせください。<br>
+               専門チームが迅速にサポートいたします。
+            </p>
+            <div class="contact-cta">
+               <a href="/contact" class="cta-button primary" aria-label="お問い合わせフォームへ">
+                  <span class="cta-icon">💬</span>
+                  お問い合わせ
+               </a>
+            </div>
          </div>
       </div>
    </section>
@@ -150,6 +273,131 @@ import "../styles/style.css";
          }, 100);
       }
 
+      // Enhanced accessibility features
+      function initializeAccessibility() {
+         // Enhanced keyboard navigation
+         document.addEventListener('keydown', (e) => {
+            // Tab navigation enhancement
+            if (e.key === 'Tab') {
+               document.body.classList.add('keyboard-navigation');
+            }
+            
+            // Escape key functionality
+            if (e.key === 'Escape') {
+               // Close any open menus or modals
+               const activeModal = document.querySelector('.nav-menu.active');
+               if (activeModal) {
+                  const closeButton = document.getElementById('nav-close');
+                  if (closeButton) {
+                     closeButton.click();
+                  }
+               }
+            }
+         });
+
+         // Remove keyboard navigation class on mouse interaction
+         document.addEventListener('mousedown', () => {
+            document.body.classList.remove('keyboard-navigation');
+         });
+
+         // Enhanced focus management
+         const focusableElements = 'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])';
+         
+         function trapFocus(container: HTMLElement) {
+            const focusables = container.querySelectorAll(focusableElements);
+            const firstFocusable = focusables[0] as HTMLElement;
+            const lastFocusable = focusables[focusables.length - 1] as HTMLElement;
+
+            container.addEventListener('keydown', (e: KeyboardEvent) => {
+               if (e.key === 'Tab') {
+                  if (e.shiftKey) {
+                     if (document.activeElement === firstFocusable) {
+                        e.preventDefault();
+                        lastFocusable.focus();
+                     }
+                  } else {
+                     if (document.activeElement === lastFocusable) {
+                        e.preventDefault();
+                        firstFocusable.focus();
+                     }
+                  }
+               }
+            });
+         }
+
+         // Apply focus trapping to navigation menu
+         const navMenu = document.getElementById('nav-menu');
+         if (navMenu) {
+            trapFocus(navMenu);
+         }
+
+         // Smooth scroll with accessibility considerations
+         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (this: HTMLAnchorElement, e: Event) {
+               const href = this.getAttribute('href');
+               if (href === '#' || !href) return;
+               
+               e.preventDefault();
+               const target = document.querySelector(href);
+               if (target && target instanceof HTMLElement) {
+                  // Add focus to target for screen readers
+                  target.scrollIntoView({
+                     behavior: 'smooth',
+                     block: 'start'
+                  });
+                  
+                  // Set focus for accessibility
+                  setTimeout(() => {
+                     target.setAttribute('tabindex', '-1');
+                     target.focus();
+                     target.addEventListener('blur', () => {
+                        target.removeAttribute('tabindex');
+                     }, { once: true });
+                  }, 100);
+               }
+            });
+         });
+
+         // Announce page changes for screen readers
+         const announcer = document.createElement('div');
+         announcer.setAttribute('aria-live', 'polite');
+         announcer.setAttribute('aria-atomic', 'true');
+         announcer.className = 'sr-only';
+         announcer.id = 'page-announcer';
+         document.body.appendChild(announcer);
+
+         // Enhanced app preview card interactions
+         document.querySelectorAll('.app-preview-card').forEach(card => {
+            const htmlCard = card as HTMLElement;
+            const appName = htmlCard.dataset.app;
+            
+            // Make cards keyboard accessible
+            htmlCard.setAttribute('tabindex', '0');
+            htmlCard.setAttribute('role', 'button');
+            htmlCard.setAttribute('aria-label', `${appName}アプリの詳細を見る`);
+            
+            // Click and keyboard event handlers
+            function navigateToApp() {
+               const targetSection = document.getElementById(`${appName}-section`) as HTMLElement;
+               if (targetSection) {
+                  targetSection.scrollIntoView({ behavior: 'smooth' });
+                  setTimeout(() => {
+                     targetSection.setAttribute('tabindex', '-1');
+                     targetSection.focus();
+                  }, 100);
+               }
+            }
+            
+            htmlCard.addEventListener('click', navigateToApp);
+            htmlCard.addEventListener('keydown', (e: KeyboardEvent) => {
+               if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault();
+                  navigateToApp();
+               }
+            });
+         });
+      }
+
       function initializeScrollFix() {
          // Comprehensive scroll behavior fixes
          const html = document.documentElement;
@@ -168,7 +416,7 @@ import "../styles/style.css";
          body.style.minHeight = '100vh';
 
          // Fix all sections for proper scroll behavior
-         const sections = document.querySelectorAll('.hero-section, .apps-section, .riddle-section, .summaries-section, .contact-section-wrapper');
+         const sections = document.querySelectorAll('.hero-section, .apps-section, .riddle-section, .summaries-section, .prompty-section, .contact-section-wrapper');
          
          sections.forEach((section, index) => {
             const htmlSection = section as HTMLElement;
@@ -300,6 +548,7 @@ import "../styles/style.css";
       function initializeAll() {
          try {
             initializeAnimations();
+            initializeAccessibility();
             initializeScrollFix();
             initializeScrollRestoration();
             
@@ -354,6 +603,101 @@ import "../styles/style.css";
 </main>
 
 <style>
+   /* CSS Variables for consistent theming */
+   :root {
+      --primary-color: #6366f1;
+      --primary-hover: #5048e5;
+      --secondary-color: #f59e0b;
+      --accent-color: #10b981;
+      --text-primary: #1f2937;
+      --text-secondary: #6b7280;
+      --text-light: #9ca3af;
+      --bg-primary: #ffffff;
+      --bg-secondary: #f9fafb;
+      --border-color: #e5e7eb;
+      --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+      --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+      --border-radius: 8px;
+      --border-radius-lg: 12px;
+      --spacing-xs: 4px;
+      --spacing-sm: 8px;
+      --spacing-md: 16px;
+      --spacing-lg: 24px;
+      --spacing-xl: 32px;
+      --spacing-2xl: 48px;
+      
+      /* Accessibility colors */
+      --focus-color: #3b82f6;
+      --focus-outline: 2px solid var(--focus-color);
+      --error-color: #dc2626;
+      --success-color: #059669;
+      --warning-color: #d97706;
+   }
+
+
+   /* Screen reader only content */
+   .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+   }
+
+   /* Enhanced focus indicators */
+   .keyboard-navigation *:focus {
+      outline: var(--focus-outline);
+      outline-offset: 2px;
+      border-radius: 4px;
+   }
+
+   /* Remove outline for mouse users */
+   body:not(.keyboard-navigation) *:focus {
+      outline: none;
+   }
+
+   /* High contrast focus for interactive elements */
+   .keyboard-navigation .cta-button:focus,
+   .keyboard-navigation .app-preview-card:focus {
+      outline: 3px solid var(--focus-color);
+      outline-offset: 2px;
+      box-shadow: 0 0 0 5px rgba(59, 130, 246, 0.1);
+   }
+
+   /* Reduced motion support */
+   @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+         animation-duration: 0.01ms !important;
+         animation-iteration-count: 1 !important;
+         transition-duration: 0.01ms !important;
+         scroll-behavior: auto !important;
+      }
+   }
+
+   /* High contrast support */
+   .high-contrast {
+      filter: contrast(150%) brightness(110%);
+   }
+
+   .high-contrast .cta-button.primary {
+      background: #000000;
+      color: #ffffff;
+      border-color: #ffffff;
+   }
+
+   .high-contrast .cta-button.secondary {
+      background: #ffffff;
+      color: #000000;
+      border-color: #000000;
+   }
+
    /* Root container fixes */
    html {
       scroll-behavior: smooth;
@@ -365,6 +709,7 @@ import "../styles/style.css";
       overflow-x: hidden;
       overflow-y: auto;
       position: relative;
+      /* padding-topはglobal.cssで統一管理 */
       background: linear-gradient(135deg,
          rgba(255, 255, 255, 0.1) 0%,
          rgba(255, 255, 255, 0.05) 25%,
@@ -390,6 +735,7 @@ import "../styles/style.css";
    .apps-section,
    .riddle-section,
    .summaries-section,
+   .prompty-section,
    .contact-section-wrapper {
       /* Use min-height instead of fixed height for better flow */
       min-height: 100vh;
@@ -413,7 +759,8 @@ import "../styles/style.css";
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
       border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-      padding-top: 8rem;
+      /* グローバルpadding-topがあるため、heroセクションは通常のpadding */
+      padding-top: var(--spacing-xl);
       /* Ensure hero section allows scrolling past it */
       position: relative;
       z-index: 1;
@@ -449,17 +796,148 @@ import "../styles/style.css";
       transform: translateY(0);
    }
 
-   .motivational-text {
-      margin-bottom: var(--spacing-lg);
+   /* Hero Section Styles */
+   .hero-content {
+      text-align: center;
+      max-width: 1000px;
+      margin: 0 auto;
    }
 
-   .hero-tagline {
-      font-size: clamp(2.5rem, 6vw, 4.5rem);
-      font-weight: 800;
-      margin-bottom: var(--spacing-md);
-      color: var(--primary-color);
-      line-height: 1.1;
-      letter-spacing: -0.03em;
+   .hero-main-title {
+      margin-bottom: var(--spacing-xl);
+      perspective: 1000px;
+   }
+
+   .hero-title-text {
+      display: inline-block;
+      font-size: clamp(4rem, 12vw, 8rem);
+      font-weight: 900;
+      line-height: 0.9;
+      letter-spacing: -0.05em;
+      background: linear-gradient(135deg,
+         #000000 0%,
+         #4a4a4a 20%,
+         #808080 40%,
+         #ffffff 60%,
+         #c0c0c0 80%,
+         #2c2c2c 100%);
+      background-size: 400% 400%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: monoGradientShift 4s ease-in-out infinite,
+                 titlePulse 3s ease-in-out infinite,
+                 titleFloat 6s ease-in-out infinite;
+      text-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+      transform-style: preserve-3d;
+      position: relative;
+   }
+
+   .hero-title-text::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg,
+         rgba(0, 0, 0, 0.1) 0%,
+         rgba(255, 255, 255, 0.1) 25%,
+         rgba(128, 128, 128, 0.08) 50%,
+         rgba(192, 192, 192, 0.1) 75%,
+         rgba(44, 44, 44, 0.1) 100%);
+      filter: blur(8px);
+      z-index: -1;
+      animation: monoGlowPulse 2s ease-in-out infinite alternate;
+   }
+
+   @keyframes monoGradientShift {
+      0%, 100% {
+         background-position: 0% 50%;
+      }
+      50% {
+         background-position: 100% 50%;
+      }
+   }
+
+   @keyframes titlePulse {
+      0%, 100% {
+         transform: scale(1) rotateX(0deg);
+      }
+      50% {
+         transform: scale(1.02) rotateX(2deg);
+      }
+   }
+
+   @keyframes titleFloat {
+      0%, 100% {
+         transform: translateY(0px) rotateY(0deg);
+      }
+      33% {
+         transform: translateY(-8px) rotateY(1deg);
+      }
+      66% {
+         transform: translateY(-4px) rotateY(-1deg);
+      }
+   }
+
+   @keyframes monoGlowPulse {
+      0% {
+         opacity: 0.3;
+         transform: scale(0.98);
+         filter: blur(8px) brightness(0.8);
+      }
+      100% {
+         opacity: 0.6;
+         transform: scale(1.02);
+         filter: blur(10px) brightness(1.2);
+      }
+   }
+
+   .hero-title-text:hover {
+      animation-play-state: paused;
+      transform: scale(1.05) rotateX(5deg) rotateY(2deg);
+      transition: transform 0.3s ease;
+   }
+
+   .hero-description {
+      font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+      color: var(--secondary-color);
+      line-height: 1.6;
+      margin-bottom: var(--spacing-xl);
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      opacity: 0;
+      animation: fadeInUp 1s ease-out 0.5s forwards;
+   }
+
+   @keyframes fadeInUp {
+      from {
+         opacity: 0;
+         transform: translateY(30px);
+      }
+      to {
+         opacity: 1;
+         transform: translateY(0);
+      }
+   }
+
+   .hero-cta {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      align-items: center;
+      opacity: 0;
+      animation: fadeInUp 1s ease-out 1s forwards;
+   }
+
+   @media (min-width: 640px) {
+      .hero-cta {
+         flex-direction: row;
+         justify-content: center;
+         gap: 1.5rem;
+      }
    }
 
    .apps-showcase,
@@ -469,12 +947,18 @@ import "../styles/style.css";
       z-index: 2;
    }
 
+   /* Apps Section Styles */
+   .apps-intro {
+      text-align: center;
+      margin-bottom: var(--spacing-xl);
+   }
+
    .apps-title {
-      font-size: clamp(2rem, 4vw, 3rem);
-      margin-bottom: var(--spacing-lg);
+      font-size: clamp(2.5rem, 5vw, 3.5rem);
+      margin-bottom: var(--spacing-md);
       color: var(--text-color);
-      font-weight: 700;
-      letter-spacing: -0.02em;
+      font-weight: 800;
+      letter-spacing: -0.03em;
       text-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
       background: linear-gradient(135deg,
          rgba(26, 26, 26, 1) 0%,
@@ -483,6 +967,83 @@ import "../styles/style.css";
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
+   }
+
+   .apps-description {
+      font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+      color: var(--secondary-color);
+      line-height: 1.6;
+      max-width: 500px;
+      margin: 0 auto;
+   }
+
+   .apps-preview {
+      margin-top: var(--spacing-xl);
+   }
+
+   .app-preview-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: var(--spacing-lg);
+      max-width: 900px;
+      margin: 0 auto;
+   }
+
+   .app-preview-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: var(--spacing-lg);
+      background: linear-gradient(135deg,
+         rgba(255, 255, 255, 0.2) 0%,
+         rgba(255, 255, 255, 0.1) 100%);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-radius: 24px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow:
+         0 4px 16px rgba(0, 0, 0, 0.1),
+         0 1px 0 rgba(255, 255, 255, 0.3) inset;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      cursor: pointer;
+   }
+
+   .app-preview-card:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow:
+         0 12px 40px rgba(0, 0, 0, 0.15),
+         0 1px 0 rgba(255, 255, 255, 0.4) inset;
+      background: linear-gradient(135deg,
+         rgba(255, 255, 255, 0.25) 0%,
+         rgba(255, 255, 255, 0.15) 100%);
+   }
+
+   .app-preview-icon {
+      width: 64px;
+      height: 64px;
+      border-radius: 16px;
+      margin-bottom: var(--spacing-md);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      transition: all 0.4s ease;
+   }
+
+   .app-preview-card:hover .app-preview-icon {
+      transform: scale(1.1);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+   }
+
+   .app-preview-card h3 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--text-color);
+      margin-bottom: var(--spacing-xs);
+   }
+
+   .app-preview-card p {
+      font-size: 1rem;
+      color: var(--secondary-color);
+      margin: 0;
    }
 
    /* Glass Background Styles */
@@ -498,6 +1059,17 @@ import "../styles/style.css";
    }
 
    .summaries-section {
+      background: linear-gradient(135deg,
+         rgba(255, 255, 255, 0.2) 0%,
+         rgba(248, 250, 252, 0.15) 50%,
+         rgba(255, 255, 255, 0.25) 100%);
+      backdrop-filter: blur(25px);
+      -webkit-backdrop-filter: blur(25px);
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+   }
+
+   .prompty-section {
       background: linear-gradient(135deg,
          rgba(255, 255, 255, 0.2) 0%,
          rgba(248, 250, 252, 0.15) 50%,
@@ -610,43 +1182,237 @@ import "../styles/style.css";
       margin: 0 auto;
    }
 
+   /* App Detail Content Styles */
+   .app-detail-content {
+      background: linear-gradient(135deg,
+         rgba(255, 255, 255, 0.25) 0%,
+         rgba(255, 255, 255, 0.1) 50%,
+         rgba(255, 255, 255, 0.25) 100%);
+      backdrop-filter: blur(30px);
+      -webkit-backdrop-filter: blur(30px);
+      border-radius: 32px;
+      padding: var(--spacing-xl);
+      box-shadow:
+         0 8px 32px rgba(0, 0, 0, 0.1),
+         0 1px 0 rgba(255, 255, 255, 0.4) inset,
+         0 -1px 0 rgba(0, 0, 0, 0.05) inset;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      max-width: 800px;
+      margin: 0 auto;
+   }
+
+   .app-detail-content:hover {
+      transform: translateY(-8px);
+      box-shadow:
+         0 16px 48px rgba(0, 0, 0, 0.15),
+         0 1px 0 rgba(255, 255, 255, 0.5) inset,
+         0 -1px 0 rgba(0, 0, 0, 0.08) inset;
+   }
+
+   .app-header {
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-lg);
+      margin-bottom: var(--spacing-xl);
+      text-align: left;
+   }
+
+   .app-logo {
+      width: 80px;
+      height: 80px;
+      border-radius: 20px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+      transition: all 0.4s ease;
+   }
+
+   .app-title-section .app-name {
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      font-weight: 800;
+      color: var(--text-color);
+      margin-bottom: var(--spacing-xs);
+      letter-spacing: -0.02em;
+   }
+
+   .app-title-section .app-tagline {
+      font-size: 1.2rem;
+      color: var(--secondary-color);
+      font-weight: 500;
+      font-style: italic;
+      margin: 0;
+   }
+
+   .app-content {
+      text-align: center;
+   }
+
+   .app-content .app-description {
+      font-size: 1.1rem;
+      color: var(--secondary-color);
+      line-height: 1.6;
+      margin-bottom: var(--spacing-xl);
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+   }
+
+   .app-features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: var(--spacing-md);
+      margin-bottom: var(--spacing-xl);
+   }
+
+   .feature-item {
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-sm);
+      padding: var(--spacing-md);
+      background: linear-gradient(135deg,
+         rgba(255, 255, 255, 0.15) 0%,
+         rgba(255, 255, 255, 0.05) 100%);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      transition: all 0.3s ease;
+   }
+
+   .feature-item:hover {
+      transform: translateY(-2px);
+      background: linear-gradient(135deg,
+         rgba(255, 255, 255, 0.2) 0%,
+         rgba(255, 255, 255, 0.1) 100%);
+   }
+
+   .feature-icon {
+      font-size: 1.5rem;
+      flex-shrink: 0;
+   }
+
+   .app-cta {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      align-items: center;
+   }
+
+   @media (min-width: 640px) {
+      .app-cta {
+         flex-direction: row;
+         justify-content: center;
+         gap: 1.5rem;
+      }
+   }
+
+   /* CTA Button Styles */
    .cta-button {
       display: inline-flex;
       align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
       padding: 1rem 2rem;
-      background: linear-gradient(135deg,
-         rgba(0, 0, 0, 0.8) 0%,
-         rgba(0, 0, 0, 0.9) 50%,
-         rgba(0, 0, 0, 0.8) 100%);
-      color: white;
       text-decoration: none;
-      border-radius: 20px;
+      border-radius: 16px;
       font-weight: 600;
-      font-size: 0.95rem;
+      font-size: 1rem;
       transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-      box-shadow:
-         0 4px 16px rgba(0, 0, 0, 0.2),
-         0 1px 0 rgba(255, 255, 255, 0.1) inset;
       letter-spacing: 0.01em;
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      border: 2px solid;
+      min-height: 48px;
+      min-width: 48px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
    }
 
-   .cta-button:hover {
-      transform: translateY(-3px) scale(1.02);
-      box-shadow:
-         0 8px 32px rgba(0, 0, 0, 0.25),
-         0 1px 0 rgba(255, 255, 255, 0.2) inset;
+   .cta-button.primary {
       background: linear-gradient(135deg,
-         rgba(102, 102, 102, 0.9) 0%,
-         rgba(102, 102, 102, 1) 50%,
-         rgba(102, 102, 102, 0.9) 100%);
+         rgba(0, 123, 255, 0.9) 0%,
+         rgba(0, 86, 179, 0.95) 100%);
+      color: white;
+      border-color: rgba(0, 123, 255, 0.8);
+      box-shadow:
+         0 4px 16px rgba(0, 123, 255, 0.3),
+         0 1px 0 rgba(255, 255, 255, 0.2) inset;
+   }
+
+   .cta-button.primary:hover {
+      transform: translateY(-3px) scale(1.02);
+      background: linear-gradient(135deg,
+         rgba(0, 123, 255, 1) 0%,
+         rgba(0, 86, 179, 1) 100%);
+      box-shadow:
+         0 8px 32px rgba(0, 123, 255, 0.4),
+         0 1px 0 rgba(255, 255, 255, 0.3) inset;
+      border-color: rgba(0, 123, 255, 1);
+   }
+
+   .cta-button.primary:focus-visible {
+      outline: 3px solid rgba(0, 123, 255, 0.5);
+      outline-offset: 2px;
+   }
+
+   .cta-button.secondary {
+      background: linear-gradient(135deg,
+         rgba(255, 255, 255, 0.8) 0%,
+         rgba(248, 250, 252, 0.9) 100%);
+      color: var(--text-color);
+      border-color: rgba(255, 255, 255, 0.6);
+      box-shadow:
+         0 4px 16px rgba(0, 0, 0, 0.1),
+         0 1px 0 rgba(255, 255, 255, 0.4) inset;
+   }
+
+   .cta-button.secondary:hover {
+      transform: translateY(-3px) scale(1.02);
+      background: linear-gradient(135deg,
+         rgba(255, 255, 255, 0.95) 0%,
+         rgba(248, 250, 252, 1) 100%);
+      box-shadow:
+         0 8px 32px rgba(0, 0, 0, 0.15),
+         0 1px 0 rgba(255, 255, 255, 0.5) inset;
+      color: var(--primary-color);
+   }
+
+   .cta-button.outline {
+      background: transparent;
+      color: var(--text-color);
+      border-color: rgba(255, 255, 255, 0.3);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+   }
+
+   .cta-button.outline:hover {
+      background: linear-gradient(135deg,
+         rgba(255, 255, 255, 0.15) 0%,
+         rgba(248, 250, 252, 0.1) 100%);
+      border-color: rgba(0, 123, 255, 0.4);
+      color: #007bff;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 16px rgba(0, 123, 255, 0.2);
+   }
+
+   .cta-icon {
+      font-size: 1.1em;
+      transition: transform 0.3s ease;
+   }
+
+   .cta-button:hover .cta-icon {
+      transform: scale(1.1);
+   }
+
+   .contact-cta {
+      display: flex;
+      justify-content: center;
+      margin-top: var(--spacing-lg);
    }
 
    /* App sections with proper scroll behavior */
    .riddle-section,
-   .summaries-section {
+   .summaries-section,
+   .prompty-section {
       position: relative;
       overflow: visible;
       scroll-behavior: smooth;
@@ -799,6 +1565,39 @@ import "../styles/style.css";
 
 
 
+   /* Reduced motion support */
+   @media (prefers-reduced-motion: reduce) {
+      .hero-title-text {
+         animation: none;
+      }
+      
+      .hero-title-text::before {
+         animation: none;
+      }
+      
+      .hero-description {
+         animation: fadeInUp 0.3s ease-out forwards;
+      }
+      
+      .hero-cta {
+         animation: fadeInUp 0.3s ease-out 0.2s forwards;
+      }
+   }
+
+   /* Mobile responsive adjustments */
+   @media (max-width: 768px) {
+      .hero-title-text {
+         font-size: clamp(3rem, 10vw, 5rem);
+      }
+   }
+
+   @media (max-width: 480px) {
+      .hero-title-text {
+         font-size: clamp(2.5rem, 12vw, 4rem);
+         letter-spacing: -0.03em;
+      }
+   }
+
    /* Responsive styles with comprehensive scroll fixes */
    @media (max-width: 768px) {
       html, body {
@@ -820,6 +1619,7 @@ import "../styles/style.css";
       .apps-section,
       .riddle-section,
       .summaries-section,
+      .prompty-section,
       .contact-section-wrapper {
          padding: var(--spacing-lg) var(--spacing-sm);
          /* Ensure sections don't interfere with mobile scrolling */
@@ -832,7 +1632,8 @@ import "../styles/style.css";
       }
 
       .hero-section {
-         padding-top: 6rem;
+         /* グローバルpadding-topに依存、追加のpaddingは最小限 */
+         padding-top: var(--spacing-lg);
          min-height: 100vh;
       }
 
@@ -890,6 +1691,7 @@ import "../styles/style.css";
       .apps-section,
       .riddle-section,
       .summaries-section,
+      .prompty-section,
       .contact-section-wrapper {
          padding: var(--spacing-md) var(--spacing-sm);
          /* Optimize for mobile scrolling */
@@ -903,7 +1705,8 @@ import "../styles/style.css";
       }
 
       .hero-section {
-         padding-top: 5rem;
+         /* 小さな画面でもグローバルpadding-topに依存 */
+         padding-top: var(--spacing-md);
          min-height: 100vh;
       }
 
@@ -964,6 +1767,7 @@ import "../styles/style.css";
       .apps-section,
       .riddle-section,
       .summaries-section,
+      .prompty-section,
       .contact-section-wrapper {
          padding: var(--spacing-sm);
          min-height: 85vh;
@@ -982,6 +1786,7 @@ import "../styles/style.css";
       .apps-section,
       .riddle-section,
       .summaries-section,
+      .prompty-section,
       .contact-section-wrapper {
          min-height: 120vh;
          padding: var(--spacing-md) var(--spacing-sm);
@@ -989,7 +1794,8 @@ import "../styles/style.css";
       }
 
       .hero-section {
-         padding-top: 4rem;
+         /* ランドスケープでも最小限のpadding */
+         padding-top: var(--spacing-sm);
       }
 
       .contact-section-wrapper {
@@ -1016,6 +1822,7 @@ import "../styles/style.css";
       .apps-section,
       .riddle-section,
       .summaries-section,
+      .prompty-section,
       .contact-section-wrapper {
          -webkit-overflow-scrolling: touch;
          height: auto;

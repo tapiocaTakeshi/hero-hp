@@ -3,104 +3,606 @@ import "../styles/style.css";
 ---
 <header class="header">
   <div class="logo">
-    <a href="/">
+    <a href="/" aria-label="Hero HP ホームページ">
       <img class="icon" src="He-ro_icon.png" alt="Hero Logo" />
     </a>
   </div>
+  
+  <!-- Desktop Navigation -->
+  <nav class="desktop-nav" id="desktop-nav" aria-label="メインナビゲーション">
+    <ul class="desktop-nav-list">
+      <li><a href="/" class="desktop-nav-link" data-page="home">Home</a></li>
+      <li><a href="/riddle" class="desktop-nav-link" data-page="riddle">Riddle</a></li>
+      <li><a href="/prompty" class="desktop-nav-link" data-page="prompty">Prompty</a></li>
+      <li><a href="/summaries_app_description" class="desktop-nav-link" data-page="summaries">Summaries</a></li>
+      <li><a href="/contact" class="desktop-nav-link" data-page="contact">Contact</a></li>
+    </ul>
+  </nav>
+  
+  <!-- Mobile Hamburger Menu -->
+  <button class="hamburger-menu" id="hamburger-menu" aria-label="メニューを開く" aria-expanded="false">
+    <span class="hamburger-line"></span>
+    <span class="hamburger-line"></span>
+    <span class="hamburger-line"></span>
+  </button>
+  
+  <!-- Mobile Navigation Menu -->
+  <nav class="nav-menu" id="nav-menu" aria-label="モバイルナビゲーション">
+    <div class="nav-overlay" id="nav-overlay"></div>
+    <div class="nav-content">
+      <button class="nav-close" id="nav-close" aria-label="メニューを閉じる">×</button>
+      <ul class="nav-list">
+        <li><a href="/" class="nav-link" data-page="home">Home</a></li>
+        <li><a href="/riddle" class="nav-link" data-page="riddle">Riddle</a></li>
+        <li><a href="/prompty" class="nav-link" data-page="prompty">Prompty</a></li>
+        <li><a href="/summaries_app_description" class="nav-link" data-page="summaries">Summaries</a></li>
+        <li><a href="/contact" class="nav-link" data-page="contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
 </header>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const hamburgerMenu = document.getElementById('hamburger-menu');
+    const navMenu = document.getElementById('nav-menu');
+    const navClose = document.getElementById('nav-close');
+    const navOverlay = document.getElementById('nav-overlay');
+    const desktopNav = document.getElementById('desktop-nav');
+    const header = document.querySelector('.header');
+    
+    if (!hamburgerMenu || !navMenu || !navClose || !navOverlay) return;
+    
+    // 動的ヘッダー高さ検出とボディpadding調整
+    function adjustForFixedHeader() {
+      if (!header) return;
+      
+      const headerElement = header as HTMLElement;
+      const headerHeight = headerElement.offsetHeight;
+      const body = document.body;
+      
+      // 現在の画面サイズに応じて適切なpadding値を設定
+      let paddingValue = headerHeight + 20; // 20pxのバッファ
+      
+      // モバイル端末での追加調整
+      if (window.innerWidth <= 768) {
+        paddingValue = headerHeight + 10;
+      }
+      if (window.innerWidth <= 480) {
+        paddingValue = headerHeight + 5;
+      }
+      
+      body.style.paddingTop = `${paddingValue}px`;
+      
+      // デバッグ情報をコンソールに出力
+      console.log('Header height adjustment:', {
+        headerHeight,
+        windowWidth: window.innerWidth,
+        appliedPadding: paddingValue
+      });
+    }
+    
+    // スクロール位置修正システム
+    function ensureProperScrollBehavior() {
+      // html要素とbody要素のスクロール設定を確実に有効化
+      const html = document.documentElement;
+      const body = document.body;
+      
+      html.style.overflow = 'auto';
+      html.style.overflowX = 'hidden';
+      html.style.scrollBehavior = 'smooth';
+      html.style.height = 'auto';
+      html.style.minHeight = '100vh';
+      
+      body.style.overflow = 'auto';
+      body.style.overflowX = 'hidden';
+      body.style.height = 'auto';
+      body.style.minHeight = '100vh';
+      body.style.position = 'relative';
+      
+      // 最上部スクロール確保
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'instant'
+      });
+    }
+    
+    // 初期設定
+    adjustForFixedHeader();
+    ensureProperScrollBehavior();
+    
+    // リサイズイベントでheader高さを再計算
+    let resizeTimeout: ReturnType<typeof setTimeout> | undefined = undefined;
+    window.addEventListener('resize', function() {
+      if (resizeTimeout) clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(() => {
+        adjustForFixedHeader();
+        ensureProperScrollBehavior();
+      }, 100);
+    });
+    
+    // ページ読み込み完了後に再度調整
+    window.addEventListener('load', function() {
+      setTimeout(() => {
+        adjustForFixedHeader();
+        ensureProperScrollBehavior();
+      }, 200);
+    });
+    
+    // Mobile menu functions
+    function openMenu() {
+      navMenu?.classList.add('active');
+      hamburgerMenu?.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden';
+      
+      // Focus management for accessibility
+      const firstLink = navMenu?.querySelector('.nav-link');
+      if (firstLink && 'focus' in firstLink) {
+        (firstLink as HTMLElement).focus();
+      }
+    }
+    
+    function closeMenu() {
+      navMenu?.classList.remove('active');
+      hamburgerMenu?.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+      
+      // Return focus to hamburger menu
+      if (hamburgerMenu && 'focus' in hamburgerMenu) {
+        hamburgerMenu.focus();
+      }
+    }
+    
+    // Event listeners for mobile menu
+    hamburgerMenu.addEventListener('click', openMenu);
+    navClose.addEventListener('click', closeMenu);
+    navOverlay.addEventListener('click', closeMenu);
+    
+    // Close menu when clicking on a nav link
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+      link.addEventListener('click', closeMenu);
+    });
+    
+    // Close menu on escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && navMenu?.classList.contains('active')) {
+        closeMenu();
+      }
+    });
+    
+    // Active page highlighting
+    function setActiveNav() {
+      const currentPath = window.location.pathname;
+      
+      // Remove active class from all links
+      document.querySelectorAll('.desktop-nav-link, .nav-link').forEach(link => {
+        link.classList.remove('active');
+      });
+      
+      // Add active class to current page links
+      const currentPageLinks = document.querySelectorAll(`[href="${currentPath}"]`);
+      currentPageLinks.forEach(link => {
+        link.classList.add('active');
+      });
+      
+      // Handle home page special case
+      if (currentPath === '/' || currentPath === '') {
+        const homeLinks = document.querySelectorAll('[data-page="home"]');
+        homeLinks.forEach(link => link.classList.add('active'));
+      }
+    }
+    
+    // Responsive navigation visibility
+    function updateNavVisibility() {
+      const isMobile = window.innerWidth <= 1024;
+      
+      if (desktopNav && hamburgerMenu) {
+        if (isMobile) {
+          desktopNav.style.display = 'none';
+          hamburgerMenu.style.display = 'flex';
+        } else {
+          desktopNav.style.display = 'flex';
+          hamburgerMenu.style.display = 'none';
+          // Close mobile menu if open
+          if (navMenu?.classList.contains('active')) {
+            closeMenu();
+          }
+        }
+      }
+    }
+    
+    // Initialize
+    setActiveNav();
+    updateNavVisibility();
+    
+    // Update on resize
+    window.addEventListener('resize', updateNavVisibility);
+    
+    // Update on navigation (for SPAs)
+    window.addEventListener('popstate', setActiveNav);
+    
+    // For Astro view transitions
+    document.addEventListener('astro:page-load', () => {
+      setActiveNav();
+      updateNavVisibility();
+      // Astroページ遷移時にもheader高さ調整を実行
+      setTimeout(() => {
+        adjustForFixedHeader();
+        ensureProperScrollBehavior();
+      }, 100);
+    });
+    
+    // オリエンテーション変更時の対応
+    window.addEventListener('orientationchange', function() {
+      setTimeout(() => {
+        adjustForFixedHeader();
+        ensureProperScrollBehavior();
+      }, 300);
+    });
+  });
+</script>
 
 <style>
     .header {
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
         background: linear-gradient(135deg,
-            rgba(255, 255, 255, 0.25) 0%,
-            rgba(255, 255, 255, 0.15) 50%,
-            rgba(255, 255, 255, 0.25) 100%);
-        padding: 1.5rem 2rem;
+            rgba(255, 255, 255, 0.95) 0%,
+            rgba(248, 248, 248, 0.9) 50%,
+            rgba(255, 255, 255, 0.95) 100%);
+        padding: 1rem 2.5rem;
         width: 100%;
         position: fixed;
         top: 0;
         left: 0;
         z-index: 1000;
-        backdrop-filter: blur(25px);
-        -webkit-backdrop-filter: blur(25px);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        box-shadow:
-            0 4px 16px rgba(0, 0, 0, 0.1),
-            0 1px 0 rgba(255, 255, 255, 0.3) inset;
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06);
+        min-height: 70px;
     }
     
     .header:hover {
         background: linear-gradient(135deg,
-            rgba(255, 255, 255, 0.35) 0%,
-            rgba(255, 255, 255, 0.25) 50%,
-            rgba(255, 255, 255, 0.35) 100%);
-        box-shadow:
-            0 6px 24px rgba(0, 0, 0, 0.12),
-            0 1px 0 rgba(255, 255, 255, 0.4) inset;
+            rgba(255, 255, 255, 0.98) 0%,
+            rgba(250, 250, 250, 0.95) 50%,
+            rgba(255, 255, 255, 0.98) 100%);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+        border-bottom-color: rgba(0, 0, 0, 0.12);
     }
     
     .logo {
         display: flex;
         align-items: center;
-        transition: all 0.4s ease;
-        padding: 8px;
-        border-radius: 16px;
+        transition: all 0.3s ease;
+        padding: 10px 16px;
+        border-radius: 12px;
         background: linear-gradient(135deg,
-            rgba(255, 255, 255, 0.2) 0%,
-            rgba(255, 255, 255, 0.05) 100%);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        box-shadow:
-            0 2px 8px rgba(0, 0, 0, 0.08),
-            0 1px 0 rgba(255, 255, 255, 0.2) inset;
+            rgba(0, 0, 0, 0.02) 0%,
+            rgba(0, 0, 0, 0.01) 100%);
+        border: 1px solid rgba(0, 0, 0, 0.06);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
     }
     
     .logo:hover {
-        transform: translateY(-2px) scale(1.02);
+        transform: translateY(-1px) scale(1.02);
         background: linear-gradient(135deg,
-            rgba(255, 255, 255, 0.3) 0%,
-            rgba(255, 255, 255, 0.1) 100%);
-        box-shadow:
-            0 4px 16px rgba(0, 0, 0, 0.12),
-            0 1px 0 rgba(255, 255, 255, 0.3) inset;
+            rgba(0, 0, 0, 0.04) 0%,
+            rgba(0, 0, 0, 0.02) 100%);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        border-color: rgba(0, 0, 0, 0.1);
     }
     
     .icon {
-        width: 48px;
+        width: 42px;
         height: auto;
-        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.15));
-        border-radius: 8px;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.1));
+        border-radius: 6px;
     }
     
     .logo:hover .icon {
-        transform: scale(1.05) rotateY(5deg);
-        filter: drop-shadow(0 4px 16px rgba(0, 0, 0, 0.2));
+        transform: scale(1.05);
+        filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.15));
     }
     
+    /* Desktop Navigation */
+    .desktop-nav {
+        display: none;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .desktop-nav-list {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .desktop-nav-link {
+        display: flex;
+        align-items: center;
+        padding: 0.75rem 1.5rem;
+        color: #2c2c2c;
+        text-decoration: none;
+        font-size: 0.95rem;
+        font-weight: 500;
+        border-radius: 8px;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        background: transparent;
+        border: 1px solid transparent;
+        position: relative;
+        min-height: 44px;
+        min-width: 44px;
+        text-align: center;
+    }
+
+    .desktop-nav-link::after {
+        content: '';
+        position: absolute;
+        bottom: -1px;
+        left: 50%;
+        width: 0;
+        height: 2px;
+        background: linear-gradient(90deg, #2c2c2c, #666);
+        transition: all 0.3s ease;
+        transform: translateX(-50%);
+    }
+
+    .desktop-nav-link:hover {
+        transform: translateY(-1px);
+        background: rgba(0, 0, 0, 0.04);
+        color: #000;
+        border-color: rgba(0, 0, 0, 0.08);
+    }
+
+    .desktop-nav-link:hover::after {
+        width: 80%;
+    }
+
+    .desktop-nav-link:focus-visible {
+        outline: 2px solid #2c2c2c;
+        outline-offset: 2px;
+    }
+
+    .desktop-nav-link.active {
+        background: rgba(0, 0, 0, 0.06);
+        color: #000;
+        border-color: rgba(0, 0, 0, 0.1);
+        font-weight: 600;
+    }
+
+    .desktop-nav-link.active::after {
+        width: 100%;
+    }
+
+    /* Hamburger Menu Styles - Hidden on desktop */
+    .hamburger-menu {
+        display: none;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 44px;
+        height: 44px;
+        background: transparent;
+        border: none;
+        padding: 8px;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        background: rgba(0, 0, 0, 0.02);
+        border: 1px solid rgba(0, 0, 0, 0.06);
+        cursor: pointer;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    }
+
+    .hamburger-menu:focus-visible {
+        outline: 2px solid #2c2c2c;
+        outline-offset: 2px;
+    }
+    
+    .hamburger-menu:hover {
+        transform: scale(1.05);
+        background: rgba(0, 0, 0, 0.04);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        border-color: rgba(0, 0, 0, 0.1);
+    }
+    
+    .hamburger-line {
+        width: 20px;
+        height: 2px;
+        background: #2c2c2c;
+        border-radius: 1px;
+        transition: all 0.3s ease;
+    }
+    
+    /* Navigation Menu Styles */
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100vh;
+        z-index: 2000;
+        transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .nav-menu.active {
+        right: 0;
+    }
+    
+    .nav-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+    }
+    
+    .nav-content {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 320px;
+        height: 100%;
+        background: linear-gradient(135deg,
+            rgba(255, 255, 255, 0.98) 0%,
+            rgba(250, 250, 250, 0.96) 100%);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-left: 1px solid rgba(0, 0, 0, 0.08);
+        box-shadow: -4px 0 20px rgba(0, 0, 0, 0.1);
+        padding: 2rem;
+        overflow-y: auto;
+    }
+    
+    .nav-close {
+        position: absolute;
+        top: 1.5rem;
+        right: 1.5rem;
+        width: 40px;
+        height: 40px;
+        background: linear-gradient(135deg,
+            rgba(255, 255, 255, 0.3) 0%,
+            rgba(255, 255, 255, 0.1) 100%);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        color: #333;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+    }
+    
+    .nav-close:hover {
+        transform: scale(1.1);
+        background: linear-gradient(135deg,
+            rgba(255, 255, 255, 0.4) 0%,
+            rgba(255, 255, 255, 0.2) 100%);
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    }
+    
+    .nav-list {
+        list-style: none;
+        padding: 0;
+        margin: 4rem 0 0 0;
+    }
+    
+    .nav-list li {
+        margin-bottom: 1rem;
+    }
+    
+    .nav-link {
+        display: block;
+        padding: 1rem 1.5rem;
+        color: #2c2c2c;
+        text-decoration: none;
+        font-size: 1.1rem;
+        font-weight: 500;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        background: transparent;
+        border: 1px solid transparent;
+        margin-bottom: 0.5rem;
+    }
+    
+    .nav-link:hover {
+        transform: translateX(6px);
+        background: rgba(0, 0, 0, 0.04);
+        color: #000;
+        border-color: rgba(0, 0, 0, 0.08);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    }
+
     /* Responsive styles */
+    @media (min-width: 1025px) {
+        .desktop-nav {
+            display: flex !important;
+        }
+        
+        .hamburger-menu {
+            display: none !important;
+        }
+        
+        .header {
+            justify-content: space-between;
+            gap: 2rem;
+        }
+    }
+    
+    @media (max-width: 1024px) {
+        .desktop-nav {
+            display: none !important;
+        }
+        
+        .hamburger-menu {
+            display: flex !important;
+        }
+        
+        .header {
+            justify-content: space-between;
+        }
+    }
+    
     @media (max-width: 768px) {
         .header {
-            padding: 1.2rem 1.5rem;
+            padding: 1rem 1.5rem;
+            min-height: 60px;
+        }
+        
+        .logo {
+            padding: 8px 12px;
         }
         
         .icon {
-            width: 42px;
+            width: 36px;
+        }
+        
+        .nav-content {
+            width: 280px;
         }
     }
     
     @media (max-width: 480px) {
         .header {
-            padding: 1rem;
+            padding: 0.75rem 1rem;
+            min-height: 55px;
+        }
+        
+        .logo {
+            padding: 6px 10px;
         }
         
         .icon {
-            width: 38px;
+            width: 32px;
+        }
+        
+        .nav-content {
+            width: 100%;
+        }
+        
+        .hamburger-menu {
+            width: 40px;
+            height: 40px;
+        }
+        
+        .hamburger-line {
+            width: 18px;
         }
     }
+
 </style>
