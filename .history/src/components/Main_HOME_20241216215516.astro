@@ -1,0 +1,192 @@
+---
+import "../styles/style.css";
+import { ViewTransitions } from "astro:transitions";
+---
+
+<head>
+   <ViewTransitions />
+</head>
+
+<style>
+   .hero-section {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+      color: white;
+      position: relative;
+      overflow: hidden;
+   }
+
+   .hero-text {
+      font-size: 3rem;
+      font-family: 'Arial', sans-serif;
+      font-weight: bold;
+      text-align: center;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 1s ease forwards;
+   }
+
+   .hero-subtext {
+      font-size: 3rem;
+      font-family: 'Arial', sans-serif;
+      margin-top: 1rem;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s ease 0.3s forwards;
+   }
+
+   @keyframes fadeInUp {
+      to {
+         opacity: 1;
+         transform: translateY(0);
+      }
+   }
+
+   .apps-section {
+      min-height: 100vh;
+      background: #f8f9fa;
+      padding: 4rem 2rem;
+   }
+
+   .apps-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 3rem;
+      padding: 2rem;
+      justify-items: center;
+   }
+
+   .app-card {
+      background: white;
+      border-radius: 20px;
+      padding: 2.5rem;
+      text-align: center;
+      transition: all 0.3s ease;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      max-width: 400px;
+      text-decoration: none;
+      color: inherit;
+   }
+
+   .app-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+      background: linear-gradient(to bottom right, #ffffff, #f8f9fa);
+   }
+
+   .app-icon-wrapper {
+      width: 150px;
+      height: 150px;
+      margin: 0 auto 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      border-radius: 15px;
+      background: #f8f9fa;
+      padding: 1rem;
+   }
+
+   .app-icon {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      transition: transform 0.3s ease;
+   }
+
+   .app-icon:hover {
+      transform: scale(1.05);
+   }
+
+   .floating-shapes {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+   }
+
+   .shape {
+      position: absolute;
+      background: linear-gradient(45deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
+      border-radius: 50%;
+      filter: blur(40px);
+   }
+
+   @media (max-width: 768px) {
+      .hero-text {
+         font-size: 2rem;
+      }
+
+      .hero-subtext {
+         font-size: 2rem;
+      }
+   }
+
+   .app-section {
+      text-align: center;
+      margin: 2rem 0;
+   }
+</style>
+
+<main>
+   <section class="hero-section">
+      <div class="floating-shapes">
+         <div class="shape" style="width: 300px; height: 300px; top: 20%; left: 10%;"></div>
+         <div class="shape" style="width: 200px; height: 200px; top: 60%; right: 15%;"></div>
+         <div class="shape" style="width: 150px; height: 150px; top: 30%; right: 25%;"></div>
+      </div>
+      
+      <div class="hero-content">
+         <h1 class="hero-text">Believe in Yourself</h1>
+         <p class="hero-subtext">Change Yourself</p>
+      </div>
+   </section>
+
+   <section class="apps-section">
+      <div class="apps-container">
+         <a href="/riddle" class="app-card">
+            <div class="app-icon-wrapper">
+               <img
+                  transition:name="riddle"
+                  transition:persist="true"
+                  src="RiddleIcon-192x192.png"
+                  alt="Riddle App"
+                  class="app-icon"
+               />
+            </div>
+            <h2 class="text-2xl font-bold mb-2">Riddle</h2>
+            <p class="text-gray-600">
+               謎解きの世界へようこそ
+            </p>
+         </a>
+
+         <a href="/rpai" class="app-card">
+            <div class="app-icon-wrapper">
+               <img
+                  transition:name="rpai"
+                  transition:persist="true"
+                  src="RPAiIcon-192x192.png"
+                  alt="RPAi App"
+                  class="app-icon"
+               />
+            </div>
+            <h2 class="text-2xl font-bold mb-2">RPAi</h2>
+            <p class="text-gray-600">
+               AIによる業務自動化ソリューション
+            </p>
+         </a>
+      </div>
+   </section>
+</main>

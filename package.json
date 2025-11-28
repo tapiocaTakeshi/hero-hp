@@ -5,9 +5,10 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "node --max-old-space-size=8192 ./node_modules/.bin/astro build",
+    "build": "astro check && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "emulate": "firebase emulators:start"
   },
   "dependencies": {
     "@astrojs/check": "^0.5.7",
@@ -19,9 +20,8 @@
     "@lottiefiles/lottie-player": "^2.0.4",
     "@types/react": "^18.2.37",
     "@types/react-dom": "^18.2.15",
-    "astro": "^4.5.16",
     "astro-bootstrap": "^0.6.2",
-    "astro-integration-lottie": "^0.2.3",
+    "astro-integration-lottie": "^0.3.1",
     "firebase": "^10.10.0",
     "lottie-react": "^2.4.0",
     "lottie-web": "^5.12.2",
@@ -29,8 +29,5 @@
     "react-dom": "^18.2.0",
     "tailwindcss": "^3.4.1",
     "typescript": "^5.4.2"
-  },
-  "devDependencies": {
-    "@astrojs/partytown": "^2.1.4"
   }
 }

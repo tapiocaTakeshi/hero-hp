@@ -1,0 +1,33 @@
+[debug] [2025-01-23T14:00:31.570Z] ----------------------------------------------------------------------
+[debug] [2025-01-23T14:00:31.570Z] Command:       /Users/yuyahiguchi/.nvm/versions/node/v18.20.4/bin/node /Users/yuyahiguchi/.npm-global/bin/firebase deploy --only hosting
+[debug] [2025-01-23T14:00:31.571Z] CLI Version:   12.4.0
+[debug] [2025-01-23T14:00:31.571Z] Platform:      darwin
+[debug] [2025-01-23T14:00:31.571Z] Node Version:  v18.20.4
+[debug] [2025-01-23T14:00:31.575Z] Time:          Thu Jan 23 2025 23:00:31 GMT+0900 (日本標準時)
+[debug] [2025-01-23T14:00:31.575Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-01-23T14:00:31.605Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-01-23T14:00:31.606Z] > authorizing via signed-in user (higuchiyuya.riddle@gmail.com)
+[debug] [2025-01-23T14:00:31.606Z] [iam] checking project hero-hp for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2025-01-23T14:00:31.607Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/hero-hp:testIamPermissions [none]
+[debug] [2025-01-23T14:00:31.607Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/hero-hp:testIamPermissions x-goog-quota-user=projects/hero-hp
+[debug] [2025-01-23T14:00:31.607Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/hero-hp:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-01-23T14:00:32.418Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/hero-hp:testIamPermissions 200
+[debug] [2025-01-23T14:00:32.418Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/hero-hp:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-01-23T14:00:32.419Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/hero-hp [none]
+[debug] [2025-01-23T14:00:32.927Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/hero-hp 200
+[debug] [2025-01-23T14:00:32.928Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/hero-hp {"projectId":"hero-hp","projectNumber":"107445154622","displayName":"hero-hp","name":"projects/hero-hp","resources":{"hostingSite":"hero-hp","storageBucket":"hero-hp.appspot.com","locationId":"us-central"},"state":"ACTIVE","etag":"1_b0738235-9831-4793-ba53-7763889d0d68"}
+[debug] [2025-01-23T14:00:34.149Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/hero-hp/sites pageToken=&pageSize=10
+[debug] [2025-01-23T14:00:35.185Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/hero-hp/sites 200
+[debug] [2025-01-23T14:00:35.186Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/hero-hp/sites {"sites":[{"name":"projects/hero-hp/sites/hero-hp","defaultUrl":"https://hero-hp.web.app","appId":"1:107445154622:web:3de070cccd3489fdd0726f","type":"DEFAULT_SITE"}]}
+[debug] [2025-01-23T14:00:35.186Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:107445154622:web:3de070cccd3489fdd0726f/config [none]
+[debug] [2025-01-23T14:00:36.411Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:107445154622:web:3de070cccd3489fdd0726f/config 200
+[debug] [2025-01-23T14:00:36.411Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:107445154622:web:3de070cccd3489fdd0726f/config {"projectId":"hero-hp","appId":"1:107445154622:web:3de070cccd3489fdd0726f","storageBucket":"hero-hp.firebasestorage.app","locationId":"us-central","apiKey":"AIzaSyBVkGLBIPj9LY835sT1CzpP_0mZ2ec8e7c","authDomain":"hero-hp.firebaseapp.com","messagingSenderId":"107445154622","measurementId":"G-8NV5FBEM5Z"}
+[debug] [2025-01-23T14:00:37.408Z] TypeError: openConfig is not a function
+    at getConfig (/Users/yuyahiguchi/.npm-global/lib/node_modules/firebase-tools/lib/frameworks/astro/utils.js:14:43)
+    at async discover (/Users/yuyahiguchi/.npm-global/lib/node_modules/firebase-tools/lib/frameworks/astro/index.js:22:52)
+    at async discover (/Users/yuyahiguchi/.npm-global/lib/node_modules/firebase-tools/lib/frameworks/index.js:45:32)
+    at async prepareFrameworks (/Users/yuyahiguchi/.npm-global/lib/node_modules/firebase-tools/lib/frameworks/index.js:183:25)
+    at async deploy (/Users/yuyahiguchi/.npm-global/lib/node_modules/firebase-tools/lib/deploy/index.js:55:13)
+[error] 
+[error] Error: An unexpected error has occurred.

@@ -1,4 +1,5 @@
 ---
+<<<<<<< HEAD
 // src/components/Main_RIDDLE.astro
 ---
 <main class="app-page">
@@ -91,6 +92,156 @@
       </div>
     </div>
   </section>
+=======
+import "../styles/style.css";
+---
+
+<style>
+   .hero-section {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #f9fafb, #e2e8f0);
+      min-height: calc(100vh - 64px); /* ヘッダーの高さを考慮 */
+      padding: 40px 20px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: fadeIn 1s ease-in-out;
+   }
+
+   .hero-content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+   }
+
+   .hero-logo {
+      width: 150px;
+      height: 150px;
+      margin-bottom: 30px;
+      object-fit: contain;
+      transition: transform 0.3s ease;
+   }
+
+   .hero-logo:hover {
+      transform: scale(1.05);
+   }
+
+   .hero-title {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 20px;
+      animation: textFadeIn 2s ease-in-out;
+   }
+
+   .hero-description {
+      font-size: 1.25rem;
+      color: #555;
+      margin-bottom: 30px;
+      line-height: 1.6;
+   }
+
+   .install-link {
+      display: inline-block;
+      padding: 15px 30px;
+      background-color: #5433FF;
+      color: white;
+      font-weight: bold;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      margin-bottom: 30px;
+   }
+
+   .install-link:hover {
+      background-color: #3a1dff;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(84, 51, 255, 0.3);
+   }
+
+   .footer-links {
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 1px solid #eee;
+   }
+
+   .footer-links a {
+      color: #5433FF;
+      margin: 0 15px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.3s ease;
+   }
+
+   .footer-links a:hover {
+      color: #3a1dff;
+      text-decoration: underline;
+   }
+
+   @keyframes fadeIn {
+      from { 
+         opacity: 0; 
+         transform: translateY(20px); 
+      }
+      to { 
+         opacity: 1; 
+         transform: translateY(0); 
+      }
+   }
+
+   @keyframes textFadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+   }
+
+   @media (max-width: 768px) {
+      .hero-title {
+         font-size: 2rem;
+      }
+
+      .hero-description {
+         font-size: 1.1rem;
+      }
+
+      .hero-content {
+         padding: 20px;
+      }
+   }
+</style>
+
+<main>
+   <section class="hero-section">
+      <div class="hero-content">
+         <img 
+            transition:name="riddle"
+            src="RiddleIcon_splash.png" 
+            alt="Riddle Logo" 
+            class="hero-logo" 
+         />
+         <h1 class="hero-title">Riddle</h1>
+         <p class="hero-description">
+            謎解きの世界へようこそ。<br>
+            あなたの知識を試し、世界中の人々と共有しましょう。
+         </p>
+         <a 
+            href="https://riddle.app.link/3gWco6ifMMb" 
+            class="install-link"
+            target="_blank"
+            rel="noopener noreferrer"
+         >
+            今すぐインストール
+         </a>
+         <div class="footer-links">
+            <a href="/privacypolicy_riddle">プライバシーポリシー</a>
+            <a href="/specialcommercialtransactionlaw_riddle">特定商取引法に基づく表記</a>
+         </div>
+      </div>
+   </section>
+>>>>>>> b7e993ae22ff520728b72cfd0a0ada13a273d8bc
 </main>
 
 <style>
