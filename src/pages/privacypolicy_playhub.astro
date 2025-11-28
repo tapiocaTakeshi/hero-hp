@@ -1,0 +1,32 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Main_PP_PLAYHUB from "../components/Main_PP_PLAYHUB.astro";
+import { ViewTransitions } from "astro:transitions";
+---
+
+<MainLayout
+  title="PlayHub - プライバシーポリシー"
+  lang="ja"
+  bodyClass="dark:bg-gray-900"
+  bodyStyle="background-color:#fff;text-align:center;overflow-y:scroll;"
+>
+  <Fragment slot="head">
+    <ViewTransitions />
+    <link rel="icon" href="/Hero/favicon.ico" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <style>
+      body {
+        padding-top: 5rem;
+      }
+      @media (max-width: 767px) {
+        body {
+          padding-top: 4rem;
+        }
+      }
+    </style>
+  </Fragment>
+  <Main_PP_PLAYHUB />
+</MainLayout>

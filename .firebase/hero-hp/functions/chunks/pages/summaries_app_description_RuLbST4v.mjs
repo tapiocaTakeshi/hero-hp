@@ -1,0 +1,26 @@
+/* empty css                            */
+import { c as createAstro, d as createComponent, r as renderTemplate, m as maybeRenderHead, h as renderComponent } from '../astro_Bq-bemsL.mjs';
+import 'kleur/colors';
+import 'html-escaper';
+import { $ as $$MainLayout } from './contact_BrsQFEs5.mjs';
+import 'clsx';
+/* empty css                                              */
+
+const $$Astro$1 = createAstro();
+const $$MainSUMMARIES = createComponent(async ($$result, $$props, $$slots) => {
+  const Astro2 = $$result.createAstro($$Astro$1, $$props, $$slots);
+  Astro2.self = $$MainSUMMARIES;
+  return renderTemplate`${maybeRenderHead()}<main class="app-page" data-astro-cid-djcj2xpp> <section class="section hero" id="overview" data-astro-cid-djcj2xpp> <div class="hero-grid" data-astro-cid-djcj2xpp> <div class="hero-copy" data-astro-cid-djcj2xpp> <span class="hero-eyebrow" data-astro-cid-djcj2xpp>要約✖️SNSプラットフォーム</span> <h1 class="hero-title" data-astro-cid-djcj2xpp>Summaries</h1> <p class="hero-subtitle" data-astro-cid-djcj2xpp>要約✖️SNSで、情報の本質を素早く把握して仲間と共有。長文をAIが要約し、チームで気づきを交換できる新しいナレッジ体験です。</p> <div class="hero-meta" data-astro-cid-djcj2xpp> <span class="meta-chip" data-astro-cid-djcj2xpp>要約✖️SNS</span> <span class="meta-chip" data-astro-cid-djcj2xpp>ナレッジ共有</span> <span class="meta-chip" data-astro-cid-djcj2xpp>チーム連携</span> </div> <div class="hero-actions" data-astro-cid-djcj2xpp> <a href="#features" class="primary-action" data-astro-cid-djcj2xpp>主な機能を見る</a> <a href="/contact" class="ghost-action" data-astro-cid-djcj2xpp>導入について相談</a> </div> </div> <div class="hero-visual" aria-hidden="true" data-astro-cid-djcj2xpp> <div class="glass-panel" data-astro-cid-djcj2xpp> <div class="panel-accent" data-astro-cid-djcj2xpp></div> <img src="/SummariesLogo.png" alt="Summaries app visual" class="hero-image" data-astro-cid-djcj2xpp> </div> </div> </div> </section> <section class="section" id="features" data-astro-cid-djcj2xpp> <div class="section-header" data-astro-cid-djcj2xpp> <h2 data-astro-cid-djcj2xpp>Summariesでできること</h2> <p data-astro-cid-djcj2xpp>膨大な情報を扱うワークフローをシンプルに。必要な情報だけを抽出し、理解と意思決定のスピードを高めます。</p> </div> <div class="feature-grid" data-astro-cid-djcj2xpp> <article class="feature-card" data-astro-cid-djcj2xpp> <span class="feature-icon" data-astro-cid-djcj2xpp>📚</span> <h3 data-astro-cid-djcj2xpp>高度なAI要約エンジン</h3> <p data-astro-cid-djcj2xpp>長文記事やドキュメントから、重要なポイントを自動抽出。読み手が理解しやすい構造で提示します。</p> </article> <article class="feature-card" data-astro-cid-djcj2xpp> <span class="feature-icon" data-astro-cid-djcj2xpp>⚡</span> <h3 data-astro-cid-djcj2xpp>高速処理</h3> <p data-astro-cid-djcj2xpp>多数の資料も短時間で要約。作業時間を大幅に削減し、次のアクションに素早く移れます。</p> </article> <article class="feature-card" data-astro-cid-djcj2xpp> <span class="feature-icon" data-astro-cid-djcj2xpp>🎯</span> <h3 data-astro-cid-djcj2xpp>カスタム要約</h3> <p data-astro-cid-djcj2xpp>要約の長さや視点を調整し、目的に合わせたアウトプットを生成。チームで共有しやすい形式で保存できます。</p> </article> <article class="feature-card" data-astro-cid-djcj2xpp> <span class="feature-icon" data-astro-cid-djcj2xpp>🌐</span> <h3 data-astro-cid-djcj2xpp>共有タイムライン</h3> <p data-astro-cid-djcj2xpp>要約結果をSNSのように投稿してディスカッション。チームの知見がタイムライン上で蓄積されます。</p> </article> </div> </section> <section class="section highlight" id="workflow" data-astro-cid-djcj2xpp> <div class="plan-card" data-astro-cid-djcj2xpp> <div class="plan-badge" data-astro-cid-djcj2xpp>Summary ✖️ Social</div> <h2 data-astro-cid-djcj2xpp>情報インプットの負荷を減らす</h2> <p data-astro-cid-djcj2xpp>Summariesは、調査レポートや学習ノート、社内ナレッジを要約しながらSNS感覚で共有。理解のスピードを揃え、意思決定までの時間を短縮します。</p> <ul data-astro-cid-djcj2xpp> <li data-astro-cid-djcj2xpp>重要な要約とキーワードを自動でエクスポート</li> <li data-astro-cid-djcj2xpp>共有タイムラインで要約とコメントを同時に共有</li> <li data-astro-cid-djcj2xpp>学習ログとして蓄積し、後から参照</li> </ul> <div class="plan-actions" data-astro-cid-djcj2xpp> <a href="/contact" class="primary-action" data-astro-cid-djcj2xpp>導入を相談</a> <a href="/summaries_app_description" class="ghost-action" data-astro-cid-djcj2xpp>アプリの詳細へ</a> </div> </div> </section> <section class="section cta" data-astro-cid-djcj2xpp> <div class="cta-card" data-astro-cid-djcj2xpp> <h2 data-astro-cid-djcj2xpp>情報の海から、答えだけを受け取る</h2> <p data-astro-cid-djcj2xpp>Summariesがあれば、読むべき箇所が一目でわかります。情報の洪水に時間を奪われず、本当に大切な思考に集中しましょう。</p> <div class="cta-actions" data-astro-cid-djcj2xpp> <a href="/summaries_app_description" class="primary-action" data-astro-cid-djcj2xpp>詳細を見る</a> <a href="/contact" class="ghost-action" data-astro-cid-djcj2xpp>お問い合わせ</a> </div> </div> </section> </main> `;
+}, "/home/user/hero-hp/src/components/Main_SUMMARIES.astro", void 0);
+
+const $$Astro = createAstro();
+const $$SummariesAppDescription = createComponent(async ($$result, $$props, $$slots) => {
+  const Astro2 = $$result.createAstro($$Astro, $$props, $$slots);
+  Astro2.self = $$SummariesAppDescription;
+  return renderTemplate`${renderComponent($$result, "MainLayout", $$MainLayout, { "title": "Summaries - App Description", "lang": "en" }, { "default": ($$result2) => renderTemplate` ${renderComponent($$result2, "Main_SUMMARIES", $$MainSUMMARIES, {})} ` })}`;
+}, "/home/user/hero-hp/src/pages/summaries_app_description.astro", void 0);
+
+const $$file = "/home/user/hero-hp/src/pages/summaries_app_description.astro";
+const $$url = "/summaries_app_description";
+
+export { $$SummariesAppDescription as default, $$file as file, $$url as url };

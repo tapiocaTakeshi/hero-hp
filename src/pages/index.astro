@@ -1,47 +1,8 @@
 ---
-import Main_HOME from "../components/Main_HOME.astro";
-import Header from "../components/Header.astro";
-import "../styles/global.css";
-import { ViewTransitions } from "astro:transitions";
+import MainLayout from '../layouts/MainLayout.astro';
+import Main_HOME from '../components/Main_HOME.astro';
 ---
 
-<html lang="ja">
-	<head>
-		<ViewTransitions />
-		<script type="text/partytown" src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
-        <script type="text/partytown">
-            window.dataLayer = window.dataLayer || [];
-            function gtag() {
-                dataLayer.push(arguments);
-            }
-            gtag('js', new Date());
-            gtag('config', 'G-8NV5FBEM5Z');
-        </script>
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-		<link rel="icon" href="/Hero/favicon.ico" />
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Hero - Home</title>
-	</head>
-	<body>
-		<Header />
-		<Main_HOME />
-	</body>
-</html>
-
-<style>
-	body {
-		margin: 0;
-		padding: 0;
-		background: linear-gradient(135deg, #fafafa 0%, #ffffff 100%);
-		overflow-x: hidden;
-		font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-		-webkit-font-smoothing: antialiased;
-		-moz-osx-font-smoothing: grayscale;
-		color: #1a1a1a;
-		line-height: 1.7;
-	}
-</style>
+<MainLayout title="He-ro" lang="ja" variant="dark">
+	<Main_HOME />
+</MainLayout>

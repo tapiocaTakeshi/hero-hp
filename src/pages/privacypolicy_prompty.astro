@@ -1,17 +1,22 @@
 ---
-import Main_PP_PROMPTY from "../components/Main_PP_PROMPTY.astro"
-import Header from "../components/Header.astro";
+import MainLayout from "../layouts/MainLayout.astro";
+import Main_PP_PROMPTY from "../components/Main_PP_PROMPTY.astro";
 import { ViewTransitions } from "astro:transitions";
-
 ---
-<html lang="ja" >
-	<head>
-		<ViewTransitions />
-		<link rel="icon" href="/Prompty/icon_removebg-preview.png">
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-		<meta name="generator" content={Astro.generator} />
-		<title>Prompty - プライバシーポリシー</title>
+
+<MainLayout
+  title="Prompty - プライバシーポリシー"
+  lang="ja"
+  bodyClass="dark:bg-gray-900"
+  bodyStyle="background-color:#ffff;text-align:center;overflow-y:scroll;"
+>
+  <Fragment slot="head">
+    <ViewTransitions />
+    <link rel="icon" href="/Prompty/icon_removebg-preview.png" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"
+    />
     <style>
       body {
         padding-top: 5rem;
@@ -22,9 +27,6 @@ import { ViewTransitions } from "astro:transitions";
         }
       }
     </style>
-	</head>
-  <body style="background-color:#ffff;text-align:center;overflow-y:scroll;" class="dark:bg-gray-900">
-  <Header />
-  <Main_PP_PROMPTY/>
- </body>
-</html>
+  </Fragment>
+  <Main_PP_PROMPTY />
+</MainLayout>

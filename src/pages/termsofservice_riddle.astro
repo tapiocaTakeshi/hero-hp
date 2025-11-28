@@ -1,19 +1,19 @@
 ---
-import Main_TOS_RIDDLE from "../components/Main_TOS_RIDDLE.astro"
-import Header from "../components/Header.astro";
-
-
+import MainLayout from "../layouts/MainLayout.astro";
+import Main_TOS_RIDDLE from "../components/Main_TOS_RIDDLE.astro";
 ---
-<html lang="ja">
-	<head>
-		<link rel="icon" href="/Riddle/favicon.ico">
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-		<meta name="generator" content={Astro.generator} />
-		<title>Terms of Service - Riddle</title>
-	</head>
-	<body style=" background-color:#ffff;text-align:center;overflow:scroll;">
-		<Header/>
-		<Main_TOS_RIDDLE/>
-	</body>
-</html>
+
+<MainLayout
+  title="Terms of Service - Riddle"
+  lang="ja"
+  bodyStyle="background-color:#ffff;text-align:center;overflow:scroll;"
+>
+  <Fragment slot="head">
+    <link rel="icon" href="/Riddle/favicon.ico" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"
+    />
+  </Fragment>
+  <Main_TOS_RIDDLE />
+</MainLayout>

@@ -1,250 +1,514 @@
 ---
 // src/components/Main_PROMPTY.astro
-import ViewTransitions from "astro/components/ViewTransitions.astro";
-import "../styles/style.css"; 
 ---
-
-<head>
-   <ViewTransitions />
-</head>
-<main class="min-h-screen" style="background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(240, 248, 255, 0.15) 25%, rgba(248, 250, 252, 0.1) 50%, rgba(255, 255, 255, 0.15) 75%, rgba(240, 248, 255, 0.1) 100%); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);">
-   <!-- Hero Section -->
-   <section class="relative overflow-hidden">
-      <div class="container mx-auto px-4 py-12 lg:py-20">
-         <div class="text-center mb-8" style="background: linear-gradient(135deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.25) 100%); backdrop-filter: blur(30px); -webkit-backdrop-filter: blur(30px); border-radius: 32px; padding: 3rem 2rem; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1), 0 1px 0 rgba(255, 255, 255, 0.4) inset; border: 1px solid rgba(255, 255, 255, 0.3);">
-            <img
-               src="/Prompty/icon_removebg-preview.png"
-               alt="Prompty Logo"
-               class="mx-auto w-32 h-32 mb-8"
-               style="filter: drop-shadow(0 4px 16px rgba(0, 0, 0, 0.15)); border-radius: 24px; background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.05) 100%); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.3); padding: 8px; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1), 0 1px 0 rgba(255, 255, 255, 0.3) inset;"
-            />
-            <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight" style="color: #1a1a1a; text-shadow: 0 2px 4px rgba(255, 255, 255, 0.8), 0 1px 2px rgba(0, 0, 0, 0.3);">
-               Prompty<br />
-               <span style="color: #007bff; text-shadow: 0 2px 4px rgba(255, 255, 255, 0.8), 0 1px 2px rgba(0, 0, 0, 0.2);">AI プロンプト生成・管理アプリ</span>
-            </h1>
-            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto" style="color: #374151; text-shadow: 0 1px 3px rgba(255, 255, 255, 0.8), 0 1px 2px rgba(0, 0, 0, 0.2); font-weight: 500;">
-               アプリ内で直接プロンプトを生成・管理できるAI活用アプリ
-            </p>
-            <p class="text-lg mb-12" style="color: #4b5563; text-shadow: 0 1px 3px rgba(255, 255, 255, 0.8), 0 1px 2px rgba(0, 0, 0, 0.2); font-weight: 500;">
-               AIを最大限に活用するための最適なプロンプトを、<br class="sm:hidden"/>スマホからいつでも作成できます。<br />
-               <span class="italic" style="color: #f59e0b;">無料プランから始めて、プラスプランで全機能を解放</span>
-            </p>
-         </div>
-
-         <!-- Pricing Section -->
-         <div class="max-w-6xl mx-auto mb-12">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12" style="color: #1f2937; text-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);">
-               プランを選択
-            </h2>
-            <div class="grid md:grid-cols-2 gap-8">
-               <!-- Free Plan -->
-               <div class="relative rounded-2xl overflow-hidden" style="background: linear-gradient(135deg, rgba(34, 197, 94, 0.1) 0%, rgba(22, 163, 74, 0.05) 100%); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1), 0 1px 0 rgba(255, 255, 255, 0.3) inset; border: 2px solid rgba(34, 197, 94, 0.3);">
-                  <div class="p-8 text-center">
-                     <h3 class="text-2xl font-bold mb-4" style="color: #1f2937;">無料プラン</h3>
-                     <div class="text-4xl font-bold mb-2" style="color: #22c55e;">¥0</div>
-                     <div class="text-lg mb-6" style="color: #6b7280;">永続無料</div>
-                     <div class="space-y-3 mb-6">
-                        <div class="flex items-center justify-center">
-                           <span class="text-green-600 mr-2">✓</span>
-                           <span style="color: #374151;">プロンプト生成</span>
-                        </div>
-                        <div class="flex items-center justify-center">
-                           <span class="text-green-600 mr-2">✓</span>
-                           <span style="color: #374151;">プロンプト保存</span>
-                        </div>
-                        <div class="flex items-center justify-center">
-                           <span class="text-amber-600 mr-2">⚠</span>
-                           <span style="color: #374151;">1日10回まで生成</span>
-                        </div>
-                     </div>
-                     <div class="inline-block p-3 rounded-lg mb-4" style="background: linear-gradient(135deg, rgba(34, 197, 94, 0.2) 0%, rgba(22, 163, 74, 0.1) 100%); border: 1px solid rgba(34, 197, 94, 0.3);">
-                        <p class="text-sm font-semibold" style="color: #374151;">今すぐ始める</p>
-                     </div>
-                  </div>
-               </div>
-
-               <!-- Plus Plan -->
-               <div class="relative rounded-2xl overflow-hidden" style="background: linear-gradient(135deg, rgba(245, 158, 11, 0.1) 0%, rgba(217, 119, 6, 0.05) 100%); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1), 0 1px 0 rgba(255, 255, 255, 0.3) inset; border: 2px solid rgba(245, 158, 11, 0.3);">
-                  <div class="absolute top-4 right-4 bg-amber-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                     おすすめ
-                  </div>
-                  <div class="p-8 text-center">
-                     <h3 class="text-2xl font-bold mb-4" style="color: #1f2937;">プラスプラン</h3>
-                     <div class="text-4xl font-bold mb-2" style="color: #f59e0b;">¥500</div>
-                     <div class="text-lg mb-6" style="color: #6b7280;">月額</div>
-                     <div class="space-y-3 mb-6">
-                        <div class="flex items-center justify-center">
-                           <span class="text-green-600 mr-2">✓</span>
-                           <span style="color: #374151;">無制限プロンプト生成</span>
-                        </div>
-                        <div class="flex items-center justify-center">
-                           <span class="text-green-600 mr-2">✓</span>
-                           <span style="color: #374151;">投稿・共有機能</span>
-                        </div>
-                        <div class="flex items-center justify-center">
-                           <span class="text-green-600 mr-2">✓</span>
-                           <span style="color: #374151;">いいね・お気に入り</span>
-                        </div>
-                        <div class="flex items-center justify-center">
-                           <span class="text-green-600 mr-2">✓</span>
-                           <span style="color: #374151;">リスト管理</span>
-                        </div>
-                     </div>
-                     <div class="inline-block p-3 rounded-lg mb-4" style="background: linear-gradient(135deg, rgba(245, 158, 11, 0.2) 0%, rgba(217, 119, 6, 0.1) 100%); border: 1px solid rgba(245, 158, 11, 0.3);">
-                        <p class="text-sm font-semibold" style="color: #374151;">7日間無料トライアル</p>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-
-         <!-- App Store Buttons Placeholder -->
-         <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6 mb-16">
-            <div class="inline-block p-4 rounded-lg" style="background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.1) 100%); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.3);">
-               <p class="text-lg font-semibold" style="color: #374151;">アプリ開発中...</p>
-               <p class="text-sm" style="color: #6b7280;">近日公開予定</p>
-            </div>
-         </div>
+<main class="app-page">
+  <section class="section hero" id="overview">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <span class="hero-eyebrow">Prompt Generate & Share</span>
+        <h1 class="hero-title">Prompty</h1>
+        <p class="hero-subtitle">promptを生成・共有できる新しいワークスペース。AIに響くプロンプトを素早く作り、コミュニティでブラッシュアップできます。</p>
+        <div class="hero-meta">
+          <span class="meta-chip">Prompt生成</span>
+          <span class="meta-chip">共有コミュニティ</span>
+          <span class="meta-chip">テンプレート集</span>
+        </div>
+        <div class="store-buttons">
+          <span class="store-button store-button--app-store disabled" aria-disabled="true">
+            <img src="/Download_on_the_App_Store_Badge_JP_RGB_blk_100317.svg" alt="App Storeでダウンロード（近日公開）" class="store-badge" loading="lazy" />
+          </span>
+          <a href="https://play.google.com/store/apps/details?id=com.hero.prompty" class="store-button store-button--google" target="_blank" rel="noopener noreferrer">
+            <img src="/Riddle/GetItOnGooglePlay_Badge_Web_color_Japanese.png" alt="Google Playで入手" class="store-badge" loading="lazy" />
+          </a>
+        </div>
+        <p class="hero-note">※ App Store版は現在準備中です。</p>
+        <div class="hero-actions">
+          <a href="#features" class="primary-action">主な機能を見る</a>
+          <a href="/contact" class="ghost-action">導入について相談</a>
+        </div>
       </div>
-   </section>
-
-   <!-- Features Section -->
-   <section class="py-16" style="background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, rgba(248, 250, 252, 0.15) 50%, rgba(255, 255, 255, 0.25) 100%); backdrop-filter: blur(25px); -webkit-backdrop-filter: blur(25px); border-top: 1px solid rgba(255, 255, 255, 0.2); border-bottom: 1px solid rgba(255, 255, 255, 0.2);">
-      <div class="container mx-auto px-4 max-w-6xl">
-         <h2 class="text-3xl md:text-5xl font-bold text-center mb-16 text-gray-900" style="text-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); background: linear-gradient(135deg, rgba(26, 26, 26, 1) 0%, rgba(102, 102, 102, 1) 50%, rgba(26, 26, 26, 1) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
-            Promptyの機能
-         </h2>
-         
-         <!-- Free Plan Features -->
-         <div class="mb-12">
-            <h3 class="text-2xl font-bold text-center mb-8" style="color: #22c55e;">無料プランの機能</h3>
-            <div class="grid md:grid-cols-2 gap-6">
-               <div class="text-center p-6 rounded-xl" style="background: linear-gradient(135deg, rgba(34, 197, 94, 0.15) 0%, rgba(34, 197, 94, 0.05) 50%, rgba(34, 197, 94, 0.15) 100%); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1), 0 1px 0 rgba(255, 255, 255, 0.4) inset; border: 1px solid rgba(34, 197, 94, 0.3); transition: all 0.4s ease;" onmouseover="this.style.transform='translateY(-8px) scale(1.02)'; this.style.boxShadow='0 16px 48px rgba(0, 0, 0, 0.15), 0 1px 0 rgba(255, 255, 255, 0.5) inset';" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 8px 32px rgba(0, 0, 0, 0.1), 0 1px 0 rgba(255, 255, 255, 0.4) inset';">
-                  <div class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                     <span class="text-white text-2xl font-bold">⚡</span>
-                  </div>
-                  <h4 class="text-xl font-semibold mb-3" style="color: #1f2937; text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8), 0 1px 1px rgba(0, 0, 0, 0.2);">プロンプト生成</h4>
-                  <p style="color: #4b5563; text-shadow: 0 1px 2px rgba(255, 255, 255, 0.7), 0 1px 1px rgba(0, 0, 0, 0.1); font-weight: 500;">短いアイデアから高品質なプロンプトを自動生成（1日10回まで）</p>
-               </div>
-
-               <div class="text-center p-6 rounded-xl" style="background: linear-gradient(135deg, rgba(34, 197, 94, 0.15) 0%, rgba(34, 197, 94, 0.05) 50%, rgba(34, 197, 94, 0.15) 100%); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1), 0 1px 0 rgba(255, 255, 255, 0.4) inset; border: 1px solid rgba(34, 197, 94, 0.3); transition: all 0.4s ease;" onmouseover="this.style.transform='translateY(-8px) scale(1.02)'; this.style.boxShadow='0 16px 48px rgba(0, 0, 0, 0.15), 0 1px 0 rgba(255, 255, 255, 0.5) inset';" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 8px 32px rgba(0, 0, 0, 0.1), 0 1px 0 rgba(255, 255, 255, 0.4) inset';">
-                  <div class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                     <span class="text-white text-2xl font-bold">💾</span>
-                  </div>
-                  <h4 class="text-xl font-semibold mb-3" style="color: #1f2937; text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8), 0 1px 1px rgba(0, 0, 0, 0.2);">プロンプト保存</h4>
-                  <p style="color: #4b5563; text-shadow: 0 1px 2px rgba(255, 255, 255, 0.7), 0 1px 1px rgba(0, 0, 0, 0.1); font-weight: 500;">生成したプロンプトを個人ライブラリに保存</p>
-               </div>
-            </div>
-         </div>
-
-         <!-- Plus Plan Features -->
-         <div class="mb-12">
-            <h3 class="text-2xl font-bold text-center mb-8" style="color: #f59e0b;">プラスプランの追加機能</h3>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-               <div class="text-center p-6 rounded-xl" style="background: linear-gradient(135deg, rgba(245, 158, 11, 0.15) 0%, rgba(245, 158, 11, 0.05) 50%, rgba(245, 158, 11, 0.15) 100%); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1), 0 1px 0 rgba(255, 255, 255, 0.4) inset; border: 1px solid rgba(245, 158, 11, 0.3); transition: all 0.4s ease;" onmouseover="this.style.transform='translateY(-8px) scale(1.02)'; this.style.boxShadow='0 16px 48px rgba(0, 0, 0, 0.15), 0 1px 0 rgba(255, 255, 255, 0.5) inset';" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 8px 32px rgba(0, 0, 0, 0.1), 0 1px 0 rgba(255, 255, 255, 0.4) inset';">
-                  <div class="w-16 h-16 bg-amber-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                     <span class="text-white text-2xl font-bold">∞</span>
-                  </div>
-                  <h4 class="text-xl font-semibold mb-3" style="color: #1f2937; text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8), 0 1px 1px rgba(0, 0, 0, 0.2);">無制限生成</h4>
-                  <p style="color: #4b5563; text-shadow: 0 1px 2px rgba(255, 255, 255, 0.7), 0 1px 1px rgba(0, 0, 0, 0.1); font-weight: 500;">プロンプト生成回数の制限なし</p>
-               </div>
-
-               <div class="text-center p-6 rounded-xl" style="background: linear-gradient(135deg, rgba(245, 158, 11, 0.15) 0%, rgba(245, 158, 11, 0.05) 50%, rgba(245, 158, 11, 0.15) 100%); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1), 0 1px 0 rgba(255, 255, 255, 0.4) inset; border: 1px solid rgba(245, 158, 11, 0.3); transition: all 0.4s ease;" onmouseover="this.style.transform='translateY(-8px) scale(1.02)'; this.style.boxShadow='0 16px 48px rgba(0, 0, 0, 0.15), 0 1px 0 rgba(255, 255, 255, 0.5) inset';" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 8px 32px rgba(0, 0, 0, 0.1), 0 1px 0 rgba(255, 255, 255, 0.4) inset';">
-                  <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                     <span class="text-white text-2xl font-bold">📤</span>
-                  </div>
-                  <h4 class="text-xl font-semibold mb-3" style="color: #1f2937; text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8), 0 1px 1px rgba(0, 0, 0, 0.2);">投稿・共有</h4>
-                  <p style="color: #4b5563; text-shadow: 0 1px 2px rgba(255, 255, 255, 0.7), 0 1px 1px rgba(0, 0, 0, 0.1); font-weight: 500;">作成したプロンプトを世界中のクリエイターと共有</p>
-               </div>
-
-               <div class="text-center p-6 rounded-xl" style="background: linear-gradient(135deg, rgba(245, 158, 11, 0.15) 0%, rgba(245, 158, 11, 0.05) 50%, rgba(245, 158, 11, 0.15) 100%); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1), 0 1px 0 rgba(255, 255, 255, 0.4) inset; border: 1px solid rgba(245, 158, 11, 0.3); transition: all 0.4s ease;" onmouseover="this.style.transform='translateY(-8px) scale(1.02)'; this.style.boxShadow='0 16px 48px rgba(0, 0, 0, 0.15), 0 1px 0 rgba(255, 255, 255, 0.5) inset';" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 8px 32px rgba(0, 0, 0, 0.1), 0 1px 0 rgba(255, 255, 255, 0.4) inset';">
-                  <div class="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                     <span class="text-white text-2xl font-bold">⭐</span>
-                  </div>
-                  <h4 class="text-xl font-semibold mb-3" style="color: #1f2937; text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8), 0 1px 1px rgba(0, 0, 0, 0.2);">いいね・お気に入り</h4>
-                  <p style="color: #4b5563; text-shadow: 0 1px 2px rgba(255, 255, 255, 0.7), 0 1px 1px rgba(0, 0, 0, 0.1); font-weight: 500;">気に入ったプロンプトをお気に入りに保存し、クリエイターを応援</p>
-               </div>
-
-               <div class="text-center p-6 rounded-xl md:col-span-2 lg:col-span-1" style="background: linear-gradient(135deg, rgba(245, 158, 11, 0.15) 0%, rgba(245, 158, 11, 0.05) 50%, rgba(245, 158, 11, 0.15) 100%); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1), 0 1px 0 rgba(255, 255, 255, 0.4) inset; border: 1px solid rgba(245, 158, 11, 0.3); transition: all 0.4s ease;" onmouseover="this.style.transform='translateY(-8px) scale(1.02)'; this.style.boxShadow='0 16px 48px rgba(0, 0, 0, 0.15), 0 1px 0 rgba(255, 255, 255, 0.5) inset';" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 8px 32px rgba(0, 0, 0, 0.1), 0 1px 0 rgba(255, 255, 255, 0.4) inset';">
-                  <div class="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                     <span class="text-white text-2xl font-bold">📋</span>
-                  </div>
-                  <h4 class="text-xl font-semibold mb-3" style="color: #1f2937; text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8), 0 1px 1px rgba(0, 0, 0, 0.2);">リスト管理</h4>
-                  <p style="color: #4b5563; text-shadow: 0 1px 2px rgba(255, 255, 255, 0.7), 0 1px 1px rgba(0, 0, 0, 0.1); font-weight: 500;">プロンプトをカテゴリ別に整理・管理</p>
-               </div>
-            </div>
-         </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="glass-panel">
+          <div class="panel-accent"></div>
+          <img src="/Prompty/icon_removebg-preview.png" alt="Prompty app visual" class="hero-image" />
+        </div>
       </div>
-   </section>
+    </div>
+  </section>
 
-   <!-- Demo Section -->
-   <section class="py-16" style="background: linear-gradient(135deg, rgba(248, 250, 252, 0.3) 0%, rgba(241, 245, 249, 0.2) 50%, rgba(248, 250, 252, 0.3) 100%); backdrop-filter: blur(25px); -webkit-backdrop-filter: blur(25px); border-top: 1px solid rgba(255, 255, 255, 0.2); border-bottom: 1px solid rgba(255, 255, 255, 0.2);">
-      <div class="container mx-auto px-4 max-w-6xl">
-         <h2 class="text-3xl md:text-5xl font-bold text-center mb-8" style="text-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); background: linear-gradient(135deg, rgba(26, 26, 26, 1) 0%, rgba(102, 102, 102, 1) 50%, rgba(26, 26, 26, 1) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
-            プロンプト生成デモ
-         </h2>
-         <p class="text-center text-lg mb-12" style="color: #6b7280;">短いアイデアが、AIに最適化された高品質なプロンプトに変わります</p>
-         
-         <div class="max-w-4xl mx-auto mb-12">
-            <div class="relative rounded-2xl overflow-hidden" style="background: linear-gradient(135deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.1) 100%); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1), 0 1px 0 rgba(255, 255, 255, 0.3) inset; border: 1px solid rgba(255, 255, 255, 0.2);">
-               <div class="p-8">
-                  <div class="grid md:grid-cols-2 gap-6">
-                     <div class="space-y-4">
-                        <h4 class="text-lg font-semibold flex items-center" style="color: #374151;">
-                           <span class="mr-2">📝</span>入力例（あなたのアイデア）
-                        </h4>
-                        <div class="p-4 rounded-lg" style="background: rgba(249, 250, 251, 0.8); border: 1px solid rgba(209, 213, 219, 0.5);">
-                           <p class="text-sm" style="color: #4b5563;">"猫の写真を生成して"</p>
-                        </div>
-                     </div>
-                     <div class="space-y-4">
-                        <h4 class="text-lg font-semibold flex items-center" style="color: #374151;">
-                           <span class="mr-2">✨</span>出力例（AI最適化プロンプト）
-                        </h4>
-                        <div class="p-4 rounded-lg" style="background: rgba(254, 249, 195, 0.8); border: 1px solid rgba(251, 191, 36, 0.3);">
-                           <p class="text-sm" style="color: #4b5563;">"A beautiful, fluffy orange tabby cat sitting gracefully on a windowsill, soft natural lighting streaming through lace curtains, photorealistic style, high detail, warm color palette, cozy home atmosphere, 4K resolution, professional photography"</p>
-                        </div>
-                     </div>
-                  </div>
-                  
-                  <!-- Plan Usage Info -->
-                  <div class="mt-8 grid md:grid-cols-2 gap-4">
-                     <div class="p-4 rounded-lg text-center" style="background: rgba(34, 197, 94, 0.1); border: 1px solid rgba(34, 197, 94, 0.3);">
-                        <p class="text-sm font-semibold" style="color: #22c55e;">無料プラン</p>
-                        <p class="text-xs" style="color: #4b5563;">1日10回まで生成可能</p>
-                     </div>
-                     <div class="p-4 rounded-lg text-center" style="background: rgba(245, 158, 11, 0.1); border: 1px solid rgba(245, 158, 11, 0.3);">
-                        <p class="text-sm font-semibold" style="color: #f59e0b;">プラスプラン</p>
-                        <p class="text-xs" style="color: #4b5563;">無制限生成 + 全機能利用可能</p>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
+  <section class="section" id="features">
+    <div class="section-header">
+      <h2>Promptyが選ばれる理由</h2>
+      <p>高品質なプロンプトを再現性高く生成し、チームや個人のクリエイティブなワークフローを支えます。</p>
+    </div>
+    <div class="feature-grid">
+      <article class="feature-card">
+        <span class="feature-icon">✨</span>
+        <h3>AI最適化プロンプト</h3>
+        <p>目的・トーン・出力形式を指定するだけで、生成AIが理解しやすい構造に自動整形。結果のブレを抑えます。</p>
+      </article>
+      <article class="feature-card">
+        <span class="feature-icon">🧠</span>
+        <h3>ヒントとベストプラクティス</h3>
+        <p>用途に合わせたプロンプト構造やキーワードを提案。アイデア出しを加速し、試行錯誤の時間を短縮。</p>
+      </article>
+      <article class="feature-card">
+        <span class="feature-icon">📁</span>
+        <h3>テンプレートギャラリー</h3>
+        <p>ビジネス、学習、ライティングなどのテンプレートを収録。お気に入り登録で、自分だけのコレクションも構築できます。</p>
+      </article>
+      <article class="feature-card">
+        <span class="feature-icon">🌐</span>
+        <h3>コミュニティ共有</h3>
+        <p>お気に入りのpromptをSNS感覚で公開しフィードバックを獲得。チームやユーザー同士でナレッジが循環します。</p>
+      </article>
+    </div>
+  </section>
 
-         <!-- CTA Section -->
-         <div class="text-center">
-            <h3 class="text-2xl font-bold mb-4" style="color: #1f2937;">今すぐPromptyを始めよう</h3>
-            <p class="text-lg mb-8" style="color: #6b7280;">無料プランで今すぐ開始 • プラスプランで7日間無料トライアル</p>
-            <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
-               <div class="inline-block p-4 rounded-lg" style="background: linear-gradient(135deg, rgba(34, 197, 94, 0.2) 0%, rgba(22, 163, 74, 0.1) 100%); border: 1px solid rgba(34, 197, 94, 0.3);">
-                  <p class="text-lg font-semibold" style="color: #374151;">無料で始める</p>
-                  <p class="text-sm" style="color: #6b7280;">アプリ開発中...</p>
-               </div>
-               <div class="inline-block p-4 rounded-lg" style="background: linear-gradient(135deg, rgba(245, 158, 11, 0.2) 0%, rgba(217, 119, 6, 0.1) 100%); border: 1px solid rgba(245, 158, 11, 0.3);">
-                  <p class="text-lg font-semibold" style="color: #374151;">プラスプランを試す</p>
-                  <p class="text-sm" style="color: #6b7280;">7日間無料トライアル</p>
-               </div>
-            </div>
-         </div>
+  <section class="section highlight" id="plan">
+    <div class="plan-card">
+      <div class="plan-badge">Standard Plan</div>
+      <h2>月額680円で全機能を解放</h2>
+      <p>スタンダードプランでは、生成から履歴管理、テンプレート活用までをフルアクセス。プロンプト設計のワークフローを包括的に支援します。</p>
+      <ul>
+        <li>プロンプト生成と履歴保存が使い放題</li>
+        <li>テンプレートギャラリーとヒント集をフルアクセス</li>
+        <li>サブスクリプションの更新・管理をアプリ内でシンプルに</li>
+      </ul>
+      <div class="plan-actions">
+        <a href="https://play.google.com/store/apps/details?id=com.hero.prompty" class="primary-action" target="_blank" rel="noopener noreferrer">Google Playで入手</a>
+        <a href="/privacypolicy_prompty" class="ghost-action">プライバシーポリシーを確認</a>
       </div>
-   </section>
-   
-   <footer class="mt-12 pt-8 border-t border-gray-300 dark:border-gray-700">
-      <div class="flex flex-col items-center space-y-3 md:flex-row md:justify-center md:space-y-0 md:space-x-6">
-         <a href="/privacypolicy_prompty" class="text-amber-600 hover:text-amber-800 dark:text-amber-400 dark:hover:text-amber-300">Privacy Policy</a>
-         <a href="/termsofservice_prompty" class="text-amber-600 hover:text-amber-800 dark:text-amber-400 dark:hover:text-amber-300">Terms of Service</a>
-         <a href="/csae" class="text-amber-600 hover:text-amber-800 dark:text-amber-400 dark:hover:text-amber-300">児童の性的虐待と搾取 (CSAE) について</a>
+    </div>
+  </section>
+
+  <section class="section cta">
+    <div class="cta-card">
+      <h2>AIとの対話を、もっと思い通りに</h2>
+      <p>Promptyがあれば、生成AIへの指示で悩む時間を創造的なアウトプットに変えられます。共有コミュニティで知見を交換し、成果を最速で形にしましょう。</p>
+      <div class="cta-actions">
+        <a href="https://play.google.com/store/apps/details?id=com.hero.prompty" class="primary-action" target="_blank" rel="noopener noreferrer">今すぐ試す</a>
+        <a href="/contact" class="ghost-action">サポートに問い合わせる</a>
       </div>
-   </footer>
+    </div>
+  </section>
 </main>
+
+<style>
+  .app-page {
+    padding-top: 96px;
+    background: linear-gradient(180deg, #111111 0%, #0b0b0b 100%);
+    color: #111111;
+    font-family: 'Inter', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+
+  .section {
+    padding: 5rem 1.75rem;
+  }
+
+  .section + .section {
+    border-top: 1px solid rgba(255, 255, 255, 0.04);
+  }
+
+  .hero {
+    background: linear-gradient(180deg, #080808 0%, #161616 100%);
+    color: #f5f5f5;
+    padding-bottom: 4.5rem;
+  }
+
+  .hero-grid {
+    max-width: 1120px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 3.5rem;
+    align-items: center;
+  }
+
+  .hero-copy {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .hero-eyebrow {
+    font-size: 0.85rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: rgba(245, 245, 245, 0.6);
+  }
+
+  .hero-title {
+    font-size: clamp(3rem, 6vw, 4.5rem);
+    font-weight: 800;
+    margin: 0;
+    letter-spacing: -0.02em;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+    line-height: 1.9;
+    color: rgba(229, 229, 229, 0.82);
+    margin: 0;
+  }
+
+  .hero-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+  }
+
+  .meta-chip {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 999px;
+    border: 1px solid rgba(245, 245, 245, 0.3);
+    color: rgba(245, 245, 245, 0.85);
+    padding: 0.35rem 1rem;
+    font-size: 0.85rem;
+    letter-spacing: 0.02em;
+  }
+
+  .store-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+  }
+
+  .store-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: none;
+    background: transparent;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .store-button--app-store,
+  .store-button--google {
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+  }
+
+  .store-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.35);
+  }
+
+  .store-button.disabled {
+    opacity: 0.55;
+    cursor: default;
+    pointer-events: none;
+    box-shadow: none;
+    border: 1px solid rgba(245, 245, 245, 0.2);
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  .store-badge {
+    display: block;
+    height: 52px;
+    width: auto;
+  }
+
+  .hero-note {
+    font-size: 0.85rem;
+    color: rgba(229, 229, 229, 0.65);
+    margin: 0;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .primary-action, .ghost-action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.9rem 1.9rem;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+  }
+
+  .primary-action {
+    background: #f5f5f5;
+    color: #111111;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+  }
+
+  .primary-action:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 22px 45px rgba(0, 0, 0, 0.45);
+  }
+
+  .ghost-action {
+    background: transparent;
+    color: rgba(245, 245, 245, 0.9);
+    border: 1px solid rgba(245, 245, 245, 0.35);
+  }
+
+  .ghost-action:hover {
+    background: rgba(245, 245, 245, 0.08);
+    transform: translateY(-2px);
+    border-color: rgba(245, 245, 245, 0.5);
+  }
+
+  .hero-visual {
+    display: flex;
+    justify-content: center;
+  }
+
+  .glass-panel {
+    position: relative;
+    width: min(420px, 100%);
+    border-radius: 32px;
+    padding: 2.5rem 2.25rem;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(24px);
+  }
+
+  .panel-accent {
+    position: absolute;
+    inset: 12%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.25), transparent 75%);
+    filter: blur(18px);
+    z-index: 0;
+  }
+
+  .hero-image {
+    position: relative;
+    width: 100%;
+    border-radius: 24px;
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.45);
+    z-index: 1;
+  }
+
+  .section-header {
+    max-width: 760px;
+    margin: 0 auto 3rem;
+    text-align: center;
+    color: #f5f5f5;
+  }
+
+  .section-header h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 1rem;
+    font-weight: 800;
+  }
+
+  .section-header p {
+    font-size: 1.05rem;
+    color: rgba(229, 229, 229, 0.75);
+    margin: 0;
+    line-height: 1.8;
+  }
+
+  .feature-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.75rem;
+  }
+
+  .feature-card {
+    background: #fefefe;
+    border-radius: 24px;
+    padding: 2rem;
+    border: 1px solid rgba(17, 17, 17, 0.08);
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    color: #111111;
+  }
+
+  .feature-card h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+
+  .feature-card p {
+    margin: 0;
+    color: rgba(51, 51, 51, 0.85);
+    line-height: 1.7;
+    font-size: 0.98rem;
+  }
+
+  .feature-icon {
+    font-size: 2.5rem;
+    line-height: 1;
+  }
+
+  .highlight {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(10, 10, 10, 0.2));
+    color: #f5f5f5;
+  }
+
+  .plan-card {
+    max-width: 920px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 28px;
+    padding: 3rem;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+  }
+
+  .plan-badge {
+    display: inline-flex;
+    padding: 0.35rem 0.9rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.12);
+    color: #f5f5f5;
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .plan-card h2 {
+    font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+    margin: 1.5rem 0 1rem;
+    font-weight: 800;
+  }
+
+  .plan-card p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: rgba(229, 229, 229, 0.78);
+    margin: 0 0 1.75rem;
+  }
+
+  .plan-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2.5rem;
+    display: grid;
+    gap: 0.9rem;
+  }
+
+  .plan-card li {
+    font-size: 1rem;
+    color: #f5f5f5;
+    padding-left: 1.75rem;
+    position: relative;
+  }
+
+  .plan-card li::before {
+    content: '\2713';
+    position: absolute;
+    left: 0;
+    top: 0.1rem;
+    font-weight: 700;
+    color: #f5f5f5;
+  }
+
+  .plan-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .cta {
+    background: linear-gradient(180deg, #080808 0%, #141414 100%);
+    color: #f5f5f5;
+  }
+
+  .cta-card {
+    max-width: 820px;
+    margin: 0 auto;
+    background: rgba(17, 17, 17, 0.6);
+    border-radius: 32px;
+    padding: 3rem;
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(18px);
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .cta-card h2 {
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    margin-bottom: 1.2rem;
+    font-weight: 800;
+  }
+
+  .cta-card p {
+    font-size: 1.05rem;
+    line-height: 1.9;
+    margin: 0 auto 2rem;
+    max-width: 560px;
+    color: rgba(229, 229, 229, 0.75);
+  }
+
+  .cta-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  @media (max-width: 1024px) {
+    .section {
+      padding: 4.5rem 1.5rem;
+    }
+    .plan-card {
+      padding: 2.5rem 2rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .app-page {
+      padding-top: 88px;
+    }
+    .hero-grid {
+      gap: 2.5rem;
+    }
+    .store-buttons,
+    .hero-actions,
+    .plan-actions,
+    .cta-actions {
+      flex-direction: column;
+      align-items: stretch;
+    }
+    .store-button,
+    .primary-action,
+    .ghost-action {
+      width: 100%;
+      justify-content: center;
+    }
+    .store-badge {
+      width: 100%;
+      height: auto;
+    }
+    .glass-panel {
+      padding: 2rem 1.75rem;
+    }
+  }
+
+  @media (max-width: 540px) {
+    .section {
+      padding: 4rem 1.25rem;
+    }
+    .feature-card {
+      padding: 1.75rem;
+    }
+    .plan-card {
+      padding: 2.25rem 1.5rem;
+    }
+    .cta-card {
+      padding: 2.5rem 1.5rem;
+    }
+  }
+</style>

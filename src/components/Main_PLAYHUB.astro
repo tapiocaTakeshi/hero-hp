@@ -1,0 +1,463 @@
+---
+// src/components/Main_PLAYHUB.astro
+---
+<main class="app-page">
+  <section class="section hero" id="overview">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <span class="hero-eyebrow">AI × ゲームコミュニティ</span>
+        <h1 class="hero-title">PlayHub</h1>
+        <p class="hero-subtitle">
+          ゲームを探して、つくって、シェアするまでを1つのアプリで完結。AI支援と直感的なUIで、誰でもオリジナルゲームの制作と配信ができる新しいプレイプラットフォームです。
+        </p>
+        <div class="hero-meta">
+          <span class="meta-chip">探索フィード</span>
+          <span class="meta-chip">HTMLアップロード</span>
+          <span class="meta-chip">AIゲームクリエイター</span>
+          <span class="meta-chip">カルーセル視聴</span>
+        </div>
+        <div class="store-buttons">
+          <a href="#" class="store-button store-button--app-store disabled" aria-disabled="true">
+            <img src="/Download_on_the_App_Store_Badge_JP_RGB_blk_100317.svg" alt="App Storeでダウンロード" class="store-badge" loading="lazy" />
+          </a>
+          <span class="coming-soon">App Storeで近日公開</span>
+        </div>
+        <div class="hero-actions">
+          <a href="#features" class="primary-action">PlayHubの特徴</a>
+		  <a href="/termsofservice_playhub" class="ghost-action">利用規約</a>
+          <a href="/privacypolicy_playhub" class="ghost-action">プライバシーポリシー</a>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="glass-panel">
+          <div class="panel-accent"></div>
+          <div class="hero-device">
+            <span class="device-title">ゲームを探索</span>
+            <span class="device-subtitle">AI生成作品が並ぶ宇宙のようなライブラリ</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="features">
+    <div class="section-header">
+      <h2>スクリーンショットに現れたPlayHubの体験</h2>
+      <p>アップロード画面からAI編集、カルーセル視聴、アカウント管理まで、ワークフローごとのUIが用意されています。</p>
+    </div>
+    <div class="feature-grid">
+      <article class="feature-card">
+        <span class="feature-icon">🔍</span>
+        <h3>探索タブ</h3>
+        <ul class="feature-list">
+          <li>検索バーとカテゴリボタンで目的のゲームを素早く発見</li>
+          <li>「人気のゲーム」カードには再生数・いいね・コメント・保存数を表示</li>
+          <li>AI生成バッジ付きのカードで出所が一目で分かる</li>
+        </ul>
+      </article>
+      <article class="feature-card">
+        <span class="feature-icon">☁️</span>
+        <h3>HTMLアップロード</h3>
+        <ul class="feature-list">
+          <li>HTML単一ファイルをドラッグ & ドロップで登録</li>
+          <li>必要条件チェックリスト：バニラHTML/CSS/JS、モバイル対応、タッチ操作など</li>
+          <li>公開設定で「公開」「非公開」をワンタップ切り替え</li>
+        </ul>
+      </article>
+      <article class="feature-card">
+        <span class="feature-icon">✨</span>
+        <h3>AIゲームクリエイター</h3>
+        <ul class="feature-list">
+          <li>ゲームのアイデアを入力するだけでAIがプロトタイプを生成</li>
+          <li>難易度チップ（簡単／普通／難しい）でバランスを調整</li>
+          <li>公開範囲と投稿タグを合わせて設定可能</li>
+        </ul>
+      </article>
+      <article class="feature-card">
+        <span class="feature-icon">🛠️</span>
+        <h3>AI編集ワークスペース</h3>
+        <ul class="feature-list">
+          <li>「Sonnet 4.5」などモデルを切り替えてチューニング</li>
+          <li>例文付きのプロンプト欄で、色変更や速度調整などの指示が簡単</li>
+          <li>保存ボタンでその場でゲームを更新</li>
+        </ul>
+      </article>
+      <article class="feature-card">
+        <span class="feature-icon">🎠</span>
+        <h3>カルーセルビュー</h3>
+        <ul class="feature-list">
+          <li>「For You」「Trending」「New」をスワイプで切り替え</li>
+          <li>動画感覚でゲームをプレビューし、そのままリアクション</li>
+          <li>いいね・コメント・ブックマーク・シェアボタンをワンタップ配置</li>
+        </ul>
+      </article>
+      <article class="feature-card">
+        <span class="feature-icon">📊</span>
+        <h3>アカウントダッシュボード</h3>
+        <ul class="feature-list">
+          <li>投稿数・公開数・非公開数をカード上で可視化</li>
+          <li>各ゲームの再生数やいいね数、公開ステータスを一覧管理</li>
+          <li>AI編集と公開切替ボタンをカード内に集約</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section class="section highlight" id="creation">
+    <div class="plan-card">
+      <div class="plan-badge">Create & Publish</div>
+      <h2>PlayHubでのゲーム制作ループ</h2>
+      <ol class="flow-steps">
+        <li><strong>AIゲームクリエイターで草案づくり：</strong> アイデアを入力し、難易度や公開設定を選択。</li>
+        <li><strong>コードをインポート：</strong> 既存のHTMLゲームをアップロードして、要件チェックをクリア。</li>
+        <li><strong>AI編集で微調整：</strong> モデルを選び、スコアや色、スピードなどの変更を会話形式で指示。</li>
+        <li><strong>カルーセルでテスト視聴：</strong> For Youフィード内でプレイ感を確認し、リアクションを収集。</li>
+        <li><strong>アカウントで成果管理：</strong> 投稿カードから公開／非公開やAI編集を即時操作。</li>
+      </ol>
+      <div class="plan-actions">
+        <a href="/contact" class="primary-action">導入・コラボの相談</a>
+        <a href="/privacypolicy_playhub" class="ghost-action">データの取扱いを見る</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section cta">
+    <div class="cta-card">
+      <h2>AIとコミュニティでゲーム制作を加速</h2>
+      <p>PlayHubなら、アイデアの着想からリリース、フィードバック収集までがひとつの宇宙で繋がります。公開準備が整ったら、ぜひご連絡ください。</p>
+      <div class="cta-actions">
+        <a href="/contact" class="primary-action">お問い合わせ</a>
+        <a href="/privacypolicy_playhub" class="ghost-action">プライバシーポリシー</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<style>
+  .app-page {
+    padding-top: 96px;
+    background: radial-gradient(140% 140% at 50% -10%, #6d28d9 0%, #4c1d95 35%, #1e1b4b 70%, #0f172a 100%);
+    color: #e2e8f0;
+    font-family: 'Inter', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+
+  .section {
+    padding: 5rem 1.75rem;
+  }
+
+  .hero {
+    background: linear-gradient(180deg, rgba(109, 40, 217, 0.85) 0%, rgba(76, 29, 149, 0.8) 100%);
+    color: #f8fafc;
+    padding-bottom: 4.5rem;
+  }
+
+  .hero-grid {
+    max-width: 1120px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 3.5rem;
+    align-items: center;
+  }
+
+  .hero-copy {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+  }
+
+  .hero-eyebrow {
+    font-size: 0.85rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(226, 232, 240, 0.75);
+  }
+
+  .hero-title {
+    font-size: clamp(3rem, 6vw, 4.6rem);
+    font-weight: 800;
+    margin: 0;
+    letter-spacing: -0.02em;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+    line-height: 1.9;
+    color: rgba(226, 232, 240, 0.85);
+    margin: 0;
+  }
+
+  .hero-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+  }
+
+  .meta-chip {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 999px;
+    border: 1px solid rgba(226, 232, 240, 0.35);
+    color: rgba(226, 232, 240, 0.95);
+    padding: 0.35rem 1rem;
+    font-size: 0.85rem;
+    letter-spacing: 0.02em;
+    backdrop-filter: blur(8px);
+  }
+
+  .store-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .store-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: none;
+    background: transparent;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+  }
+
+  .store-button.disabled {
+    opacity: 0.45;
+    cursor: default;
+    pointer-events: none;
+    box-shadow: none;
+  }
+
+  .coming-soon {
+    font-size: 0.9rem;
+    color: rgba(226, 232, 240, 0.75);
+    letter-spacing: 0.04em;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+  }
+
+  .primary-action,
+  .ghost-action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.78rem 1.9rem;
+    border-radius: 999px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease, color 0.25s ease;
+  }
+
+  .primary-action {
+    background: linear-gradient(135deg, #38bdf8 0%, #818cf8 50%, #a855f7 100%);
+    color: #0b1120;
+    box-shadow: 0 16px 36px rgba(168, 85, 247, 0.3);
+  }
+
+  .primary-action:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 20px 44px rgba(129, 140, 248, 0.4);
+  }
+
+  .ghost-action {
+    border: 1px solid rgba(148, 163, 184, 0.6);
+    color: rgba(226, 232, 240, 0.9);
+    background: rgba(15, 23, 42, 0.25);
+  }
+
+  .ghost-action:hover {
+    background: rgba(148, 163, 184, 0.12);
+    color: #ffffff;
+  }
+
+  .section-header {
+    max-width: 820px;
+    margin: 0 auto 3.2rem;
+    text-align: center;
+    color: #e2e8f0;
+  }
+
+  .feature-grid {
+    max-width: 1080px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.85rem;
+  }
+
+  .feature-card {
+    background: rgba(15, 23, 42, 0.78);
+    border: 1px solid rgba(148, 163, 184, 0.18);
+    border-radius: 22px;
+    padding: 1.9rem;
+    color: #e2e8f0;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: transform 0.25s ease, border 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  .feature-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(168, 85, 247, 0.6);
+    box-shadow: 0 22px 38px rgba(79, 70, 229, 0.24);
+  }
+
+  .feature-icon {
+    font-size: 1.9rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
+    background: rgba(168, 85, 247, 0.18);
+    color: #c4b5fd;
+    margin-bottom: 1.1rem;
+  }
+
+  .feature-list {
+    margin: 0;
+    padding-left: 1.1rem;
+    color: rgba(226, 232, 240, 0.9);
+  }
+
+  .feature-list li + li {
+    margin-top: 0.55rem;
+  }
+
+  .highlight {
+    background: linear-gradient(180deg, rgba(76, 29, 149, 0.88) 0%, rgba(30, 41, 59, 0.92) 100%);
+    color: #f1f5f9;
+  }
+
+  .plan-card {
+    max-width: 940px;
+    margin: 0 auto;
+    background: rgba(15, 23, 42, 0.78);
+    border-radius: 26px;
+    padding: 3.1rem;
+    border: 1px solid rgba(129, 140, 248, 0.35);
+    box-shadow: 0 26px 48px rgba(30, 64, 175, 0.3);
+  }
+
+  .plan-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.38rem 0.95rem;
+    border-radius: 999px;
+    background: rgba(129, 140, 248, 0.18);
+    color: rgba(191, 219, 254, 0.92);
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    margin-bottom: 1.4rem;
+  }
+
+  .flow-steps {
+    margin: 1.8rem 0 2.6rem;
+    padding-left: 1.25rem;
+    color: rgba(226, 232, 240, 0.95);
+  }
+
+  .flow-steps li + li {
+    margin-top: 0.9rem;
+  }
+
+  .cta {
+    background: radial-gradient(120% 120% at 50% -20%, rgba(168, 85, 247, 0.24) 0%, rgba(15, 23, 42, 0.92) 90%);
+    color: #e2e8f0;
+  }
+
+  .cta-card {
+    max-width: 720px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    background: rgba(15, 23, 42, 0.75);
+    border: 1px solid rgba(129, 140, 248, 0.32);
+    border-radius: 26px;
+    padding: 3.2rem;
+    box-shadow: 0 20px 44px rgba(14, 116, 144, 0.28);
+  }
+
+  .hero-visual {
+    display: flex;
+    justify-content: center;
+  }
+
+  .glass-panel {
+    position: relative;
+    width: min(360px, 90%);
+    aspect-ratio: 10 / 19;
+    border-radius: 28px;
+    background: rgba(15, 23, 42, 0.45);
+    border: 1px solid rgba(129, 140, 248, 0.32);
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+    box-shadow: 0 32px 60px rgba(14, 116, 144, 0.45);
+  }
+
+  .panel-accent {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(140deg, rgba(168, 85, 247, 0.22) 0%, rgba(79, 70, 229, 0.18) 45%, rgba(56, 189, 248, 0.28) 100%);
+    opacity: 0.65;
+  }
+
+  .hero-device {
+    position: relative;
+    width: 76%;
+    aspect-ratio: 9 / 18;
+    border-radius: 18px;
+    background: linear-gradient(145deg, rgba(129, 140, 248, 0.92) 0%, rgba(168, 85, 247, 0.82) 55%, rgba(56, 189, 248, 0.78) 100%);
+    box-shadow: inset 0 0 0 2px rgba(226, 232, 240, 0.25), 0 25px 40px rgba(14, 116, 144, 0.35);
+    color: #0f172a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    text-align: center;
+    padding: 2.2rem;
+  }
+
+  .device-title {
+    font-size: 1.95rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+  }
+
+  .device-subtitle {
+    font-size: 0.95rem;
+    letter-spacing: 0.05em;
+    color: rgba(15, 23, 42, 0.75);
+  }
+
+  @media (max-width: 768px) {
+    .section {
+      padding: 4.2rem 1.25rem;
+    }
+
+    .hero-grid {
+      gap: 2.6rem;
+    }
+
+    .plan-card,
+    .cta-card {
+      padding: 2.45rem;
+    }
+
+    .flow-steps {
+      padding-left: 1.1rem;
+    }
+  }
+</style>

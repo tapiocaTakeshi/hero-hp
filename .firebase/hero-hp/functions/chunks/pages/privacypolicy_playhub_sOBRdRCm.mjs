@@ -1,0 +1,56 @@
+import { c as createAstro, d as createComponent, r as renderTemplate, e as addAttribute, h as renderComponent, g as renderHead, n as Fragment } from '../astro_Bq-bemsL.mjs';
+/* empty css                            */
+import 'kleur/colors';
+import 'html-escaper';
+import { $ as $$MainLayout } from './contact_BrsQFEs5.mjs';
+import 'clsx';
+/* empty css                                          */
+/* empty css                                          */
+
+const $$Astro$2 = createAstro();
+const $$ViewTransitions = createComponent(async ($$result, $$props, $$slots) => {
+  const Astro2 = $$result.createAstro($$Astro$2, $$props, $$slots);
+  Astro2.self = $$ViewTransitions;
+  const { fallback = "animate" } = Astro2.props;
+  return renderTemplate`<meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback"${addAttribute(fallback, "content")}>`;
+}, "/home/user/hero-hp/node_modules/astro/components/ViewTransitions.astro", void 0);
+
+const $$Astro$1 = createAstro();
+const $$MainPPPLAYHUB = createComponent(async ($$result, $$props, $$slots) => {
+  const Astro2 = $$result.createAstro($$Astro$1, $$props, $$slots);
+  Astro2.self = $$MainPPPLAYHUB;
+  return renderTemplate`<head>${renderComponent($$result, "ViewTransitions", $$ViewTransitions, { "data-astro-cid-gqylorwf": true })}${renderHead()}</head> <main data-astro-cid-gqylorwf> <div class="policy-wrapper" style="margin-top: 140px; margin-bottom: 120px;" data-astro-cid-gqylorwf> <h1 data-astro-cid-gqylorwf>PlayHub プライバシーポリシー</h1> <p data-astro-cid-gqylorwf>
+樋口雄哉（以下「当社」といいます。）は、当社が提供するコミュニティ参加支援アプリ「PlayHub」（以下「本サービス」といいます。）において取得する利用者の個人情報及び関連情報（以下「個人情報等」といいます。）を適切に取り扱うため、本プライバシーポリシー（以下「本ポリシー」といいます。）を定めます。
+</p> <div class="note" data-astro-cid-gqylorwf> <p data-astro-cid-gqylorwf>本サービスにはイベント参加申込機能、チャット、レビュー投稿、通知などのコミュニティ機能が含まれます。これらの機能の提供・改善のため、利用者に関する情報を取得・利用します。</p> </div> <h2 data-astro-cid-gqylorwf>第1条（適用範囲）</h2> <p data-astro-cid-gqylorwf>
+本ポリシーは、本サービスを利用するすべての利用者に適用されます。当社が別途プライバシーに関する個別規約を提示し同意を得た場合は、当該規約と本ポリシーが併せて適用されます。
+</p> <h2 data-astro-cid-gqylorwf>第2条（取得する情報）</h2> <p data-astro-cid-gqylorwf>当社は、本サービスの提供に必要な範囲で、利用者から以下の情報を取得します。</p> <ul data-astro-cid-gqylorwf> <li data-astro-cid-gqylorwf>アカウント情報（氏名、ニックネーム、生年月日、メールアドレス、プロフィール画像等）</li> <li data-astro-cid-gqylorwf>イベント・コミュニティに関する情報（参加申込履歴、キャンセル履歴、参加希望条件、所属グループ等）</li> <li data-astro-cid-gqylorwf>コミュニケーション情報（チャットメッセージ、コメント、レビュー、リアクション等の投稿内容）</li> <li data-astro-cid-gqylorwf>決済関連情報（有料イベント・サブスクリプションの購入状況、決済日時、取引ID等）※決済情報の詳細は決済事業者において管理され、当社は必要な範囲の情報のみを取得します。</li> <li data-astro-cid-gqylorwf>デバイス情報（端末種別、OS、アプリバージョン、言語設定等）</li> <li data-astro-cid-gqylorwf>本サービスの利用状況に関する情報（アクセス日時、閲覧した画面、タップ操作等の利用ログ）</li> <li data-astro-cid-gqylorwf>位置情報（利用者がイベントの検索条件として位置情報の利用を許可した場合に限ります）</li> <li data-astro-cid-gqylorwf>問い合わせ時に提供される情報（氏名、メールアドレス、問い合わせ内容等）</li> </ul> <h2 data-astro-cid-gqylorwf>第3条（利用目的）</h2> <p data-astro-cid-gqylorwf>当社が取得した個人情報等の利用目的は以下のとおりです。</p> <ul data-astro-cid-gqylorwf> <li data-astro-cid-gqylorwf>本サービスの提供、運営および利用者認証のため</li> <li data-astro-cid-gqylorwf>イベント参加申込、参加状況の管理、出欠確認及び主催者・参加者間の連絡を円滑化するため</li> <li data-astro-cid-gqylorwf>コミュニティ機能（チャット、レビュー、フィード等）の提供及び安全な運用のため</li> <li data-astro-cid-gqylorwf>おすすめイベント、コンテンツ、コミュニティのレコメンド機能の改善のため</li> <li data-astro-cid-gqylorwf>利用者の興味関心に基づくお知らせ、アップデート情報、キャンペーン情報の送付のため</li> <li data-astro-cid-gqylorwf>システムの維持管理、不正利用の防止・調査及びセキュリティ向上のため</li> <li data-astro-cid-gqylorwf>サポート対応、問い合わせ内容の確認及び記録のため</li> <li data-astro-cid-gqylorwf>利用状況の分析及び新機能開発・サービス改善のため</li> <li data-astro-cid-gqylorwf>利用規約や本ポリシーの変更等、重要なお知らせの通知のため</li> <li data-astro-cid-gqylorwf>上記の利用目的に付随する目的のため</li> </ul> <h2 data-astro-cid-gqylorwf>第4条（第三者提供・委託）</h2> <p data-astro-cid-gqylorwf>
+当社は、個人情報保護法その他法令で認められる場合を除き、あらかじめ利用者の同意を得ることなく個人情報等を第三者に提供しません。ただし、次の場合は第三者提供に該当しないものとします。
+</p> <ul data-astro-cid-gqylorwf> <li data-astro-cid-gqylorwf>利用目的の達成に必要な範囲で、個人情報等の取扱いを第三者に委託する場合（ホスティング、分析、通知配信等）</li> <li data-astro-cid-gqylorwf>業務提携先との共同利用を行う場合で、共同利用者、利用目的及び管理責任者等を公表または本人に通知しているとき</li> <li data-astro-cid-gqylorwf>合併・会社分割等の事業承継に伴って個人情報等が提供される場合</li> </ul> <p data-astro-cid-gqylorwf>
+また、決済処理、メール配信、アクセス解析等のために外部サービスを利用する場合があり、当該サービス提供者に必要な範囲で情報が移転されることがあります。その際には、各社のプライバシーポリシーに従って取り扱われます。
+</p> <h2 data-astro-cid-gqylorwf>第5条（広告配信・効果測定）</h2> <p data-astro-cid-gqylorwf>当社は、本サービス内における広告配信及び効果測定を行うため、「広告喝采」その他の第三者広告サービス（以下総称して「広告サービス」といいます。）を利用する場合があります。</p> <ul data-astro-cid-gqylorwf> <li data-astro-cid-gqylorwf>広告サービス事業者が収集する可能性のある情報には、端末識別子（IDFA/AAID等）、広告ID、アプリ内の閲覧・クリック履歴、IPアドレス、推定位置情報、端末の利用言語・OS情報等が含まれます。</li> <li data-astro-cid-gqylorwf>取得された情報は、個人を直接特定しない範囲で、興味関心に基づく広告配信、広告効果分析、不正利用の検知に利用されます。</li> <li data-astro-cid-gqylorwf>広告喝采のプライバシーポリシーおよび提供元が定めるオプトアウト方法については、広告喝采の公式ページをご確認ください。</li> </ul> <p data-astro-cid-gqylorwf>利用者は、端末設定による広告識別子のリセットや各広告サービスが提供するオプトアウト手続を行うことで、パーソナライズド広告の配信を制限できます。ただし、設定後も非パーソナライズド広告が表示される場合があります。</p> <h2 data-astro-cid-gqylorwf>第6条（海外への移転）</h2> <p data-astro-cid-gqylorwf>当社が利用するクラウドサービス等の所在国が日本国外となる場合、当該国の個人情報保護制度に基づき適切な安全管理措置を講じた上で個人情報等を取り扱います。</p> <h2 data-astro-cid-gqylorwf>第7条（安全管理措置）</h2> <p data-astro-cid-gqylorwf>当社は、個人情報等の漏洩、滅失又は毀損の防止その他安全管理のために、以下の措置を講じます。</p> <ul data-astro-cid-gqylorwf> <li data-astro-cid-gqylorwf>アクセス権限の最小化及び管理ログの定期的な確認</li> <li data-astro-cid-gqylorwf>通信の暗号化、ファイアウォール等の技術的安全管理措置の実施</li> <li data-astro-cid-gqylorwf>従業者に対する個人情報保護に関する教育、監督</li> <li data-astro-cid-gqylorwf>委託先との間での秘密保持契約等による適切な監督</li> </ul> <h2 data-astro-cid-gqylorwf>第8条（個人情報の保存期間）</h2> <p data-astro-cid-gqylorwf>当社は、利用目的の達成に必要な期間、または法令により保存を義務付けられた期間に限り個人情報等を保持します。利用者がアカウントを削除した場合でも、法令遵守及び紛争等への備えのため必要な範囲で情報を保存することがあります。</p> <h2 data-astro-cid-gqylorwf>第9条（利用者による開示・訂正等の請求）</h2> <p data-astro-cid-gqylorwf>
+利用者は、個人情報保護法で認められた範囲で、当社に対し本人に関する個人情報等の利用目的の通知、開示、訂正、追加、削除、利用停止、第三者提供停止等を請求できます。請求の際は、本人確認書類の提示をお願いする場合があります。
+</p> <p data-astro-cid-gqylorwf>開示請求等の手続及び手数料については、第12条のお問い合わせ窓口までご連絡ください。</p> <h2 data-astro-cid-gqylorwf>第10条（未成年者の情報）</h2> <p data-astro-cid-gqylorwf>利用者が未成年の場合、親権者等の法定代理人の同意を得た上で本サービスを利用してください。未成年者が本サービスを利用した場合、親権者等の同意があったものとみなします。</p> <h2 data-astro-cid-gqylorwf>第11条（本ポリシーの改定）</h2> <p data-astro-cid-gqylorwf>当社は、法令改正やサービス内容の変更等に伴い、本ポリシーを改定することがあります。重要な変更を行う際は、本サービス内または当社ウェブサイトで告知するとともに、必要に応じて利用者に通知します。</p> <h2 data-astro-cid-gqylorwf>第12条（お問い合わせ窓口）</h2> <p data-astro-cid-gqylorwf>本ポリシーまたは個人情報等の取扱いに関するお問い合わせ、相談、苦情については、下記窓口までご連絡ください。</p> <p data-astro-cid-gqylorwf>
+個人情報取扱事業者：樋口雄哉<br data-astro-cid-gqylorwf>
+住所：四日市市 垂坂新町173<br data-astro-cid-gqylorwf>
+Eメールアドレス：higuchiyuya.prompty@gmail.com
+</p> </div> </main>`;
+}, "/home/user/hero-hp/src/components/Main_PP_PLAYHUB.astro", void 0);
+
+const $$Astro = createAstro();
+const $$PrivacypolicyPlayhub = createComponent(async ($$result, $$props, $$slots) => {
+  const Astro2 = $$result.createAstro($$Astro, $$props, $$slots);
+  Astro2.self = $$PrivacypolicyPlayhub;
+  return renderTemplate`${renderComponent($$result, "MainLayout", $$MainLayout, { "title": "PlayHub - \u30D7\u30E9\u30A4\u30D0\u30B7\u30FC\u30DD\u30EA\u30B7\u30FC", "lang": "ja", "bodyClass": "dark:bg-gray-900", "bodyStyle": "background-color:#fff;text-align:center;overflow-y:scroll;", "data-astro-cid-htvevtqs": true }, { "default": ($$result2) => renderTemplate`  ${renderComponent($$result2, "Main_PP_PLAYHUB", $$MainPPPLAYHUB, { "data-astro-cid-htvevtqs": true })} `, "head": ($$result2) => renderTemplate`${renderComponent($$result2, "Fragment", Fragment, { "slot": "head" }, { "default": ($$result3) => renderTemplate` ${renderComponent($$result3, "ViewTransitions", $$ViewTransitions, { "data-astro-cid-htvevtqs": true })} <link rel="icon" href="/Hero/favicon.ico"> <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">  ` })}` })}`;
+}, "/home/user/hero-hp/src/pages/privacypolicy_playhub.astro", void 0);
+
+const $$file = "/home/user/hero-hp/src/pages/privacypolicy_playhub.astro";
+const $$url = "/privacypolicy_playhub";
+
+const privacypolicy_playhub = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+	__proto__: null,
+	default: $$PrivacypolicyPlayhub,
+	file: $$file,
+	url: $$url
+}, Symbol.toStringTag, { value: 'Module' }));
+
+export { $$ViewTransitions as $, privacypolicy_playhub as p };

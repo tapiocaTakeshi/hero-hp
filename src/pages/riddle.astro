@@ -1,33 +1,8 @@
 ---
-import Main_RIDDLE from "../components/Main_RIDDLE.astro"
-import Header from "../components/Header.astro"; // Changed to use RiddleHeader
-import { ViewTransitions } from "astro:transitions";
-
-
+import MainLayout from '../layouts/MainLayout.astro';
+import Main_RIDDLE from '../components/Main_RIDDLE.astro';
 ---
-<html lang="ja" >
-	<head>
-		<ViewTransitions />
-		<link rel="icon" href="/Riddle/android-chrome-icon-512x512.png">
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-		<meta name="generator" content={Astro.generator} />
-		<title>riddle</title>
-    <style>
-      /* Add top padding to the body to account for the fixed RiddleHeader height */
-      /* Adjust based on RiddleHeader's actual height (h-16 or h-20 in RiddleHeader.astro) */
-      body {
-        padding-top: 5rem; /* Assuming 80px for md:h-20 in RiddleHeader */
-      }
-      @media (max-width: 767px) { /* md breakpoint in Tailwind */
-        body {
-          padding-top: 4rem; /* Assuming 64px for h-16 in RiddleHeader */
-        }
-      }
-    </style>
-	</head>
-  <body style="background-color:#ffff;text-align:center;overflow-y:scroll;" class="dark:bg-gray-900">
-  <Header />
-  <Main_RIDDLE/>
- </body>
-</html>
+
+<MainLayout title="He-ro" lang="en">
+	<Main_RIDDLE />
+</MainLayout>

@@ -27,8 +27,11 @@
     previews = {
       enable = true;
       previews = [{
-        command =
-          [ "npm" "run" "dev" "--" "--port" "$PORT" "--hostname" "0.0.0.0" ];
+        command = [
+          "sh"
+          "-c"
+          ''PORT="${PORT:-4321}" npm run dev -- --port "$PORT" --hostname 0.0.0.0''
+        ];
         manager = "web";
         id = "web";
       }];

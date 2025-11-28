@@ -2,101 +2,81 @@
 import "../styles/style.css";
 ---
 
-<main class="home-main">
-   <section class="hero-section">
+<div class="scroll-container">
+   <section class="hero-section" id="home">
+      <div class="hero-backdrop" aria-hidden="true"></div>
       <div class="section-content">
-         <div class="hero-content scroll-fade">
-            <h1 class="hero-main-title">
-               <span class="hero-title-text">Change Yourself.</span>
-            </h1>
-            <p class="hero-description">革新的なアプリで、あなたの日常を変革しよう。思考力、読書体験、創造性を最大化する3つのアプリをご紹介します。</p>
-            <div class="hero-cta">
-               <a href="#apps-section" class="cta-button primary" aria-label="アプリを見る">
-                  <span class="cta-icon">🚀</span>
-                  アプリを探索
-               </a>
-               <a href="/contact" class="cta-button secondary" aria-label="お問い合わせ">
-                  お問い合わせ
-               </a>
-            </div>
-         </div>
-      </div>
-   </section>
-
-   <section class="apps-section" id="apps-section">
-      <div class="section-content">
-         <div class="apps-intro scroll-fade">
-            <h2 class="apps-title">Our Apps</h2>
-            <p class="apps-description">あなたの成長をサポートする3つの革新的なアプリ</p>
-         </div>
-         <div class="apps-preview scroll-fade">
-            <div class="app-preview-grid">
-               <div class="app-preview-card" data-app="riddle">
-                  <img src="/RiddleLogo.png" alt="Riddle" class="app-preview-icon">
-                  <h3>Riddle</h3>
-                  <p>思考力を解き放つ</p>
+         <div class="hero-text-wrapper" aria-label="Change yourself mantra">
+            <div class="hero-panel-grid">
+               <div class="hero-panel hero-panel--left slide-left" style="--panel-delay: 0s;">
+                  <p class="hero-panel-text">心が変われば行動が変わる。</p>
                </div>
-               <div class="app-preview-card" data-app="prompty">
-                  <img src="/Prompty/icon_removebg-preview.png" alt="Prompty" class="app-preview-icon">
-                  <h3>Prompty</h3>
-                  <p>AIプロンプト生成</p>
+               <div class="hero-panel hero-panel--right slide-right" style="--panel-delay: 0.15s;">
+                  <p class="hero-panel-text">行動が変われば習慣が変わる。</p>
                </div>
-               <div class="app-preview-card" data-app="summaries">
-                  <img src="/SummariesLogo.png" alt="Summaries" class="app-preview-icon">
-                  <h3>Summaries</h3>
-                  <p>読書体験を変革</p>
+               <div class="hero-panel hero-panel--left slide-left" style="--panel-delay: 0.3s;">
+                  <p class="hero-panel-text">習慣が変われば人格が変わる。</p>
+               </div>
+               <div class="hero-panel hero-panel--right slide-right" style="--panel-delay: 0.45s;">
+                  <p class="hero-panel-text">人格が変われば運命が変わる。</p>
+               </div>
+               <div class="hero-panel hero-panel--full slide-bottom" style="--panel-delay: 0.75s;">
+                  <h1 class="hero-headline hero-main-title">Change yourself.</h1>
                </div>
             </div>
          </div>
       </div>
    </section>
 
-   <section class="riddle-section" id="riddle-section">
+   <section class="app-detail-section" id="riddle" data-theme="riddle">
       <div class="section-content">
-         <div class="app-showcase scroll-fade">
-            <div class="app-detail-content">
-               <div class="app-header">
-                  <div class="app-logo-container">
-                     <img
-                        transition:name="riddle"
-                        src="/RiddleLogo.png"
-                        class="app-logo"
-                        alt="Riddle App Logo"
-                     />
+         <div class="app-detail-content">
+            <div class="app-info-left">
+               <span class="app-pill">クイズ✖️SNS</span>
+               <img transition:name="riddle" src="/RiddleLogo.png" class="app-logo" alt="Riddle App Logo" />
+               <h2 class="app-name">Riddle</h2>
+               <p class="app-tagline">Change your thinking.</p>
+            </div>
+            <div class="app-info-right">
+               <p class="app-description">
+                  クイズ✖️SNSで思考力とつながりを同時にアップデート。難問に挑戦しながら、コミュニティで解法や気づきをシェアできます。
+               </p>
+               <div class="app-features">
+                  <div class="feature-item">
+                     <span class="feature-icon">🧩</span>
+                     <div>
+                        <p class="feature-title">豊富なパズルコレクション</p>
+                        <p class="feature-description">論理、数学、言葉など多彩なジャンルに挑戦できます。</p>
+                     </div>
                   </div>
-                  <div class="app-title-section">
-                     <h2 class="app-name">Riddle</h2>
-                     <p class="app-tagline">Change your thinking.</p>
+                  <div class="feature-item">
+                     <span class="feature-icon">🎯</span>
+                     <div>
+                        <p class="feature-title">段階的な難易度設計</p>
+                        <p class="feature-description">初心者から上級者まで、自分に合ったレベルで継続的にステップアップ。</p>
+                     </div>
+                  </div>
+                  <div class="feature-item">
+                     <span class="feature-icon">📊</span>
+                     <div>
+                        <p class="feature-title">進捗追跡機能</p>
+                        <p class="feature-description">プレイ履歴を可視化して、学習効果と成長を確認できます。</p>
+                     </div>
                   </div>
                </div>
-               
-               <div class="app-content">
-                  <p class="app-description">
-                     挑戦的なパズルと脳トレで、あなたの思考力を解き放ちましょう。論理的思考、創造性、問題解決能力を鍛える革新的なクイズアプリです。
-                  </p>
-                  
-                  <div class="app-features">
-                     <div class="feature-item">
-                        <span class="feature-icon">🧩</span>
-                        <span>豊富なパズルコレクション</span>
-                     </div>
-                     <div class="feature-item">
-                        <span class="feature-icon">🎯</span>
-                        <span>段階的な難易度設計</span>
-                     </div>
-                     <div class="feature-item">
-                        <span class="feature-icon">📊</span>
-                        <span>進捗追跡機能</span>
-                     </div>
-                  </div>
-                  
-                  <div class="app-cta">
-                     <a href="/riddle" class="cta-button primary" aria-label="Riddleアプリの詳細を見る">
-                        <span class="cta-icon">🧩</span>
-                        今すぐ挑戦する
+               <div class="app-actions">
+                  <div class="app-links">
+                     <a href="/riddle" class="cta-button surface" aria-label="Riddleアプリの詳細を見る">
+                        <span class="cta-icon">🧩</span>アプリ詳細を見る
                      </a>
-                     <a href="#prompty-section" class="cta-button outline" aria-label="次のアプリを見る">
-                        次のアプリ →
+                     <span class="app-availability">iOS / Android 対応</span>
+                  </div>
+                  <div class="store-buttons">
+                     <a href="https://apps.apple.com/jp/app/riddle/id1621658101" class="store-button store-button--app-store" target="_blank" rel="noopener noreferrer">
+                        <img src="/Download_on_the_App_Store_Badge_JP_RGB_blk_100317.svg" alt="App Storeでダウンロード" class="store-badge" loading="lazy" />
+                     </a>
+                     <a href="https://play.google.com/store/apps/details?id=com.higuchiyuya.riddle" class="store-button store-button--google" target="_blank" rel="noopener noreferrer">
+                        <img src="/Riddle/GetItOnGooglePlay_Badge_Web_color_Japanese.png" alt="Google Playで入手" class="store-badge" loading="lazy" />
                      </a>
                   </div>
                </div>
@@ -105,52 +85,106 @@ import "../styles/style.css";
       </div>
    </section>
 
-   <section class="prompty-section" id="prompty-section">
+   <section class="app-detail-section" id="prompty" data-theme="prompty">
       <div class="section-content">
-         <div class="app-showcase scroll-fade">
-            <div class="app-detail-content">
-               <div class="app-header">
-                  <div class="app-logo-container">
-                     <img
-                        src="/Prompty/icon_removebg-preview.png"
-                        class="app-logo"
-                        alt="Prompty App Logo"
-                     />
+         <div class="app-detail-content">
+            <div class="app-info-left">
+               <span class="app-pill">promptを生成・共有</span>
+               <img src="/Prompty/icon_removebg-preview.png" class="app-logo" alt="Prompty App Logo" />
+               <h2 class="app-name">Prompty</h2>
+               <p class="app-tagline">Change your prompt.</p>
+            </div>
+            <div class="app-info-right">
+               <p class="app-description">
+                  promptを生成・共有する新しいワークスペース。AIに響くプロンプトを作り、コミュニティで磨きながら成果を加速させましょう。
+               </p>
+               <div class="app-features">
+                  <div class="feature-item">
+                     <span class="feature-icon">✨</span>
+                     <div>
+                        <p class="feature-title">AI最適化プロンプト</p>
+                        <p class="feature-description">生成AIが理解しやすい形に整えた高品質なプロンプトを即座に生成します。</p>
+                     </div>
                   </div>
-                  <div class="app-title-section">
-                     <h2 class="app-name">Prompty</h2>
-                     <p class="app-tagline">Change your prompt.</p>
+                  <div class="feature-item">
+                     <span class="feature-icon">🎨</span>
+                     <div>
+                        <p class="feature-title">創造性支援機能</p>
+                        <p class="feature-description">インスピレーションを刺激するサンプルとヒントでアイデア出しをサポートします。</p>
+                     </div>
+                  </div>
+                  <div class="feature-item">
+                     <span class="feature-icon">💡</span>
+                     <div>
+                        <p class="feature-title">テンプレートギャラリー</p>
+                        <p class="feature-description">ビジネスや学習などのシーン別テンプレートを多数収録しています。</p>
+                     </div>
                   </div>
                </div>
-               
-               <div class="app-content">
-                  <p class="app-description">
-                     プロフェッショナルなAIプロンプト生成で、あなたの創造力を最大化しましょう。効果的なプロンプトで、AIとの対話をより有意義にします。
-                  </p>
-                  
-                  <div class="app-features">
-                     <div class="feature-item">
-                        <span class="feature-icon">✨</span>
-                        <span>AI最適化プロンプト</span>
-                     </div>
-                     <div class="feature-item">
-                        <span class="feature-icon">🎨</span>
-                        <span>創造性支援機能</span>
-                     </div>
-                     <div class="feature-item">
-                        <span class="feature-icon">💡</span>
-                        <span>テンプライト豊富</span>
+               <div class="app-actions">
+                  <div class="app-links">
+                     <a href="/prompty" class="cta-button surface" aria-label="Promptyアプリの詳細を見る">
+                        <span class="cta-icon">✨</span>アプリ詳細を見る
+                     </a>
+                     <span class="app-availability">Android 先行提供</span>
+                  </div>
+                  <div class="store-buttons">
+                     <span class="store-button store-button--app-store disabled" aria-disabled="true">
+                        <img src="/Download_on_the_App_Store_Badge_JP_RGB_blk_100317.svg" alt="App Store版は近日公開予定" class="store-badge" loading="lazy" />
+                     </span>
+                     <a href="https://play.google.com/store/apps/details?id=com.hero.prompty" class="store-button store-button--google" target="_blank" rel="noopener noreferrer">
+                        <img src="/Riddle/GetItOnGooglePlay_Badge_Web_color_Japanese.png" alt="Google Playで入手" class="store-badge" loading="lazy" />
+                     </a>
+                  </div>
+                  <p class="store-note">※ App Store版は現在準備中です。公開時にこちらでお知らせします。</p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <section class="app-detail-section" id="summaries" data-theme="summaries">
+      <div class="section-content">
+         <div class="app-detail-content">
+            <div class="app-info-left">
+               <span class="app-pill">要約✖️SNS</span>
+               <img src="/SummariesLogo.png" class="app-logo" alt="Summaries App Logo" />
+               <h2 class="app-name">Summaries</h2>
+               <p class="app-tagline">Change your reading.</p>
+            </div>
+            <div class="app-info-right">
+               <p class="app-description">
+                  要約✖️SNSで情報共有のスピードを刷新。AI要約で要点を押さえ、仲間と知識を交換しながら学びを深めます。
+               </p>
+               <div class="app-features">
+                  <div class="feature-item">
+                     <span class="feature-icon">📚</span>
+                     <div>
+                        <p class="feature-title">AI要約エンジン</p>
+                        <p class="feature-description">高度な自然言語処理で重要なポイントだけを抽出します。</p>
                      </div>
                   </div>
-                  
-                  <div class="app-cta">
-                     <a href="/prompty" class="cta-button primary" aria-label="Promptyアプリの詳細を見る">
-                        <span class="cta-icon">✨</span>
-                        創造力を解放する
+                  <div class="feature-item">
+                     <span class="feature-icon">⚡</span>
+                     <div>
+                        <p class="feature-title">高速処理</p>
+                        <p class="feature-description">長文のドキュメントでも数秒で要約し、時間を有効に活用できます。</p>
+                     </div>
+                  </div>
+                  <div class="feature-item">
+                     <span class="feature-icon">🎯</span>
+                     <div>
+                        <p class="feature-title">カスタム要約</p>
+                        <p class="feature-description">必要な情報量に合わせて、要約の長さや粒度を柔軟に調整できます。</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="app-actions">
+                  <div class="app-links">
+                     <a href="/summaries_app_description" class="cta-button surface" aria-label="Summariesアプリの詳細を見る">
+                        <span class="cta-icon">📚</span>アプリ詳細を見る
                      </a>
-                     <a href="#summaries-section" class="cta-button outline" aria-label="次のアプリを見る">
-                        次のアプリ →
-                     </a>
+                     <span class="app-availability">Coming soon</span>
                   </div>
                </div>
             </div>
@@ -158,1674 +192,613 @@ import "../styles/style.css";
       </div>
    </section>
 
-   <section class="summaries-section" id="summaries-section">
+   <section class="contact-section" id="contact">
       <div class="section-content">
-         <div class="app-showcase scroll-fade">
-            <div class="app-detail-content">
-               <div class="app-header">
-                  <div class="app-logo-container">
-                     <img
-                        src="/SummariesLogo.png"
-                        class="app-logo"
-                        alt="Summaries App Logo"
-                     />
-                  </div>
-                  <div class="app-title-section">
-                     <h2 class="app-name">Summaries</h2>
-                     <p class="app-tagline">Change your reading.</p>
-                  </div>
-               </div>
-               
-               <div class="app-content">
-                  <p class="app-description">
-                     インテリジェントな要約機能で、コンテンツの読み方を変革しましょう。効率的な学習と情報収集を実現する革新的なアプリです。
-                  </p>
-                  
-                  <div class="app-features">
-                     <div class="feature-item">
-                        <span class="feature-icon">📚</span>
-                        <span>AI要約エンジン</span>
-                     </div>
-                     <div class="feature-item">
-                        <span class="feature-icon">⚡</span>
-                        <span>高速処理</span>
-                     </div>
-                     <div class="feature-item">
-                        <span class="feature-icon">🎯</span>
-                        <span>カスタム要約レベル</span>
-                     </div>
-                  </div>
-                  
-                  <div class="app-cta">
-                     <a href="/summaries_app_description" class="cta-button primary" aria-label="Summariesアプリの詳細を見る">
-                        <span class="cta-icon">📚</span>
-                        読書体験を変える
-                     </a>
-                     <a href="#contact-section" class="cta-button outline" aria-label="お問い合わせへ移動">
-                        お問い合わせ →
-                     </a>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-   </section>
-
-   <section class="contact-section-wrapper" id="contact-section">
-      <div class="section-content">
-         <div class="contact-section scroll-fade">
+         <div class="contact-card">
             <h2 class="contact-title">お問い合わせ</h2>
             <p class="contact-description">
-               ご質問やご相談がございましたら、お気軽にお問い合わせください。<br>
-               専門チームが迅速にサポートいたします。
+               ご質問や導入のご相談がありましたら、お気軽にお知らせください。専門チームが迅速にサポートいたします。
             </p>
-            <div class="contact-cta">
+            <div class="contact-actions">
                <a href="/contact" class="cta-button primary" aria-label="お問い合わせフォームへ">
-                  <span class="cta-icon">💬</span>
-                  お問い合わせ
+                  <span class="cta-icon">💬</span>お問い合わせフォーム
+               </a>
+               <a href="mailto:higuchiyuya.prompty@gmail.com" class="cta-button secondary" aria-label="メールで問い合わせる">
+                  <span class="cta-icon">✉️</span>メールで相談する
                </a>
             </div>
          </div>
       </div>
    </section>
-
-   <script>
-      function initializeAnimations() {
-         // Scroll-triggered fade-in animation
-         const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-         };
-
-         const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-               if (entry.isIntersecting) {
-                  entry.target.classList.add('visible');
-               }
-            });
-         }, observerOptions);
-
-         // Reset all animations first
-         document.querySelectorAll('.scroll-fade').forEach(el => {
-            el.classList.remove('visible');
-         });
-
-         // Show hero section immediately on page load
-         const heroElements = document.querySelectorAll('.hero-section .scroll-fade');
-         heroElements.forEach(el => {
-            el.classList.add('visible');
-         });
-
-         // Observe all scroll-fade elements
-         document.querySelectorAll('.scroll-fade').forEach(el => {
-            observer.observe(el);
-         });
-
-         // Trigger check for elements already in view
-         setTimeout(() => {
-            document.querySelectorAll('.scroll-fade').forEach(el => {
-               const rect = el.getBoundingClientRect();
-               const windowHeight = window.innerHeight;
-               if (rect.top < windowHeight * 0.9) {
-                  el.classList.add('visible');
-               }
-            });
-         }, 100);
-      }
-
-      // Enhanced accessibility features
-      function initializeAccessibility() {
-         // Enhanced keyboard navigation
-         document.addEventListener('keydown', (e) => {
-            // Tab navigation enhancement
-            if (e.key === 'Tab') {
-               document.body.classList.add('keyboard-navigation');
-            }
-            
-            // Escape key functionality
-            if (e.key === 'Escape') {
-               // Close any open menus or modals
-               const activeModal = document.querySelector('.nav-menu.active');
-               if (activeModal) {
-                  const closeButton = document.getElementById('nav-close');
-                  if (closeButton) {
-                     closeButton.click();
-                  }
-               }
-            }
-         });
-
-         // Remove keyboard navigation class on mouse interaction
-         document.addEventListener('mousedown', () => {
-            document.body.classList.remove('keyboard-navigation');
-         });
-
-         // Enhanced focus management
-         const focusableElements = 'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])';
-         
-         function trapFocus(container: HTMLElement) {
-            const focusables = container.querySelectorAll(focusableElements);
-            const firstFocusable = focusables[0] as HTMLElement;
-            const lastFocusable = focusables[focusables.length - 1] as HTMLElement;
-
-            container.addEventListener('keydown', (e: KeyboardEvent) => {
-               if (e.key === 'Tab') {
-                  if (e.shiftKey) {
-                     if (document.activeElement === firstFocusable) {
-                        e.preventDefault();
-                        lastFocusable.focus();
-                     }
-                  } else {
-                     if (document.activeElement === lastFocusable) {
-                        e.preventDefault();
-                        firstFocusable.focus();
-                     }
-                  }
-               }
-            });
-         }
-
-         // Apply focus trapping to navigation menu
-         const navMenu = document.getElementById('nav-menu');
-         if (navMenu) {
-            trapFocus(navMenu);
-         }
-
-         // Smooth scroll with accessibility considerations
-         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (this: HTMLAnchorElement, e: Event) {
-               const href = this.getAttribute('href');
-               if (href === '#' || !href) return;
-               
-               e.preventDefault();
-               const target = document.querySelector(href);
-               if (target && target instanceof HTMLElement) {
-                  // Add focus to target for screen readers
-                  target.scrollIntoView({
-                     behavior: 'smooth',
-                     block: 'start'
-                  });
-                  
-                  // Set focus for accessibility
-                  setTimeout(() => {
-                     target.setAttribute('tabindex', '-1');
-                     target.focus();
-                     target.addEventListener('blur', () => {
-                        target.removeAttribute('tabindex');
-                     }, { once: true });
-                  }, 100);
-               }
-            });
-         });
-
-         // Announce page changes for screen readers
-         const announcer = document.createElement('div');
-         announcer.setAttribute('aria-live', 'polite');
-         announcer.setAttribute('aria-atomic', 'true');
-         announcer.className = 'sr-only';
-         announcer.id = 'page-announcer';
-         document.body.appendChild(announcer);
-
-         // Enhanced app preview card interactions
-         document.querySelectorAll('.app-preview-card').forEach(card => {
-            const htmlCard = card as HTMLElement;
-            const appName = htmlCard.dataset.app;
-            
-            // Make cards keyboard accessible
-            htmlCard.setAttribute('tabindex', '0');
-            htmlCard.setAttribute('role', 'button');
-            htmlCard.setAttribute('aria-label', `${appName}アプリの詳細を見る`);
-            
-            // Click and keyboard event handlers
-            function navigateToApp() {
-               const targetSection = document.getElementById(`${appName}-section`) as HTMLElement;
-               if (targetSection) {
-                  targetSection.scrollIntoView({ behavior: 'smooth' });
-                  setTimeout(() => {
-                     targetSection.setAttribute('tabindex', '-1');
-                     targetSection.focus();
-                  }, 100);
-               }
-            }
-            
-            htmlCard.addEventListener('click', navigateToApp);
-            htmlCard.addEventListener('keydown', (e: KeyboardEvent) => {
-               if (e.key === 'Enter' || e.key === ' ') {
-                  e.preventDefault();
-                  navigateToApp();
-               }
-            });
-         });
-      }
-
-      function initializeScrollFix() {
-         // Comprehensive scroll behavior fixes
-         const html = document.documentElement;
-         const body = document.body;
-         
-         // Ensure root elements allow proper scrolling
-         html.style.overflow = 'auto';
-         html.style.overflowX = 'hidden';
-         html.style.scrollBehavior = 'smooth';
-         html.style.height = 'auto';
-         
-         body.style.overflow = 'auto';
-         body.style.overflowX = 'hidden';
-         body.style.scrollBehavior = 'smooth';
-         body.style.height = 'auto';
-         body.style.minHeight = '100vh';
-
-         // Fix all sections for proper scroll behavior
-         const sections = document.querySelectorAll('.hero-section, .apps-section, .riddle-section, .summaries-section, .prompty-section, .contact-section-wrapper');
-         
-         sections.forEach((section, index) => {
-            const htmlSection = section as HTMLElement;
-            
-            // Ensure sections don't interfere with scroll
-            htmlSection.style.position = 'relative';
-            htmlSection.style.overflow = 'visible';
-            htmlSection.style.pointerEvents = 'auto';
-            htmlSection.style.touchAction = 'pan-y';
-            htmlSection.style.zIndex = String(index + 1);
-            htmlSection.style.transform = 'translateZ(0)'; // Force hardware acceleration
-            
-            // Remove any height constraints that might interfere
-            htmlSection.style.maxHeight = 'none';
-            htmlSection.style.height = 'auto';
-         });
-
-         // Ensure main container allows scrolling
-         const mainContainer = document.querySelector('.home-main') as HTMLElement;
-         if (mainContainer) {
-            mainContainer.style.overflow = 'visible';
-            mainContainer.style.overflowX = 'hidden';
-            mainContainer.style.height = 'auto';
-            mainContainer.style.minHeight = '100vh';
-            mainContainer.style.position = 'relative';
-         }
-
-         // Fix header to not interfere with scrolling
-         const header = document.querySelector('.header') as HTMLElement;
-         if (header) {
-            header.style.position = 'fixed';
-            header.style.zIndex = '1000';
-            header.style.pointerEvents = 'auto';
-         }
-
-         // Ensure content areas don't block scrolling
-         const contentAreas = document.querySelectorAll('.section-content, .animated-content, .app-showcase, .contact-section');
-         contentAreas.forEach(area => {
-            const htmlArea = area as HTMLElement;
-            htmlArea.style.pointerEvents = 'auto';
-            htmlArea.style.touchAction = 'pan-y';
-            htmlArea.style.position = 'relative';
-         });
-
-         // Force scroll recalculation
-         setTimeout(() => {
-            window.scrollTo(0, window.pageYOffset);
-         }, 100);
-      }
-
-      function debounce(func: (...args: any[]) => void, wait: number) {
-         let timeout: ReturnType<typeof setTimeout> | undefined;
-         return function executedFunction(...args: any[]) {
-            const later = () => {
-               clearTimeout(timeout);
-               func(...args);
-            };
-            clearTimeout(timeout);
-            timeout = setTimeout(later, wait);
-         };
-      }
-
-      // Enhanced scroll debugging and monitoring
-      function initializeScrollDebugging() {
-         const debouncedScrollHandler = debounce(() => {
-            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            const documentHeight = document.documentElement.scrollHeight;
-            const windowHeight = window.innerHeight;
-            const scrollPercentage = (scrollTop / (documentHeight - windowHeight)) * 100;
-            
-            console.log('Scroll Debug:', {
-               position: scrollTop,
-               documentHeight,
-               windowHeight,
-               maxScroll: documentHeight - windowHeight,
-               percentage: Math.round(scrollPercentage)
-            });
-         }, 100);
-
-         window.addEventListener('scroll', debouncedScrollHandler, { passive: true });
-         
-         // Monitor for scroll issues
-         let lastScrollTop = 0;
-         let scrollStuckCount = 0;
-         
-         const scrollMonitor = debounce(() => {
-            const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            if (Math.abs(currentScrollTop - lastScrollTop) < 1) {
-               scrollStuckCount++;
-               if (scrollStuckCount > 10) {
-                  console.warn('Scroll appears to be stuck, attempting fix...');
-                  initializeScrollFix();
-                  scrollStuckCount = 0;
-               }
-            } else {
-               scrollStuckCount = 0;
-            }
-            lastScrollTop = currentScrollTop;
-         }, 500);
-
-         window.addEventListener('scroll', scrollMonitor, { passive: true });
-      }
-
-      // Add scroll restoration for better UX
-      function initializeScrollRestoration() {
-         // Ensure scroll position is maintained on page reload
-         if ('scrollRestoration' in history) {
-            history.scrollRestoration = 'manual';
-         }
-         
-         // Restore scroll position after page load
-         window.addEventListener('load', () => {
-            const savedScrollPosition = sessionStorage.getItem('scrollPosition');
-            if (savedScrollPosition) {
-               setTimeout(() => {
-                  window.scrollTo(0, parseInt(savedScrollPosition, 10));
-                  sessionStorage.removeItem('scrollPosition');
-               }, 100);
-            }
-         });
-         
-         // Save scroll position before page unload
-         window.addEventListener('beforeunload', () => {
-            sessionStorage.setItem('scrollPosition', String(window.pageYOffset));
-         });
-      }
-
-      // Initialize all functions with proper error handling
-      function initializeAll() {
-         try {
-            initializeAnimations();
-            initializeAccessibility();
-            initializeScrollFix();
-            initializeScrollRestoration();
-            
-            if (window.location.search.includes('debug=scroll')) {
-               initializeScrollDebugging();
-            }
-            
-            // Final scroll check
-            setTimeout(() => {
-               const documentHeight = document.documentElement.scrollHeight;
-               const windowHeight = window.innerHeight;
-               console.log('Page initialization complete. Document height:', documentHeight, 'Window height:', windowHeight);
-            }, 200);
-            
-         } catch (error) {
-            console.error('Error initializing page:', error);
-         }
-      }
-
-      // Initialize on page load
-      document.addEventListener('DOMContentLoaded', initializeAll);
-      
-      // Handle Astro view transitions
-      document.addEventListener('astro:page-load', initializeAll);
-      
-      // Re-initialize when page becomes visible (back button)
-      document.addEventListener('visibilitychange', () => {
-         if (!document.hidden) {
-            setTimeout(initializeAll, 100);
-         }
-      });
-
-      // Handle browser back/forward navigation
-      window.addEventListener('pageshow', (event) => {
-         if (event.persisted) {
-            setTimeout(initializeAll, 100);
-         }
-      });
-
-      // Handle popstate events (browser back/forward)
-      window.addEventListener('popstate', () => {
-         setTimeout(initializeAll, 100);
-      });
-
-      // Fallback for immediate execution if DOM is already loaded
-      if (document.readyState === 'loading') {
-         document.addEventListener('DOMContentLoaded', initializeAll);
-      } else {
-         initializeAll();
-      }
-   </script>
-</main>
+</div>
 
 <style>
-   /* CSS Variables for consistent theming */
    :root {
-      --primary-color: #6366f1;
-      --primary-hover: #5048e5;
-      --secondary-color: #f59e0b;
-      --accent-color: #10b981;
-      --text-primary: #1f2937;
-      --text-secondary: #6b7280;
-      --text-light: #9ca3af;
-      --bg-primary: #ffffff;
-      --bg-secondary: #f9fafb;
-      --border-color: #e5e7eb;
-      --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-      --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-      --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-      --border-radius: 8px;
-      --border-radius-lg: 12px;
-      --spacing-xs: 4px;
-      --spacing-sm: 8px;
-      --spacing-md: 16px;
-      --spacing-lg: 24px;
-      --spacing-xl: 32px;
-      --spacing-2xl: 48px;
-      
-      /* Accessibility colors */
-      --focus-color: #3b82f6;
-      --focus-outline: 2px solid var(--focus-color);
-      --error-color: #dc2626;
-      --success-color: #059669;
-      --warning-color: #d97706;
+      --base-black: #060606;
+      --base-dark: #101010;
+      --base-mid: #1a1a1a;
+      --text-high: #f5f5f5;
+      --text-mid: rgba(229, 229, 229, 0.78);
+      --card-border: rgba(255, 255, 255, 0.08);
+      --card-shadow: rgba(0, 0, 0, 0.35);
    }
 
-
-   /* Screen reader only content */
-   .sr-only {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      margin: -1px;
-      overflow: hidden;
-      clip: rect(0, 0, 0, 0);
-      white-space: nowrap;
-      border: 0;
-   }
-
-   /* Enhanced focus indicators */
-   .keyboard-navigation *:focus {
-      outline: var(--focus-outline);
-      outline-offset: 2px;
-      border-radius: 4px;
-   }
-
-   /* Remove outline for mouse users */
-   body:not(.keyboard-navigation) *:focus {
-      outline: none;
-   }
-
-   /* High contrast focus for interactive elements */
-   .keyboard-navigation .cta-button:focus,
-   .keyboard-navigation .app-preview-card:focus {
-      outline: 3px solid var(--focus-color);
-      outline-offset: 2px;
-      box-shadow: 0 0 0 5px rgba(59, 130, 246, 0.1);
-   }
-
-   /* Reduced motion support */
-   @media (prefers-reduced-motion: reduce) {
-      *,
-      *::before,
-      *::after {
-         animation-duration: 0.01ms !important;
-         animation-iteration-count: 1 !important;
-         transition-duration: 0.01ms !important;
-         scroll-behavior: auto !important;
-      }
-   }
-
-   /* High contrast support */
-   .high-contrast {
-      filter: contrast(150%) brightness(110%);
-   }
-
-   .high-contrast .cta-button.primary {
-      background: #000000;
-      color: #ffffff;
-      border-color: #ffffff;
-   }
-
-   .high-contrast .cta-button.secondary {
-      background: #ffffff;
-      color: #000000;
-      border-color: #000000;
-   }
-
-   /* Root container fixes */
-   html {
-      scroll-behavior: smooth;
-      overflow-x: hidden;
-      overflow-y: auto;
-   }
-
-   body {
-      overflow-x: hidden;
-      overflow-y: auto;
-      position: relative;
-      /* padding-topはglobal.cssで統一管理 */
-      background: linear-gradient(135deg,
-         rgba(255, 255, 255, 0.1) 0%,
-         rgba(255, 255, 255, 0.05) 25%,
-         rgba(240, 248, 255, 0.1) 50%,
-         rgba(248, 250, 252, 0.05) 75%,
-         rgba(255, 255, 255, 0.1) 100%);
-      background-attachment: fixed;
-   }
-
-   .home-main {
-      padding: 0;
-      overflow-x: hidden;
-      overflow-y: visible;
-      position: relative;
-      width: 100%;
-      /* Ensure proper document flow */
-      display: block;
-      background: transparent;
-   }
-
-   /* Section layout fixes */
-   .hero-section,
-   .apps-section,
-   .riddle-section,
-   .summaries-section,
-   .prompty-section,
-   .contact-section-wrapper {
-      /* Use min-height instead of fixed height for better flow */
+   .scroll-container {
       min-height: 100vh;
+      overflow-y: auto;
+      scroll-snap-type: y mandatory;
+      -webkit-overflow-scrolling: touch;
+      background: radial-gradient(circle at 10% 10%, rgba(255, 255, 255, 0.04), transparent 55%),
+                  radial-gradient(circle at 90% 0%, rgba(255, 255, 255, 0.05), transparent 45%),
+                  linear-gradient(180deg, var(--base-black) 0%, var(--base-dark) 100%);
+      color: #111111;
+   }
+
+   .scroll-container > section {
+      --section-inline-padding: var(--layout-padding-inline, 1.6rem);
+      min-height: 100vh;
+      padding: 6.5rem var(--section-inline-padding) 4.5rem;
       display: flex;
-      align-items: center;
       justify-content: center;
+      align-items: center;
+      scroll-snap-align: start;
       position: relative;
-      padding: var(--spacing-xl) var(--spacing-md);
-      margin: 0;
-      /* Ensure sections don't interfere with scrolling */
-      overflow: visible;
+      overflow: hidden;
+   }
+
+   .section-content {
       width: 100%;
-      box-sizing: border-box;
-   }
-
-   .hero-section {
-      background: linear-gradient(135deg,
-         rgba(255, 255, 255, 0.25) 0%,
-         rgba(240, 248, 255, 0.15) 50%,
-         rgba(248, 250, 252, 0.25) 100%);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-      /* グローバルpadding-topがあるため、heroセクションは通常のpadding */
-      padding-top: var(--spacing-xl);
-      /* Ensure hero section allows scrolling past it */
-      position: relative;
-      z-index: 1;
-   }
-
-   .apps-section {
-      background: rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(15px);
-      -webkit-backdrop-filter: blur(15px);
-      border-top: 1px solid rgba(255, 255, 255, 0.15);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-      padding: var(--spacing-lg) var(--spacing-md);
-      /* Remove min-height auto to ensure consistent flow */
-      min-height: 60vh;
+      max-width: 1100px;
       position: relative;
       z-index: 2;
    }
 
-   .section-content {
-      max-width: 900px;
-      width: 100%;
-      text-align: center;
+   .hero-section {
+      color: var(--text-high);
    }
 
-   .scroll-fade {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-   }
-
-   .scroll-fade.visible {
+   .hero-backdrop {
+      position: absolute;
+      inset: 0;
+      background: #000000;
       opacity: 1;
-      transform: translateY(0);
+      z-index: 1;
    }
 
-   /* Hero Section Styles */
-   .hero-content {
+   .hero-text-wrapper {
+      min-height: calc(100vh - 12rem);
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
-      max-width: 1000px;
-      margin: 0 auto;
+      padding-top: clamp(4rem, 6vw, 6rem);
    }
 
    .hero-main-title {
-      margin-bottom: var(--spacing-xl);
-      perspective: 1000px;
+      margin: 0;
+      font-size: clamp(3.5rem, 10vw, 6.2rem);
+      font-weight: 800;
+      letter-spacing: -0.045em;
+      line-height: 1.1;
    }
 
-   .hero-title-text {
-      display: inline-block;
-      font-size: clamp(4rem, 12vw, 8rem);
-      font-weight: 900;
-      line-height: 0.9;
-      letter-spacing: -0.05em;
-      background: linear-gradient(135deg,
-         #000000 0%,
-         #4a4a4a 20%,
-         #808080 40%,
-         #ffffff 60%,
-         #c0c0c0 80%,
-         #2c2c2c 100%);
-      background-size: 400% 400%;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      animation: monoGradientShift 4s ease-in-out infinite,
-                 titlePulse 3s ease-in-out infinite,
-                 titleFloat 6s ease-in-out infinite;
-      text-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
-      transform-style: preserve-3d;
+   .hero-panel-grid {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: clamp(1.5rem, 3.6vw, 3.8rem);
+      row-gap: clamp(2rem, 4vw, 4.5rem);
+      margin-top: clamp(2rem, 5vw, 4rem);
+   }
+
+   .hero-panel {
       position: relative;
+      border-radius: 34px;
+      padding: clamp(1.4rem, 3.2vw, 2.6rem);
+      background: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 25px 70px rgba(0, 0, 0, 0.35);
+      color: #0d1f30;
+      margin: clamp(0.75rem, 2vw, 1.5rem);
+      opacity: 0;
+      animation-duration: 0.9s;
+      animation-fill-mode: forwards;
+      animation-delay: var(--panel-delay, 0s);
    }
 
-   .hero-title-text::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: linear-gradient(135deg,
-         rgba(0, 0, 0, 0.1) 0%,
-         rgba(255, 255, 255, 0.1) 25%,
-         rgba(128, 128, 128, 0.08) 50%,
-         rgba(192, 192, 192, 0.1) 75%,
-         rgba(44, 44, 44, 0.1) 100%);
-      filter: blur(8px);
-      z-index: -1;
-      animation: monoGlowPulse 2s ease-in-out infinite alternate;
+   .hero-panel--left {
+      grid-column: 1 / span 1;
+      text-align: left;
    }
 
-   @keyframes monoGradientShift {
-      0%, 100% {
-         background-position: 0% 50%;
-      }
-      50% {
-         background-position: 100% 50%;
-      }
+   .hero-panel--right {
+      grid-column: 2 / span 1;
+      text-align: right;
    }
 
-   @keyframes titlePulse {
-      0%, 100% {
-         transform: scale(1) rotateX(0deg);
-      }
-      50% {
-         transform: scale(1.02) rotateX(2deg);
-      }
+   .hero-panel--full {
+      grid-column: 1 / -1;
+      text-align: center;
    }
 
-   @keyframes titleFloat {
-      0%, 100% {
-         transform: translateY(0px) rotateY(0deg);
-      }
-      33% {
-         transform: translateY(-8px) rotateY(1deg);
-      }
-      66% {
-         transform: translateY(-4px) rotateY(-1deg);
-      }
+   .hero-panel-text {
+      margin: 0;
+      font-size: clamp(1.4rem, 4vw, 2.4rem);
+      font-weight: 600;
+      letter-spacing: -0.02em;
    }
 
-   @keyframes monoGlowPulse {
+   .hero-headline {
+      color: #0d1f30;
+   }
+
+   .slide-left {
+      transform: translateX(-40px);
+      animation-name: slideInLeft;
+   }
+
+   .slide-right {
+      transform: translateX(40px);
+      animation-name: slideInRight;
+   }
+
+   .slide-bottom {
+      transform: translateY(40px);
+      animation-name: slideInUp;
+   }
+
+   @keyframes slideInLeft {
       0% {
-         opacity: 0.3;
-         transform: scale(0.98);
-         filter: blur(8px) brightness(0.8);
+         opacity: 0;
+         transform: translateX(-70px);
       }
       100% {
-         opacity: 0.6;
-         transform: scale(1.02);
-         filter: blur(10px) brightness(1.2);
+         opacity: 1;
+         transform: translateX(0);
       }
    }
 
-   .hero-title-text:hover {
-      animation-play-state: paused;
-      transform: scale(1.05) rotateX(5deg) rotateY(2deg);
-      transition: transform 0.3s ease;
-   }
-
-   .hero-description {
-      font-size: clamp(1.1rem, 2.5vw, 1.3rem);
-      color: var(--secondary-color);
-      line-height: 1.6;
-      margin-bottom: var(--spacing-xl);
-      max-width: 700px;
-      margin-left: auto;
-      margin-right: auto;
-      opacity: 0;
-      animation: fadeInUp 1s ease-out 0.5s forwards;
-   }
-
-   @keyframes fadeInUp {
-      from {
+   @keyframes slideInRight {
+      0% {
          opacity: 0;
-         transform: translateY(30px);
+         transform: translateX(70px);
       }
-      to {
+      100% {
+         opacity: 1;
+         transform: translateX(0);
+      }
+   }
+
+   @keyframes slideInUp {
+      0% {
+         opacity: 0;
+         transform: translateY(70px);
+      }
+      100% {
          opacity: 1;
          transform: translateY(0);
       }
    }
 
-   .hero-cta {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
+   .cta-button {
+      display: inline-flex;
       align-items: center;
-      opacity: 0;
-      animation: fadeInUp 1s ease-out 1s forwards;
-   }
-
-   @media (min-width: 640px) {
-      .hero-cta {
-         flex-direction: row;
-         justify-content: center;
-         gap: 1.5rem;
-      }
-   }
-
-   .apps-showcase,
-   .app-showcase {
-      margin: 0;
-      position: relative;
-      z-index: 2;
-   }
-
-   /* Apps Section Styles */
-   .apps-intro {
-      text-align: center;
-      margin-bottom: var(--spacing-xl);
-   }
-
-   .apps-title {
-      font-size: clamp(2.5rem, 5vw, 3.5rem);
-      margin-bottom: var(--spacing-md);
-      color: var(--text-color);
-      font-weight: 800;
-      letter-spacing: -0.03em;
-      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-      background: linear-gradient(135deg,
-         rgba(26, 26, 26, 1) 0%,
-         rgba(102, 102, 102, 1) 50%,
-         rgba(26, 26, 26, 1) 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-   }
-
-   .apps-description {
-      font-size: clamp(1.1rem, 2.5vw, 1.3rem);
-      color: var(--secondary-color);
-      line-height: 1.6;
-      max-width: 500px;
-      margin: 0 auto;
-   }
-
-   .apps-preview {
-      margin-top: var(--spacing-xl);
-   }
-
-   .app-preview-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: var(--spacing-lg);
-      max-width: 900px;
-      margin: 0 auto;
-   }
-
-   .app-preview-card {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      padding: var(--spacing-lg);
-      background: linear-gradient(135deg,
-         rgba(255, 255, 255, 0.2) 0%,
-         rgba(255, 255, 255, 0.1) 100%);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border-radius: 24px;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      box-shadow:
-         0 4px 16px rgba(0, 0, 0, 0.1),
-         0 1px 0 rgba(255, 255, 255, 0.3) inset;
-      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-      cursor: pointer;
-   }
-
-   .app-preview-card:hover {
-      transform: translateY(-8px) scale(1.02);
-      box-shadow:
-         0 12px 40px rgba(0, 0, 0, 0.15),
-         0 1px 0 rgba(255, 255, 255, 0.4) inset;
-      background: linear-gradient(135deg,
-         rgba(255, 255, 255, 0.25) 0%,
-         rgba(255, 255, 255, 0.15) 100%);
-   }
-
-   .app-preview-icon {
-      width: 64px;
-      height: 64px;
-      border-radius: 16px;
-      margin-bottom: var(--spacing-md);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-      transition: all 0.4s ease;
-   }
-
-   .app-preview-card:hover .app-preview-icon {
-      transform: scale(1.1);
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-   }
-
-   .app-preview-card h3 {
-      font-size: 1.4rem;
-      font-weight: 700;
-      color: var(--text-color);
-      margin-bottom: var(--spacing-xs);
-   }
-
-   .app-preview-card p {
+      gap: 0.55rem;
+      padding: 0.9rem 1.9rem;
+      border-radius: 999px;
+      font-weight: 600;
       font-size: 1rem;
-      color: var(--secondary-color);
-      margin: 0;
+      text-decoration: none;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+      border: none;
    }
 
-   /* Glass Background Styles */
-   .riddle-section {
-      background: linear-gradient(135deg,
-         rgba(248, 250, 252, 0.3) 0%,
-         rgba(241, 245, 249, 0.2) 50%,
-         rgba(248, 250, 252, 0.3) 100%);
-      backdrop-filter: blur(25px);
-      -webkit-backdrop-filter: blur(25px);
-      border-top: 1px solid rgba(255, 255, 255, 0.2);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-   }
-
-   .summaries-section {
-      background: linear-gradient(135deg,
-         rgba(255, 255, 255, 0.2) 0%,
-         rgba(248, 250, 252, 0.15) 50%,
-         rgba(255, 255, 255, 0.25) 100%);
-      backdrop-filter: blur(25px);
-      -webkit-backdrop-filter: blur(25px);
-      border-top: 1px solid rgba(255, 255, 255, 0.2);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-   }
-
-   .prompty-section {
-      background: linear-gradient(135deg,
-         rgba(255, 255, 255, 0.2) 0%,
-         rgba(248, 250, 252, 0.15) 50%,
-         rgba(255, 255, 255, 0.25) 100%);
-      backdrop-filter: blur(25px);
-      -webkit-backdrop-filter: blur(25px);
-      border-top: 1px solid rgba(255, 255, 255, 0.2);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-   }
-
-   .video-background {
-      display: none; /* Hide video backgrounds for cleaner glass look */
-   }
-
-   .video-overlay {
-      display: none;
-   }
-
-   /* Enhanced Glass Content Styles */
-   .animated-content {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      position: relative;
-      z-index: 3;
-      background: linear-gradient(135deg,
-         rgba(255, 255, 255, 0.25) 0%,
-         rgba(255, 255, 255, 0.1) 50%,
-         rgba(255, 255, 255, 0.25) 100%);
-      backdrop-filter: blur(30px);
-      -webkit-backdrop-filter: blur(30px);
-      border-radius: 32px;
-      padding: var(--spacing-xl) var(--spacing-lg);
-      box-shadow:
-         0 8px 32px rgba(0, 0, 0, 0.1),
-         0 1px 0 rgba(255, 255, 255, 0.4) inset,
-         0 -1px 0 rgba(0, 0, 0, 0.05) inset;
-      border: 1px solid rgba(255, 255, 255, 0.3);
-      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-   }
-
-   .animated-content:hover {
-      transform: translateY(-12px) scale(1.02);
-      box-shadow:
-         0 20px 60px rgba(0, 0, 0, 0.15),
-         0 1px 0 rgba(255, 255, 255, 0.5) inset,
-         0 -1px 0 rgba(0, 0, 0, 0.1) inset;
-      background: linear-gradient(135deg,
-         rgba(255, 255, 255, 0.35) 0%,
-         rgba(255, 255, 255, 0.15) 50%,
-         rgba(255, 255, 255, 0.35) 100%);
-   }
-
-   .app-logo-container {
-      margin-bottom: var(--spacing-lg);
-   }
-
-   .animated-logo {
-      width: 96px;
-      height: 96px;
-      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-      filter: drop-shadow(0 4px 16px rgba(0, 0, 0, 0.15));
-      border-radius: 24px;
-      background: linear-gradient(135deg,
-         rgba(255, 255, 255, 0.2) 0%,
-         rgba(255, 255, 255, 0.05) 100%);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 255, 255, 0.3);
-      padding: 4px;
-      box-shadow:
-         0 4px 16px rgba(0, 0, 0, 0.1),
-         0 1px 0 rgba(255, 255, 255, 0.3) inset;
-   }
-
-   .animated-logo:hover {
-      transform: scale(1.08) rotateY(5deg);
-      filter: drop-shadow(0 12px 32px rgba(0, 0, 0, 0.2));
-      box-shadow:
-         0 8px 32px rgba(0, 0, 0, 0.15),
-         0 1px 0 rgba(255, 255, 255, 0.4) inset;
-   }
-
-   .animated-text {
-      margin-bottom: var(--spacing-lg);
-   }
-
-   .animated-text .app-name {
-      font-size: clamp(2rem, 4vw, 2.5rem);
-      font-weight: 800;
-      color: var(--text-color);
-      margin-bottom: var(--spacing-xs);
-      letter-spacing: -0.02em;
-   }
-
-   .animated-text .app-tagline {
+   .cta-button .cta-icon {
       font-size: 1.1rem;
-      color: var(--secondary-color);
-      font-weight: 500;
-      margin-bottom: var(--spacing-sm);
-      font-style: normal;
    }
 
-   .animated-text .app-description {
-      font-size: 1rem;
-      color: var(--secondary-color);
-      line-height: 1.6;
-      max-width: 360px;
-      margin: 0 auto;
+   .cta-button.primary {
+      background: #f5f5f5;
+      color: #111111;
+      box-shadow: 0 20px 44px var(--card-shadow);
    }
 
-   /* App Detail Content Styles */
+   .cta-button.primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 24px 48px rgba(0, 0, 0, 0.45);
+   }
+
+   .cta-button.secondary {
+      background: transparent;
+      color: rgba(245, 245, 245, 0.9);
+      border: 1px solid rgba(245, 245, 245, 0.32);
+   }
+
+   .cta-button.secondary:hover {
+      background: rgba(245, 245, 245, 0.08);
+      transform: translateY(-2px);
+      border-color: rgba(245, 245, 245, 0.5);
+   }
+
+   .cta-button.surface {
+      background: #0f0f0f;
+      color: #f5f5f5;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 14px 32px rgba(0, 0, 0, 0.35);
+   }
+
+   .cta-button.surface:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+      border-color: rgba(255, 255, 255, 0.18);
+   }
+
+   .app-detail-section {
+      background: #f7f7f7;
+      border-top: 1px solid #e5e5e5;
+      border-bottom: 1px solid #e5e5e5;
+   }
+
+   .app-detail-section:nth-of-type(even) {
+      background: #ffffff;
+   }
+
+   .app-detail-section::before {
+      content: "";
+      position: absolute;
+      inset: 12% -40% auto -40%;
+      height: 60%;
+      background: radial-gradient(circle, rgba(0, 0, 0, 0.05), transparent 65%);
+      opacity: 0.4;
+      pointer-events: none;
+   }
+
    .app-detail-content {
-      background: linear-gradient(135deg,
-         rgba(255, 255, 255, 0.25) 0%,
-         rgba(255, 255, 255, 0.1) 50%,
-         rgba(255, 255, 255, 0.25) 100%);
-      backdrop-filter: blur(30px);
-      -webkit-backdrop-filter: blur(30px);
-      border-radius: 32px;
-      padding: var(--spacing-xl);
-      box-shadow:
-         0 8px 32px rgba(0, 0, 0, 0.1),
-         0 1px 0 rgba(255, 255, 255, 0.4) inset,
-         0 -1px 0 rgba(0, 0, 0, 0.05) inset;
-      border: 1px solid rgba(255, 255, 255, 0.3);
-      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-      max-width: 800px;
-      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr);
+      gap: 3rem;
+      background: rgba(255, 255, 255, 0.96);
+      border-radius: 30px;
+      padding: 3.2rem;
+      box-shadow: 0 28px 68px rgba(17, 17, 17, 0.12);
+      border: 1px solid rgba(17, 17, 17, 0.06);
+     }
+
+   .app-detail-section[data-theme="riddle"] {
+      --accent: #fb923c;
+      --accent-soft: rgba(251, 146, 60, 0.12);
    }
 
-   .app-detail-content:hover {
-      transform: translateY(-8px);
-      box-shadow:
-         0 16px 48px rgba(0, 0, 0, 0.15),
-         0 1px 0 rgba(255, 255, 255, 0.5) inset,
-         0 -1px 0 rgba(0, 0, 0, 0.08) inset;
+   .app-detail-section[data-theme="prompty"] {
+      --accent: #34d399;
+      --accent-soft: rgba(52, 211, 153, 0.12);
    }
 
-   .app-header {
+   .app-detail-section[data-theme="summaries"] {
+      --accent: #60a5fa;
+      --accent-soft: rgba(96, 165, 250, 0.12);
+   }
+
+   .app-info-left {
       display: flex;
+      flex-direction: column;
       align-items: center;
-      gap: var(--spacing-lg);
-      margin-bottom: var(--spacing-xl);
-      text-align: left;
+      text-align: center;
+      gap: 1.1rem;
+   }
+
+   .app-pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.4rem 1rem;
+      border-radius: 999px;
+      background: var(--accent-soft, rgba(0, 0, 0, 0.06));
+      color: var(--accent, #111111);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
    }
 
    .app-logo {
-      width: 80px;
-      height: 80px;
-      border-radius: 20px;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
-      transition: all 0.4s ease;
+      width: 112px;
+      height: 112px;
+      border-radius: 24px;
+      box-shadow: 0 18px 44px rgba(17, 17, 17, 0.14);
    }
 
-   .app-title-section .app-name {
-      font-size: clamp(2rem, 4vw, 2.8rem);
+   .app-name {
+      font-size: 2.45rem;
       font-weight: 800;
-      color: var(--text-color);
-      margin-bottom: var(--spacing-xs);
-      letter-spacing: -0.02em;
+      margin: 0;
+      letter-spacing: -0.01em;
+      color: #111111;
    }
 
-   .app-title-section .app-tagline {
-      font-size: 1.2rem;
-      color: var(--secondary-color);
+   .app-tagline {
+      color: rgba(45, 45, 45, 0.78);
       font-weight: 500;
-      font-style: italic;
       margin: 0;
    }
 
-   .app-content {
-      text-align: center;
+   .app-info-right {
+      display: flex;
+      flex-direction: column;
+      gap: 1.85rem;
+      text-align: left;
    }
 
-   .app-content .app-description {
-      font-size: 1.1rem;
-      color: var(--secondary-color);
-      line-height: 1.6;
-      margin-bottom: var(--spacing-xl);
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
+   .app-description {
+      margin: 0;
+      font-size: 1.08rem;
+      line-height: 1.85;
+      color: #1a1a1a;
    }
 
    .app-features {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: var(--spacing-md);
-      margin-bottom: var(--spacing-xl);
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.3rem;
    }
 
    .feature-item {
       display: flex;
-      align-items: center;
-      gap: var(--spacing-sm);
-      padding: var(--spacing-md);
-      background: linear-gradient(135deg,
-         rgba(255, 255, 255, 0.15) 0%,
-         rgba(255, 255, 255, 0.05) 100%);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      border-radius: 16px;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      transition: all 0.3s ease;
-   }
-
-   .feature-item:hover {
-      transform: translateY(-2px);
-      background: linear-gradient(135deg,
-         rgba(255, 255, 255, 0.2) 0%,
-         rgba(255, 255, 255, 0.1) 100%);
+      gap: 1rem;
+      padding: 1.25rem 1.35rem;
+      border-radius: 22px;
+      background: rgba(247, 247, 247, 0.96);
+      border: 1px solid rgba(0, 0, 0, 0.05);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8);
    }
 
    .feature-icon {
-      font-size: 1.5rem;
-      flex-shrink: 0;
+      font-size: 1.95rem;
+      line-height: 1;
    }
 
-   .app-cta {
+   .feature-title {
+      font-size: 1.02rem;
+      font-weight: 700;
+      margin: 0 0 0.35rem;
+      color: #0f0f0f;
+   }
+
+   .feature-description {
+      font-size: 0.95rem;
+      color: rgba(60, 60, 60, 0.85);
+      margin: 0;
+      line-height: 1.65;
+   }
+
+   .app-actions {
       display: flex;
       flex-direction: column;
-      gap: 1rem;
+      gap: 1.3rem;
+   }
+
+   .app-links {
+      display: flex;
       align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
    }
 
-   @media (min-width: 640px) {
-      .app-cta {
-         flex-direction: row;
-         justify-content: center;
-         gap: 1.5rem;
-      }
+   .app-availability {
+      font-size: 0.85rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(45, 45, 45, 0.6);
    }
 
-   /* CTA Button Styles */
-   .cta-button {
+   .store-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.9rem;
+   }
+
+   .store-button {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 0.5rem;
-      padding: 1rem 2rem;
-      text-decoration: none;
-      border-radius: 16px;
-      font-weight: 600;
-      font-size: 1rem;
-      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-      letter-spacing: 0.01em;
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      border: 2px solid;
-      min-height: 48px;
-      min-width: 48px;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-   }
-
-   .cta-button.primary {
-      background: linear-gradient(135deg,
-         rgba(0, 123, 255, 0.9) 0%,
-         rgba(0, 86, 179, 0.95) 100%);
-      color: white;
-      border-color: rgba(0, 123, 255, 0.8);
-      box-shadow:
-         0 4px 16px rgba(0, 123, 255, 0.3),
-         0 1px 0 rgba(255, 255, 255, 0.2) inset;
-   }
-
-   .cta-button.primary:hover {
-      transform: translateY(-3px) scale(1.02);
-      background: linear-gradient(135deg,
-         rgba(0, 123, 255, 1) 0%,
-         rgba(0, 86, 179, 1) 100%);
-      box-shadow:
-         0 8px 32px rgba(0, 123, 255, 0.4),
-         0 1px 0 rgba(255, 255, 255, 0.3) inset;
-      border-color: rgba(0, 123, 255, 1);
-   }
-
-   .cta-button.primary:focus-visible {
-      outline: 3px solid rgba(0, 123, 255, 0.5);
-      outline-offset: 2px;
-   }
-
-   .cta-button.secondary {
-      background: linear-gradient(135deg,
-         rgba(255, 255, 255, 0.8) 0%,
-         rgba(248, 250, 252, 0.9) 100%);
-      color: var(--text-color);
-      border-color: rgba(255, 255, 255, 0.6);
-      box-shadow:
-         0 4px 16px rgba(0, 0, 0, 0.1),
-         0 1px 0 rgba(255, 255, 255, 0.4) inset;
-   }
-
-   .cta-button.secondary:hover {
-      transform: translateY(-3px) scale(1.02);
-      background: linear-gradient(135deg,
-         rgba(255, 255, 255, 0.95) 0%,
-         rgba(248, 250, 252, 1) 100%);
-      box-shadow:
-         0 8px 32px rgba(0, 0, 0, 0.15),
-         0 1px 0 rgba(255, 255, 255, 0.5) inset;
-      color: var(--primary-color);
-   }
-
-   .cta-button.outline {
+      padding: 0;
+      border: none;
       background: transparent;
-      color: var(--text-color);
-      border-color: rgba(255, 255, 255, 0.3);
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 18px 38px rgba(17, 17, 17, 0.16);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
    }
 
-   .cta-button.outline:hover {
-      background: linear-gradient(135deg,
-         rgba(255, 255, 255, 0.15) 0%,
-         rgba(248, 250, 252, 0.1) 100%);
-      border-color: rgba(0, 123, 255, 0.4);
-      color: #007bff;
+   .store-button:hover {
       transform: translateY(-2px);
-      box-shadow: 0 4px 16px rgba(0, 123, 255, 0.2);
+      box-shadow: 0 24px 44px rgba(17, 17, 17, 0.2);
    }
 
-   .cta-icon {
-      font-size: 1.1em;
-      transition: transform 0.3s ease;
+   .store-button--app-store {
+      background: #ffffff;
+      border: 1px solid rgba(0, 0, 0, 0.06);
    }
 
-   .cta-button:hover .cta-icon {
-      transform: scale(1.1);
+   .store-button--google {
+      background: #ffffff;
+      border: 1px solid rgba(0, 0, 0, 0.06);
    }
 
-   .contact-cta {
-      display: flex;
-      justify-content: center;
-      margin-top: var(--spacing-lg);
+   .store-button.disabled {
+      opacity: 0.6;
+      cursor: default;
+      pointer-events: none;
+      box-shadow: none;
    }
 
-   /* App sections with proper scroll behavior */
-   .riddle-section,
-   .summaries-section,
-   .prompty-section {
-      position: relative;
-      overflow: visible;
-      scroll-behavior: smooth;
-      -webkit-overflow-scrolling: touch;
-      /* Ensure proper z-index stacking */
-      z-index: 3;
-      /* Ensure sections don't stick or overlap */
-      transform: translateZ(0);
+   .store-badge {
+      display: block;
+      height: 52px;
+      width: auto;
    }
 
-   .contact-section-wrapper {
-      background: linear-gradient(135deg,
-         rgba(250, 250, 250, 0.3) 0%,
-         rgba(255, 255, 255, 0.2) 50%,
-         rgba(248, 250, 252, 0.3) 100%);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border-top: 1px solid rgba(255, 255, 255, 0.2);
-      padding: var(--spacing-xl) var(--spacing-md);
-      /* Ensure contact section is accessible */
-      min-height: 80vh;
-      position: relative;
-      z-index: 4;
-      /* Add bottom margin to ensure scrolling past the last section */
-      margin-bottom: 2rem;
-   }
-
-   /* Ensure all content is scrollable */
-   .section-content {
-      position: relative;
-      z-index: 10;
-      /* Ensure content doesn't interfere with scroll */
-      pointer-events: auto;
+   .store-note {
+      font-size: 0.85rem;
+      color: rgba(45, 45, 45, 0.6);
+      margin: 0;
    }
 
    .contact-section {
-      margin: 0;
-      padding: var(--spacing-xl) var(--spacing-lg);
-      background: linear-gradient(135deg,
-         rgba(255, 255, 255, 0.3) 0%,
-         rgba(255, 255, 255, 0.15) 50%,
-         rgba(255, 255, 255, 0.3) 100%);
-      backdrop-filter: blur(25px);
-      -webkit-backdrop-filter: blur(25px);
-      border-radius: 32px;
-      text-align: center;
-      border: 1px solid rgba(255, 255, 255, 0.25);
-      box-shadow:
-         0 8px 32px rgba(0, 0, 0, 0.1),
-         0 1px 0 rgba(255, 255, 255, 0.4) inset,
-         0 -1px 0 rgba(0, 0, 0, 0.05) inset;
-      transition: all 0.4s ease;
+      background: linear-gradient(180deg, #131313 0%, #080808 100%);
+      color: var(--text-high);
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
    }
 
-   .contact-section:hover {
-      transform: translateY(-4px);
-      box-shadow:
-         0 12px 40px rgba(0, 0, 0, 0.12),
-         0 1px 0 rgba(255, 255, 255, 0.5) inset,
-         0 -1px 0 rgba(0, 0, 0, 0.08) inset;
+   .contact-card {
+      background: rgba(17, 17, 17, 0.68);
+      border-radius: 34px;
+      padding: 3.5rem 2.6rem;
+      box-shadow: 0 28px 70px rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(22px);
+      max-width: 760px;
+      margin: 0 auto;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      text-align: center;
    }
 
    .contact-title {
-      font-size: clamp(1.8rem, 3vw, 2.2rem);
-      margin-bottom: var(--spacing-sm);
-      color: var(--text-color);
-      font-weight: 700;
-      letter-spacing: -0.02em;
+      font-size: clamp(2.1rem, 4vw, 2.9rem);
+      font-weight: 800;
+      margin: 0 0 1rem;
    }
 
    .contact-description {
-      font-size: 1.1rem;
-      color: var(--secondary-color);
-      margin-bottom: var(--spacing-lg);
-      line-height: 1.6;
-      max-width: 480px;
-      margin-left: auto;
-      margin-right: auto;
+      font-size: 1.05rem;
+      line-height: 1.9;
+      margin: 0 auto 2rem;
+      max-width: 520px;
+      color: rgba(245, 245, 245, 0.75);
    }
 
-   .contact-button {
-      display: inline-flex;
-      align-items: center;
-      padding: 1rem 2rem;
-      background: linear-gradient(135deg,
-         rgba(0, 0, 0, 0.8) 0%,
-         rgba(0, 0, 0, 0.9) 50%,
-         rgba(0, 0, 0, 0.8) 100%);
-      color: white;
-      text-decoration: none;
-      border-radius: 20px;
-      font-weight: 600;
-      font-size: 0.95rem;
-      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-      box-shadow:
-         0 4px 16px rgba(0, 0, 0, 0.2),
-         0 1px 0 rgba(255, 255, 255, 0.1) inset;
-      letter-spacing: 0.01em;
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 255, 255, 0.1);
+   .contact-actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
    }
 
-   .contact-button:hover {
-      transform: translateY(-3px) scale(1.02);
-      box-shadow:
-         0 8px 32px rgba(0, 0, 0, 0.25),
-         0 1px 0 rgba(255, 255, 255, 0.2) inset;
-      background: linear-gradient(135deg,
-         rgba(102, 102, 102, 0.9) 0%,
-         rgba(102, 102, 102, 1) 50%,
-         rgba(102, 102, 102, 0.9) 100%);
-   }
-
-
-   .app-info {
-      margin-top: 1rem;
-      text-align: center;
-   }
-
-   .app-name {
-      display: block;
-      font-size: 1.2rem;
-      font-weight: 600;
-      color: #333;
-      margin-bottom: 0.3rem;
-   }
-
-   .app-tagline {
-      display: block;
-      font-size: 0.9rem;
-      color: #666;
-      font-style: italic;
-      font-weight: 400;
-   }
-
-   .tappable {
-      width: 100px;  /* Reduced size */
-      height: 100px; /* Reduced size */
-      object-fit: cover; /* Default object-fit */
-      /* border-radius is applied inline */
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); 
-      transition: all 0.3s ease;
-   }
-
-    .tappable:hover {
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
-        transform: scale(1.05); 
-   }
-
-
-
-   /* Reduced motion support */
-   @media (prefers-reduced-motion: reduce) {
-      .hero-title-text {
-         animation: none;
+   @media (max-width: 1024px) {
+      .scroll-container > section {
+         padding: 5.5rem var(--section-inline-padding, 1.4rem) 3.8rem;
       }
-      
-      .hero-title-text::before {
-         animation: none;
+      .hero-text-wrapper {
+         min-height: calc(100vh - 10rem);
       }
-      
-      .hero-description {
-         animation: fadeInUp 0.3s ease-out forwards;
+      .hero-main-title {
+         font-size: clamp(3.6rem, 12vw, 6rem);
       }
-      
-      .hero-cta {
-         animation: fadeInUp 0.3s ease-out 0.2s forwards;
+      .hero-panel-grid {
+         gap: clamp(0.9rem, 2vw, 2rem);
+      }
+      .hero-panel-text {
+         font-size: clamp(1.25rem, 5vw, 2rem);
+      }
+      .app-detail-content {
+         grid-template-columns: 1fr;
+         padding: 2.6rem;
+         gap: 2.4rem;
+      }
+      .app-info-right {
+         text-align: left;
+      }
+      .app-links {
+         align-items: flex-start;
+      }
+      .app-detail-section::before {
+         inset: 10% -30% auto -30%;
       }
    }
 
-   /* Mobile responsive adjustments */
    @media (max-width: 768px) {
-      .hero-title-text {
-         font-size: clamp(3rem, 10vw, 5rem);
+      .scroll-container > section {
+         padding: 5rem var(--section-inline-padding, 1.1rem) 3.4rem;
+      }
+      .hero-text-wrapper {
+         min-height: calc(100vh - 8rem);
+      }
+      .hero-main-title {
+         font-size: clamp(3rem, 14vw, 5rem);
+      }
+      .hero-panel-grid {
+         grid-template-columns: 1fr;
+         gap: clamp(1rem, 6vw, 2.5rem);
+         margin-top: clamp(1.5rem, 6vw, 3rem);
+      }
+      .hero-panel {
+         grid-column: 1 / -1;
+         text-align: left;
+         margin: 0;
+         padding: clamp(1.2rem, 5vw, 2rem);
+      }
+      .hero-panel--full {
+         text-align: center;
+      }
+      .hero-panel-text {
+         font-size: clamp(1.3rem, 6vw, 2.3rem);
+         letter-spacing: -0.015em;
+      }
+      .app-detail-content {
+         padding: 2.3rem 1.8rem;
+      }
+      .store-buttons {
+         flex-direction: column;
+         width: 100%;
+      }
+      .store-button {
+         width: 100%;
+      }
+      .store-badge {
+         width: 100%;
+         height: auto;
+      }
+      .app-links {
+         flex-direction: column;
+         align-items: stretch;
       }
    }
 
-   @media (max-width: 480px) {
-      .hero-title-text {
-         font-size: clamp(2.5rem, 12vw, 4rem);
-         letter-spacing: -0.03em;
+   @media (max-width: 540px) {
+      .hero-text-wrapper {
+         min-height: calc(100vh - 6rem);
+         padding: 0 max(0.75rem, var(--layout-padding-inline, 0.75rem));
       }
-   }
-
-   /* Responsive styles with comprehensive scroll fixes */
-   @media (max-width: 768px) {
-      html, body {
-         overflow-x: hidden;
-         overflow-y: auto;
-         -webkit-overflow-scrolling: touch;
-         height: auto;
-         min-height: 100vh;
+      .hero-main-title {
+         font-size: clamp(2.5rem, 16vw, 3.8rem);
+         letter-spacing: -0.035em;
       }
-
-      .home-main {
-         overflow-x: hidden;
-         overflow-y: visible;
-         min-height: 100vh;
-         height: auto;
+      .hero-panel-text {
+         font-size: clamp(1.1rem, 8vw, 1.8rem);
+         letter-spacing: -0.01em;
       }
-
-      .hero-section,
-      .apps-section,
-      .riddle-section,
-      .summaries-section,
-      .prompty-section,
-      .contact-section-wrapper {
-         padding: var(--spacing-lg) var(--spacing-sm);
-         /* Ensure sections don't interfere with mobile scrolling */
-         position: relative;
-         overflow: visible;
-         min-height: 100vh;
-         /* Add touch-action for better mobile scroll */
-         touch-action: pan-y;
-         -webkit-overflow-scrolling: touch;
+      .hero-panel-grid {
+         gap: clamp(0.9rem, 8vw, 1.8rem);
       }
-
-      .hero-section {
-         /* グローバルpadding-topに依存、追加のpaddingは最小限 */
-         padding-top: var(--spacing-lg);
-         min-height: 100vh;
+      .hero-panel {
+         border-radius: 24px;
+         padding: clamp(1rem, 6vw, 1.6rem);
       }
-
-      .contact-section-wrapper {
-         /* Ensure last section is fully scrollable */
-         min-height: 80vh;
-         margin-bottom: 3rem;
-         padding-bottom: var(--spacing-xl);
-      }
-
-      .animated-content {
-         padding: var(--spacing-lg) var(--spacing-md);
-         /* Ensure content doesn't block touch events */
-         touch-action: pan-y;
-      }
-
-      .animated-logo {
-         width: 80px;
-         height: 80px;
-      }
-
-      .tappable {
-         width: 70px;
-         height: 70px;
-         touch-action: manipulation;
-      }
-   }
-
-   @media (max-width: 480px) {
-      /* Enhanced mobile scroll support */
-      html {
-         -webkit-text-size-adjust: 100%;
-         -webkit-overflow-scrolling: touch;
-         overflow-y: auto;
-         height: auto;
-         min-height: 100vh;
-      }
-
-      body {
-         -webkit-overflow-scrolling: touch;
-         overflow-y: auto;
-         position: relative;
-         height: auto;
-         min-height: 100vh;
-      }
-
-      .home-main {
-         -webkit-overflow-scrolling: touch;
-         overflow-y: visible;
-         height: auto;
-         min-height: 100vh;
-      }
-
-      .hero-section,
-      .apps-section,
-      .riddle-section,
-      .summaries-section,
-      .prompty-section,
-      .contact-section-wrapper {
-         padding: var(--spacing-md) var(--spacing-sm);
-         /* Optimize for mobile scrolling */
-         position: relative;
-         overflow: visible;
-         touch-action: pan-y;
-         -webkit-overflow-scrolling: touch;
-         /* Reduce min-height on small screens for better flow */
-         min-height: 90vh;
-         height: auto;
-      }
-
-      .hero-section {
-         /* 小さな画面でもグローバルpadding-topに依存 */
-         padding-top: var(--spacing-md);
-         min-height: 100vh;
-      }
-
-      .contact-section-wrapper {
-         min-height: 70vh;
-         margin-bottom: 4rem;
-         /* Ensure contact section is fully accessible */
-         padding-bottom: var(--spacing-xl);
-      }
-
-      .animated-content {
-         padding: var(--spacing-md) var(--spacing-sm);
-         border-radius: 20px;
-         touch-action: pan-y;
-      }
-
-      .animated-logo {
-         width: 72px;
-         height: 72px;
-      }
-
       .cta-button {
-         padding: 0.9rem 1.8rem;
-         font-size: 0.9rem;
-         /* Ensure buttons are touchable */
-         touch-action: manipulation;
+         width: 100%;
+         justify-content: center;
       }
-
-      .contact-section {
-         padding: var(--spacing-md) var(--spacing-sm);
-         touch-action: pan-y;
+      .app-detail-content {
+         padding: 2rem 1.5rem;
       }
-
-      .contact-button {
-         padding: 0.9rem 1.8rem;
-         font-size: 0.9rem;
-         touch-action: manipulation;
-      }
-
-      .tappable {
-         width: 60px;
-         height: 60px;
-         touch-action: manipulation;
-      }
-
-      .app-name {
-         font-size: 1rem;
-      }
-
-      .app-tagline {
-         font-size: 0.85rem;
+      .contact-card {
+         padding: 2.6rem 1.6rem;
       }
    }
 
-   /* Ultra-small screens */
-   @media (max-width: 320px) {
-      .hero-section,
-      .apps-section,
-      .riddle-section,
-      .summaries-section,
-      .prompty-section,
-      .contact-section-wrapper {
-         padding: var(--spacing-sm);
-         min-height: 85vh;
-         height: auto;
-      }
-
-      .contact-section-wrapper {
-         margin-bottom: 5rem;
-         padding-bottom: var(--spacing-xl);
-      }
-   }
-
-   /* Landscape mobile orientation */
-   @media (max-height: 500px) and (orientation: landscape) {
-      .hero-section,
-      .apps-section,
-      .riddle-section,
-      .summaries-section,
-      .prompty-section,
-      .contact-section-wrapper {
-         min-height: 120vh;
-         padding: var(--spacing-md) var(--spacing-sm);
-         height: auto;
-      }
-
-      .hero-section {
-         /* ランドスケープでも最小限のpadding */
-         padding-top: var(--spacing-sm);
-      }
-
-      .contact-section-wrapper {
-         margin-bottom: 3rem;
-      }
-   }
-
-   /* iOS Safari specific fixes */
-   @supports (-webkit-touch-callout: none) {
-      html, body {
-         -webkit-overflow-scrolling: touch;
-         overflow-y: auto;
-         height: auto;
-         min-height: 100vh;
-      }
-
-      .home-main {
-         -webkit-overflow-scrolling: touch;
-         height: auto;
-         min-height: 100vh;
-      }
-
-      .hero-section,
-      .apps-section,
-      .riddle-section,
-      .summaries-section,
-      .prompty-section,
-      .contact-section-wrapper {
-         -webkit-overflow-scrolling: touch;
-         height: auto;
+   @media (prefers-reduced-motion: reduce) {
+      .hero-panel {
+         animation: none !important;
+         opacity: 1 !important;
+         transform: none !important;
       }
    }
 </style>

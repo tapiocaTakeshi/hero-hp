@@ -1,5 +1,6 @@
 {
   "firebase_hosting": {
     "deploymentHostingUrl": "https://hero-hp.web.app"
-  }
+  },
+  "cloud_run_deploy": {}
 }

@@ -1,31 +1,8 @@
 ---
-import Main_PROMPTY from "../components/Main_PROMPTY.astro"
-import Header from "../components/Header.astro";
-import { ViewTransitions } from "astro:transitions";
-
+import MainLayout from '../layouts/MainLayout.astro';
+import Main_PROMPTY from '../components/Main_PROMPTY.astro';
 ---
-<html lang="ja" >
-	<head>
-		<ViewTransitions />
-		<link rel="icon" href="/Prompty/icon_removebg-preview.png">
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-		<meta name="generator" content={Astro.generator} />
-		<title>Prompty - AI プロンプト生成・管理アプリ</title>
-    <style>
-      /* Add top padding to the body to account for the fixed Header height */
-      body {
-        padding-top: 5rem; /* Assuming 80px for md:h-20 in Header */
-      }
-      @media (max-width: 767px) { /* md breakpoint in Tailwind */
-        body {
-          padding-top: 4rem; /* Assuming 64px for h-16 in Header */
-        }
-      }
-    </style>
-	</head>
-  <body style="background-color:#ffff;text-align:center;overflow-y:scroll;" class="dark:bg-gray-900">
-  <Header />
-  <Main_PROMPTY/>
- </body>
-</html>
+
+<MainLayout title="He-ro" lang="en">
+	<Main_PROMPTY />
+</MainLayout>
