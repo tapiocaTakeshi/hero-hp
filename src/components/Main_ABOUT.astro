@@ -3,68 +3,197 @@ import "../styles/style.css";
 ---
 
 <style>
-  .about-container {
-    margin-top: 82px;
-    padding: 2rem;
+  .app-page {
+    background: var(--bg-body);
+    color: var(--text-main);
+    transition:
+      background-color 0.4s ease,
+      color 0.4s ease;
+    min-height: 100vh;
+  }
+
+  .section {
+    position: relative;
+    padding: 140px 1.5rem 6rem;
+    overflow: hidden;
+  }
+
+  .section-content {
+    width: 100%;
     max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
   }
 
-  .about-section {
-    margin-bottom: 3rem;
+  .section-header {
+    text-align: center;
+    margin-bottom: 4rem;
   }
 
-  .about-title {
-    font-size: 2rem;
-    color: #333;
-    margin-bottom: 1.5rem;
+  .about-main-title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 800;
+    background: var(--title-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1rem;
+  }
+
+  .about-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+  }
+
+  .about-card {
+    background: var(--panel-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 32px;
+    padding: 3rem;
+    backdrop-filter: var(--glass-blur);
   }
 
   .about-content {
-    line-height: 1.8;
-    color: #444;
+    font-size: 1.15rem;
+    line-height: 2;
+    color: var(--text-muted);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
   }
 
-  .service-list {
-    margin-top: 2rem;
+  .services-section {
+    padding-top: 6rem;
+    border-top: 1px solid var(--border-color);
   }
 
-  .service-item {
-    margin-bottom: 1.5rem;
-    padding: 1rem;
-    border-bottom: 1px solid #eee;
+  .services-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 4rem;
+    background: var(--title-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2rem;
+  }
+
+  .service-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    backdrop-filter: var(--glass-blur);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .service-card:hover {
+    transform: translateY(-8px);
+    background: var(--card-hover-bg);
+    border-color: var(--text-main);
+  }
+
+  .service-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
   }
 
   .service-name {
-    font-weight: 500;
-    color: #333;
-    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-main);
+  }
+
+  .service-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-muted);
+  }
+
+  @media (max-width: 640px) {
+    .section {
+      padding-top: 120px;
+    }
+    .about-card {
+      padding: 2rem;
+    }
+    .about-content {
+      font-size: 1rem;
+    }
+    .services-title {
+      font-size: 1.8rem;
+    }
   }
 </style>
 
-<main class="about-container">
-  <section class="about-section">
-    <h1 class="about-title">He-roについて</h1>
-    <div class="about-content">
-      <p>
-        He-roは、個人開発者が運営するインディーズブランドです。
-        ユーザーの皆様により良い体験を提供できるよう、日々改善を重ねています。
-      </p>
+<main class="app-page">
+  <section class="section about-hero">
+    <div class="hero-backdrop" aria-hidden="true"></div>
+    <div class="section-content">
+      <div class="section-header">
+        <h1 class="about-main-title">About He-ro</h1>
+        <p class="about-subtitle">
+          テクノロジーとクリエイティビティで、新しい価値を創造する。
+        </p>
+      </div>
+
+      <div class="glass-panel about-card">
+        <div class="about-content">
+          <p>
+            He-roは、独創的なアイデアと最新のテクノロジーを掛け合わせ、ユーザーの日常に刺激と利便性をもたらすプロダクトを創出するインディーズブランドです。
+          </p>
+          <p>
+            「遊び心」を大切にしながら、より良い体験を提供できるよう、日々進化を続けています。
+          </p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section class="about-section">
-    <h2 class="text-2xl font-bold mb-4">提供サービス</h2>
-    <div class="service-list">
-      <div class="service-item">
-        <h3 class="service-name">Riddle</h3>
-        <p>クイズを作成し、世界中の人々と共有できるプラットフォーム</p>
-      </div>
-      <div class="service-item">
-        <h3 class="service-name">RPAI</h3>
-        <p>RPAツールとAIを組み合わせた、業務効率化のためのソリューション</p>
+  <section class="section services-section">
+    <div class="hero-backdrop" aria-hidden="true"></div>
+    <div class="section-content">
+      <h2 class="services-title">Featured Ecosystem</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <span class="service-icon">🧩</span>
+          <h3 class="service-name">Riddle</h3>
+          <p class="service-description">
+            クイズ✖️SNSで、難問とコミュニティの両方から刺激を受ける新感覚の脳トレ体験。
+          </p>
+        </div>
+        <div class="service-card">
+          <span class="service-icon">🤖</span>
+          <h3 class="service-name">PlayHub</h3>
+          <p class="service-description">
+            AIと共に歩む次世代ゲームコミュニティ、新たな創造の場を提供。
+          </p>
+        </div>
+        <div class="service-card">
+          <span class="service-icon">✨</span>
+          <h3 class="service-name">Prompty</h3>
+          <p class="service-description">
+            AI最適化されたプロンプトを生成・共有し、チームの生産性を最大化。
+          </p>
+        </div>
+        <div class="service-card">
+          <span class="service-icon">📚</span>
+          <h3 class="service-name">Summaries</h3>
+          <p class="service-description">
+            情報の海から本質だけを救い出す、AI要約✖️SNSプラットフォーム。
+          </p>
+        </div>
       </div>
     </div>
   </section>
-</main> 
+</main>
+

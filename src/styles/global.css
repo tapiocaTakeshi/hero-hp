@@ -1,13 +1,84 @@
-/*
-  The CSS in this style tag is based off of Bear Blog's default CSS.
-  https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9a79113c05C8558/templates/styles/blog/default.css
-  License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
- */
+/* Global Theme Variables */
+:root {
+  /* Shared Colors */
+  --color-riddle: #ff9f43;
+  --color-riddle-glow: rgba(255, 159, 67, 0.4);
+  --color-prompty: #2ed573;
+  --color-prompty-glow: rgba(46, 213, 115, 0.4);
+  --color-playhub: #7d5fff;
+  --color-playhub-glow: rgba(125, 95, 255, 0.4);
+  --color-summaries: #18dcff;
+  --color-summaries-glow: rgba(24, 220, 255, 0.4);
+
+  --transition-base: 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  
+  /* Default Theme (Light) */
+  --bg-body: #fdfdfd;
+  --bg-card: rgba(255, 255, 255, 0.7);
+  --text-main: #0f172a;
+  --text-muted: #64748b;
+  --border-color: rgba(0, 0, 0, 0.08);
+  --hero-grid-color: rgba(0, 0, 0, 0.04);
+  --card-hover-bg: rgba(255, 255, 255, 0.9);
+  --panel-bg: rgba(0, 0, 0, 0.03);
+  --contact-bg: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+  --title-gradient: linear-gradient(135deg, #1e293b 0%, #475569 100%);
+  --glass-blur: blur(20px);
+}
+
+/* Dark Theme Overrides */
+[data-theme="dark"] {
+  --bg-body: #050505;
+  --bg-card: rgba(20, 20, 20, 0.6);
+  --text-main: #ffffff;
+  --text-muted: #94a3b8;
+  --border-color: rgba(255, 255, 255, 0.1);
+  --hero-grid-color: rgba(255, 255, 255, 0.08);
+  --card-hover-bg: rgba(255, 255, 255, 0.08);
+  --panel-bg: rgba(255, 255, 255, 0.04);
+  --contact-bg: linear-gradient(180deg, #131313 0%, #080808 100%);
+  --title-gradient: linear-gradient(135deg, #fff 0%, #888 100%);
+}
+
+/* System preference as default */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg-body: #050505;
+    --bg-card: rgba(20, 20, 20, 0.6);
+    --text-main: #ffffff;
+    --text-muted: #94a3b8;
+    --border-color: rgba(255, 255, 255, 0.1);
+    --hero-grid-color: rgba(255, 255, 255, 0.08);
+    --card-hover-bg: rgba(255, 255, 255, 0.08);
+    --panel-bg: rgba(255, 255, 255, 0.04);
+    --contact-bg: linear-gradient(180deg, #131313 0%, #080808 100%);
+    --title-gradient: linear-gradient(135deg, #fff 0%, #888 100%);
+  }
+}
 
 body {
-	font-family: sans-serif;
+	font-family: 'Inter', system-ui, -apple-system, sans-serif;
 	margin: 0;
 	padding: 0;
 	max-width: 100%;
 	overflow-x: hidden;
+  background-color: var(--bg-body);
+  color: var(--text-main);
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
+
+/* Common Background Grid */
+.hero-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    linear-gradient(var(--hero-grid-color) 1px, transparent 1px),
+    linear-gradient(90deg, var(--hero-grid-color) 1px, transparent 1px);
+  background-size: 50px 50px;
+  z-index: 1;
+  pointer-events: none;
+}
+

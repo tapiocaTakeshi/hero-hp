@@ -2,48 +2,158 @@
 import "../styles/style.css";
 ---
 
+<main class="app-page">
+  <section class="section news-section">
+    <div class="hero-backdrop" aria-hidden="true"></div>
+    <div class="section-content">
+      <div class="section-header">
+        <h1 class="news-main-title">最新ニュース</h1>
+        <p class="news-subtitle">
+          He-roの最新情報やアップデート情報をお届けします。
+        </p>
+      </div>
+
+      <div class="news-grid">
+        <article class="news-card">
+          <div class="news-date">2024年3月15日</div>
+          <h2 class="news-title">サービス開始のお知らせ</h2>
+          <p class="news-content">
+            He-roのサービスを開始しました。より良いサービスを提供できるよう努めてまいります。未来のコミュニケーションとエンターテインメントを再定義する、私たちの挑戦がここから始まります。
+          </p>
+          <div class="news-footer">
+            <span class="news-tag">Update</span>
+          </div>
+        </article>
+
+        <!-- Placeholder for more news items -->
+        <article class="news-card">
+          <div class="news-date">2024年3月10日</div>
+          <h2 class="news-title">PlayHub ベータ版公開</h2>
+          <p class="news-content">
+            AIコミュニティプラットフォーム「PlayHub」のベータ版を公開しました。ユーザーの皆様からのフィードバックをお待ちしております。
+          </p>
+          <div class="news-footer">
+            <span class="news-tag">Release</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+
 <style>
-  .news-container {
-    margin-top: 82px;
-    padding: 2rem;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
+  .app-page {
+    background: var(--bg-body);
+    color: var(--text-main);
+    transition:
+      background-color 0.4s ease,
+      color 0.4s ease;
+    min-height: 100vh;
   }
 
-  .news-item {
-    margin-bottom: 2rem;
-    padding: 1.5rem;
-    border-bottom: 1px solid #eee;
+  .section {
+    position: relative;
+    padding: 140px 1.5rem 6rem;
+    overflow: hidden;
+  }
+
+  .section-content {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .news-main-title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 800;
+    background: var(--title-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1rem;
+  }
+
+  .news-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+  }
+
+  .news-grid {
+    display: grid;
+    gap: 2rem;
+  }
+
+  .news-card {
+    background: var(--panel-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    padding: 2.5rem;
+    transition: all 0.3s ease;
+    backdrop-filter: var(--glass-blur);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .news-card:hover {
+    transform: translateY(-4px);
+    background: var(--card-hover-bg);
+    border-color: var(--text-main);
   }
 
   .news-date {
-    color: #666;
     font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-riddle);
+    letter-spacing: 0.05em;
   }
 
   .news-title {
     font-size: 1.5rem;
-    margin: 0.5rem 0;
-    color: #333;
+    font-weight: 700;
+    color: var(--text-main);
+    margin: 0;
   }
 
   .news-content {
-    color: #444;
-    line-height: 1.6;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--text-muted);
+    margin: 0;
+  }
+
+  .news-footer {
+    margin-top: 1rem;
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .news-tag {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0.3rem 0.8rem;
+    border-radius: 100px;
+    background: var(--panel-bg);
+    border: 1px solid var(--border-color);
+    color: var(--text-muted);
+  }
+
+  @media (max-width: 640px) {
+    .section {
+      padding-top: 120px;
+    }
+    .news-card {
+      padding: 1.5rem;
+    }
+    .news-main-title {
+      font-size: 2.2rem;
+    }
   }
 </style>
-
-<main class="news-container">
-  <h1 class="text-3xl font-bold mb-8">最新ニュース</h1>
-  
-  <div class="news-item">
-    <div class="news-date">2024年3月15日</div>
-    <h2 class="news-title">サービス開始のお知らせ</h2>
-    <p class="news-content">
-      He-roのサービスを開始しました。より良いサービスを提供できるよう努めてまいります。
-    </p>
-  </div>
-
-  <!-- 必要に応じてニュース項目を追加 -->
-</main>
