@@ -45,12 +45,11 @@
         <div class="hero-visual" aria-hidden="true">
           <div class="glass-panel">
             <div class="panel-accent"></div>
-            <div class="hero-device">
-              <span class="device-title">ゲームを探索</span>
-              <span class="device-subtitle"
-                >AI生成作品が並ぶ宇宙のようなライブラリ</span
-              >
-            </div>
+            <img
+              src="/playhub_icon-removebg-preview.png"
+              alt="PlayHub app visual"
+              class="hero-image"
+            />
           </div>
         </div>
       </div>
@@ -570,31 +569,13 @@
     z-index: 0;
   }
 
-  .hero-device {
+  .hero-image {
     position: relative;
     z-index: 1;
-    height: 100%;
-    background: var(--bg-body);
-    border-radius: 22px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-    text-align: center;
-    gap: 1rem;
-    border: 1px solid var(--border-color);
-  }
-
-  .device-title {
-    font-size: 1.8rem;
-    font-weight: 800;
-    color: var(--text-main);
-  }
-
-  .device-subtitle {
-    font-size: 0.95rem;
-    color: var(--text-muted);
+    max-width: 100%;
+    height: auto;
+    border-radius: 18px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
   }
 
   @media (max-width: 968px) {

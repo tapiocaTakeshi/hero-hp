@@ -1,5 +1,6 @@
 ---
 import "../styles/style.css";
+import ThemeIcon from "./ThemeIcon.astro";
 const { pathname } = Astro.url;
 ---
 
@@ -7,7 +8,12 @@ const { pathname } = Astro.url;
   <div class="header-content">
     <div class="logo">
       <a href="/" aria-label="Hero HP ホームページ">
-        <img class="icon" src="/He-ro_icon_white.png" alt="Hero Logo" />
+        <img class="icon icon-light" src="/He-ro_icon.png" alt="Hero Logo" />
+        <img
+          class="icon icon-dark"
+          src="/He-ro_icon_white.png"
+          alt="Hero Logo"
+        />
       </a>
     </div>
 
@@ -29,14 +35,7 @@ const { pathname } = Astro.url;
           >
         </li>
         <li>
-          <button
-            id="theme-toggle"
-            class="theme-toggle"
-            aria-label="Toggle theme"
-          >
-            <span class="sun-icon">☀️</span>
-            <span class="moon-icon">🌙</span>
-          </button>
+          <ThemeIcon />
         </li>
       </ul>
     </nav>
@@ -46,49 +45,6 @@ const { pathname } = Astro.url;
 <script>
   document.addEventListener("DOMContentLoaded", () => {
     const header = document.getElementById("main-header");
-    const themeToggle = document.getElementById("theme-toggle");
-    let logoImg = document.querySelector<HTMLImageElement>(".logo .icon");
-    const defaultLogoSrc = "/He-ro_icon.png";
-    const whiteLogoSrc = "/He-ro_icon_white.png";
-
-    // Theme logic
-    const getTheme = () => {
-      if (
-        typeof localStorage !== "undefined" &&
-        localStorage.getItem("theme")
-      ) {
-        return localStorage.getItem("theme");
-      }
-      return window.matchMedia("(prefers-color-scheme: dark)").matches
-        ? "dark"
-        : "light";
-    };
-
-    const setTheme = (theme: string) => {
-      document.documentElement.setAttribute("data-theme", theme);
-      localStorage.setItem("theme", theme);
-      updateLogo(theme);
-    };
-
-    const updateLogo = (theme: string) => {
-      if (!logoImg) return;
-      if (theme === "dark") {
-        logoImg.src = whiteLogoSrc;
-      } else {
-        logoImg.src = defaultLogoSrc;
-      }
-    };
-
-    if (themeToggle) {
-      themeToggle.addEventListener("click", () => {
-        const currentTheme =
-          document.documentElement.getAttribute("data-theme");
-        setTheme(currentTheme === "dark" ? "light" : "dark");
-      });
-    }
-
-    // Initialize theme
-    setTheme(getTheme() || "light");
 
     const applyHeaderState = () => {
       if (!header) return;
@@ -103,13 +59,8 @@ const { pathname } = Astro.url;
     window.addEventListener("scroll", applyHeaderState);
 
     document.addEventListener("astro:page-load", () => {
-      logoImg = document.querySelector<HTMLImageElement>(".logo .icon");
-      const currentTheme =
-        document.documentElement.getAttribute("data-theme") ||
-        getTheme() ||
-        "light";
-      setTheme(currentTheme);
       applyHeaderState();
+
       const currentPath = window.location.pathname;
       document.querySelectorAll(".nav-link").forEach((link) => {
         link.classList.remove("active");
@@ -158,16 +109,13 @@ const { pathname } = Astro.url;
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    background-color: rgba(255, 255, 255, 0.7);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
   }
 
   :global([data-theme="dark"]) .header.scrolled {
     background-color: rgba(10, 10, 10, 0.7);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  }
-
-  :global([data-theme="light"]) .header.scrolled {
-    background-color: rgba(255, 255, 255, 0.7);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
   }
 
   .header-content {
@@ -189,6 +137,19 @@ const { pathname } = Astro.url;
     height: auto;
     transition: transform 0.3s ease;
     filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.35));
+    display: none; /* Hidden by default, shown based on theme */
+  }
+
+  .icon-light {
+    display: block;
+  }
+
+  :global([data-theme="dark"]) .icon-light {
+    display: none;
+  }
+
+  :global([data-theme="dark"]) .icon-dark {
+    display: block;
   }
 
   .logo:hover .icon {
@@ -205,17 +166,13 @@ const { pathname } = Astro.url;
   }
 
   .nav-link {
-    color: var(--nav-link-color, #f5f5f5);
+    color: var(--nav-link-color, #1e293b);
     text-decoration: none;
     font-weight: 500;
     position: relative;
     padding: 0.5rem 0;
     transition: color 0.3s ease;
     letter-spacing: 0.02em;
-  }
-
-  :global([data-theme="light"]) .nav-link {
-    --nav-link-color: #1e293b;
   }
 
   :global([data-theme="dark"]) .nav-link {
@@ -244,58 +201,6 @@ const { pathname } = Astro.url;
 
   :global([data-theme="dark"]) .header.scrolled .nav-link {
     --nav-link-scrolled: #ffffff;
-  }
-
-  :global([data-theme="light"]) .header.scrolled .nav-link {
-    --nav-link-scrolled: #111111;
-  }
-
-  .theme-toggle {
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    padding: 0.5rem;
-    border-radius: 50%;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-    width: 38px;
-    height: 38px;
-  }
-
-  :global([data-theme="light"]) .theme-toggle {
-    background: rgba(0, 0, 0, 0.05);
-    border-color: rgba(0, 0, 0, 0.1);
-  }
-
-  .theme-toggle:hover {
-    transform: scale(1.1);
-    background: rgba(255, 255, 255, 0.2);
-  }
-
-  .sun-icon {
-    display: none;
-  }
-  .moon-icon {
-    display: block;
-  }
-
-  :global([data-theme="dark"]) .sun-icon {
-    display: block;
-  }
-  :global([data-theme="dark"]) .moon-icon {
-    display: none;
-  }
-  :global([data-theme="light"]) .sun-icon {
-    display: none;
-  }
-  :global([data-theme="light"]) .moon-icon {
-    display: block;
-  }
-
-  .header.scrolled .nav-link::after {
-    background-color: currentColor;
   }
 
   @media (max-width: 768px) {

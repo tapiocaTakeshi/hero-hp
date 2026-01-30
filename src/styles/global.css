@@ -27,7 +27,7 @@
 }
 
 /* Dark Theme Overrides */
-[data-theme="dark"] {
+:root[data-theme="dark"] {
   --bg-body: #050505;
   --bg-card: rgba(20, 20, 20, 0.6);
   --text-main: #ffffff;
@@ -38,22 +38,6 @@
   --panel-bg: rgba(255, 255, 255, 0.04);
   --contact-bg: linear-gradient(180deg, #131313 0%, #080808 100%);
   --title-gradient: linear-gradient(135deg, #fff 0%, #888 100%);
-}
-
-/* System preference as default */
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg-body: #050505;
-    --bg-card: rgba(20, 20, 20, 0.6);
-    --text-main: #ffffff;
-    --text-muted: #94a3b8;
-    --border-color: rgba(255, 255, 255, 0.1);
-    --hero-grid-color: rgba(255, 255, 255, 0.08);
-    --card-hover-bg: rgba(255, 255, 255, 0.08);
-    --panel-bg: rgba(255, 255, 255, 0.04);
-    --contact-bg: linear-gradient(180deg, #131313 0%, #080808 100%);
-    --title-gradient: linear-gradient(135deg, #fff 0%, #888 100%);
-  }
 }
 
 body {
@@ -81,4 +65,3 @@ body {
   z-index: 1;
   pointer-events: none;
 }
-
