@@ -1,0 +1,16 @@
+chore: Add .divisionignore to exclude secrets, build artifacts, and metadata from AI agent reads
+
+Introduce a new `.divisionignore` file that lists files and directories
+the Division AI agent should skip when reading the workspace. The syntax
+mirrors `.gitignore`, and the initial ruleset covers:
+
+- Secrets and credentials (.env, *.pem, *.key, *.crt, secrets/, ...)
+- Dependencies and build outputs (node_modules/, dist/, build/, .next/,
+  .cache/, .turbo/, .vite/, coverage/, ...)
+- VCS and IDE metadata (.git/, .idea/, .vscode/, .DS_Store, ...)
+- Logs and temporary files (*.log, *.tmp, tmp/, ...)
+- Division internal directory (.division/)
+
+Lockfiles are listed but commented out so they can be opted-in per
+project. This prevents sensitive data and large generated files from
+being passed to the AI agent.
