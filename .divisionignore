@@ -25,6 +25,10 @@ out/
 .parcel-cache/
 .vite/
 coverage/
+.history/
+.firebase/
+.idx/
+.vscode/
 
 # --- VCS / IDE メタデータ ---
 .git/
@@ -48,3 +52,6 @@ tmp/
 
 # --- Division 内部 ---
 .division/
+
+
+.divisionignore
