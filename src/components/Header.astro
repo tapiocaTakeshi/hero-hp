@@ -43,37 +43,93 @@ const { pathname } = Astro.url;
 </header>
 
 <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const header = document.getElementById("main-header");
+  const header = document.getElementById("main-header");
 
-    const applyHeaderState = () => {
-      if (!header) return;
-      if (window.scrollY > 50) {
-        header.classList.add("scrolled");
+  const applyHeaderState = () => {
+    if (!header) return;
+    if (window.scrollY > 50) {
+      header.classList.add("scrolled");
+    } else {
+      header.classList.remove("scrolled");
+    }
+  };
+
+  const setActiveNav = (page: string | null) => {
+    document.querySelectorAll<HTMLAnchorElement>(".nav-link").forEach((link) => {
+      const linkPage = link.getAttribute("data-page");
+      if (page && linkPage === page) {
+        link.classList.add("active");
       } else {
-        header.classList.remove("scrolled");
-      }
-    };
-
-    applyHeaderState();
-    window.addEventListener("scroll", applyHeaderState);
-
-    document.addEventListener("astro:page-load", () => {
-      applyHeaderState();
-
-      const currentPath = window.location.pathname;
-      document.querySelectorAll(".nav-link").forEach((link) => {
         link.classList.remove("active");
-        if (link.getAttribute("href") === currentPath) {
-          link.classList.add("active");
-        }
-      });
-      if (currentPath === "/") {
-        const homeLink = document.querySelector('.nav-link[data-page="home"]');
-        if (homeLink) homeLink.classList.add("active");
       }
     });
-  });
+  };
+
+  const updateActiveNavOnScroll = () => {
+    const sections = Array.from(
+      document.querySelectorAll<HTMLElement>("section[id]")
+    ).filter((s) => ["home", "apps", "contact"].includes(s.id));
+
+    if (sections.length === 0) return;
+
+    const triggerLine = window.innerHeight * 0.35;
+    let current: string | null = null;
+
+    for (const section of sections) {
+      const rect = section.getBoundingClientRect();
+      if (rect.top <= triggerLine && rect.bottom > triggerLine) {
+        current = section.id;
+        break;
+      }
+    }
+
+    if (!current) {
+      if (window.scrollY < 50) {
+        current = sections[0].id;
+      } else if (
+        window.innerHeight + window.scrollY >=
+        document.documentElement.scrollHeight - 2
+      ) {
+        current = sections[sections.length - 1].id;
+      }
+    }
+
+    if (current) setActiveNav(current);
+  };
+
+  const initActiveNav = () => {
+    const currentPath = window.location.pathname;
+    if (currentPath === "/") {
+      updateActiveNavOnScroll();
+    } else {
+      const match = document.querySelector<HTMLAnchorElement>(
+        `.nav-link[href="${currentPath}"]`
+      );
+      setActiveNav(match?.getAttribute("data-page") ?? null);
+    }
+  };
+
+  let scrollTicking = false;
+  const onScroll = () => {
+    if (scrollTicking) return;
+    scrollTicking = true;
+    requestAnimationFrame(() => {
+      applyHeaderState();
+      if (window.location.pathname === "/") {
+        updateActiveNavOnScroll();
+      }
+      scrollTicking = false;
+    });
+  };
+
+  const setup = () => {
+    applyHeaderState();
+    initActiveNav();
+  };
+
+  window.addEventListener("scroll", onScroll, { passive: true });
+  document.addEventListener("DOMContentLoaded", setup);
+  document.addEventListener("astro:page-load", setup);
 </script>
 
 <style>
