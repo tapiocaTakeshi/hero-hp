@@ -9,6 +9,8 @@
   --color-playhub-glow: rgba(125, 95, 255, 0.4);
   --color-summaries: #18dcff;
   --color-summaries-glow: rgba(24, 220, 255, 0.4);
+  --color-orchestra: #dc2626;
+  --color-orchestra-glow: rgba(220, 38, 38, 0.4);
 
   --transition-base: 0.4s cubic-bezier(0.25, 1, 0.5, 1);
 

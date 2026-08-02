@@ -110,6 +110,25 @@ import "../styles/style.css";
             <span class="app-tag">要約✖️SNS</span>
           </div>
         </a>
+
+        <!-- Orchestra -->
+        <a
+          href="https://division.he-ro.jp/"
+          class="app-card"
+          data-theme="orchestra"
+        >
+          <div class="app-icon-wrapper">
+            <img
+              src="/OrchestralLogo.png"
+              alt="Orchestra"
+              class="app-icon-img"
+            />
+          </div>
+          <div class="app-info">
+            <h3 class="app-name">Orchestra</h3>
+            <span class="app-tag">ID E</span>
+          </div>
+        </a>
       </div>
     </div>
   </section>
@@ -487,6 +506,10 @@ import "../styles/style.css";
   :global([data-theme="summaries"]) {
     --accent: var(--color-summaries);
     --accent-glow: var(--color-summaries-glow);
+  }
+  :global([data-theme="orchestra"]) {
+    --accent: var(--color-orchestra);
+    --accent-glow: var(--color-orchestra-glow);
   }
 
   /* Contact Section */
