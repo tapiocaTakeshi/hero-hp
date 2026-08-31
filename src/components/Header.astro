@@ -29,6 +29,13 @@ const { pathname } = Astro.url;
         <li><a href="/#apps" class="nav-link" data-page="apps">Apps</a></li>
         <li>
           <a
+            href="/philosophy"
+            class:list={["nav-link", { active: pathname === "/philosophy" }]}
+            data-page="philosophy">Philosophy</a
+          >
+        </li>
+        <li>
+          <a
             href="/contact"
             class:list={["nav-link", { active: pathname === "/contact" }]}
             data-page="contact">Contact</a
@@ -68,7 +75,7 @@ const { pathname } = Astro.url;
   const updateActiveNavOnScroll = () => {
     const sections = Array.from(
       document.querySelectorAll<HTMLElement>("section[id]")
-    ).filter((s) => ["home", "apps", "contact"].includes(s.id));
+    ).filter((s) => ["home", "apps", "philosophy", "contact"].includes(s.id));
 
     if (sections.length === 0) return;
 

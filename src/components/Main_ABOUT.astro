@@ -63,6 +63,32 @@ import "../styles/style.css";
     text-align: center;
   }
 
+  .about-actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 2.5rem;
+  }
+
+  .about-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.85rem 1.8rem;
+    border-radius: 999px;
+    border: 1px solid var(--border-color);
+    background: var(--bg-card);
+    color: var(--text-main);
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .about-link:hover {
+    transform: translateY(-2px);
+    background: var(--card-hover-bg);
+    border-color: var(--text-main);
+  }
+
   .services-section {
     padding-top: 6rem;
     border-top: 1px solid var(--border-color);
@@ -154,6 +180,11 @@ import "../styles/style.css";
           <p>
             「遊び心」を大切にしながら、より良い体験を提供できるよう、日々進化を続けています。
           </p>
+        </div>
+        <div class="about-actions">
+          <a href="/philosophy" class="about-link">
+            私たちの理念を見る <span aria-hidden="true">→</span>
+          </a>
         </div>
       </div>
     </div>
