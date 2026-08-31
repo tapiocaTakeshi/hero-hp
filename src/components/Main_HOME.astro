@@ -1,5 +1,17 @@
 ---
 import "../styles/style.css";
+
+const philosophyItems = [
+  { no: "01", en: "Put People Where They Shine", ja: "人が最も輝く場所を見つける" },
+  { no: "02", en: "Grow People, Not Just Performance", ja: "成果より先に、人の成長を" },
+  { no: "03", en: "Different People, One Purpose", ja: "違いを、力に変える" },
+  { no: "04", en: "People First, Value Follows", ja: "人を大切にすることから価値は生まれる" },
+  { no: "05", en: "Change the Perspective", ja: "答えを変える前に、視点を変える" },
+  { no: "06", en: "Build the Environment, Unlock the Potential", ja: "人ではなく、環境を変える" },
+  { no: "07", en: "Orchestrate, Don't Control", ja: "管理ではなく、設計する" },
+  { no: "08", en: "Continuity Creates Strength", ja: "継続は、未来を変える力になる" },
+  { no: "09", en: "Change Yourself", ja: "自分の意思で、変わる" },
+];
 ---
 
 <div class="scroll-container">
@@ -39,6 +51,32 @@ import "../styles/style.css";
             <h1 class="hero-headline hero-main-title">Change yourself.</h1>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="philosophy-section" id="philosophy">
+    <div class="hero-backdrop" aria-hidden="true"></div>
+    <div class="section-content">
+      <div class="philosophy-header">
+        <h2 class="philosophy-title">Our Philosophy</h2>
+        <p class="philosophy-subtitle">
+          人を、最も輝く場所へ。私たちが大切にしている9つの考え方。
+        </p>
+      </div>
+      <ul class="philosophy-grid">
+        {
+          philosophyItems.map((item) => (
+            <li class="philosophy-card">
+              <span class="philosophy-no">{item.no}</span>
+              <h3 class="philosophy-name">{item.en}</h3>
+              <p class="philosophy-lead">{item.ja}</p>
+            </li>
+          ))
+        }
+      </ul>
+      <div class="philosophy-actions">
+        <a href="/philosophy" class="cta-button primary">理念をすべて読む</a>
       </div>
     </div>
   </section>
@@ -337,6 +375,94 @@ import "../styles/style.css";
     }
   }
 
+  /* Philosophy Section */
+  .philosophy-section {
+    background: var(--bg-body);
+    border-top: 1px solid var(--border-color);
+  }
+
+  .philosophy-header {
+    text-align: center;
+    margin-bottom: 3.5rem;
+  }
+
+  .philosophy-title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 800;
+    margin: 0 0 0.75rem;
+    background: var(--title-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding-bottom: 0.05em;
+  }
+
+  .philosophy-subtitle {
+    font-size: 1.1rem;
+    line-height: 1.9;
+    color: var(--text-muted);
+    margin: 0;
+  }
+
+  .philosophy-grid {
+    list-style: none;
+    margin: 0 0 3rem;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+
+  .philosophy-card {
+    background: var(--panel-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 1.75rem 1.5rem;
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  }
+
+  .philosophy-card:hover {
+    transform: translateY(-6px);
+    background: var(--card-hover-bg);
+    border-color: var(--text-main);
+    box-shadow: 0 18px 36px -18px rgba(0, 0, 0, 0.35);
+  }
+
+  :global([data-theme="dark"]) .philosophy-card:hover {
+    box-shadow: 0 18px 40px -18px rgba(0, 0, 0, 0.8);
+  }
+
+  .philosophy-no {
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.25em;
+    color: var(--text-muted);
+  }
+
+  .philosophy-name {
+    font-size: 1.15rem;
+    font-weight: 700;
+    line-height: 1.4;
+    margin: 0;
+    color: var(--text-main);
+  }
+
+  .philosophy-lead {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    margin: auto 0 0;
+    color: var(--text-muted);
+  }
+
+  .philosophy-actions {
+    display: flex;
+    justify-content: center;
+  }
+
   /* Apps Section */
   .apps-section {
     background: var(--bg-body);
@@ -595,6 +721,12 @@ import "../styles/style.css";
   }
 
   /* Responsive */
+  @media (max-width: 1024px) {
+    .philosophy-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
   @media (max-width: 768px) {
     .scroll-container > section {
       padding-top: 150px;
@@ -604,6 +736,13 @@ import "../styles/style.css";
     }
     .hero-panel--full {
       grid-column: span 1;
+    }
+    .philosophy-grid {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+    .philosophy-card {
+      padding: 1.5rem 1.25rem;
     }
     .apps-grid {
       grid-template-columns: 1fr;

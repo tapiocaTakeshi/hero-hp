@@ -1,0 +1,593 @@
+---
+import "../styles/style.css";
+
+type Principle = {
+  no: string;
+  en: string;
+  stanzas: string[];
+};
+
+const principles: Principle[] = [
+  {
+    no: "01",
+    en: "Put People Where They Shine",
+    stanzas: [
+      `私たちは、誰が優秀かを決めるのではなく、\n誰が、どこで最も輝くのかを見つける。`,
+      `人には、それぞれ異なる才能がある。\nその才能を正しく見つけ、活かせる場所をつくる。`,
+      `人を仕事に合わせるのではなく、\n人と仕事が最も輝く組み合わせをつくる。`,
+      `一人ひとりが力を発揮できるとき、\n組織はもっと強くなる。`,
+    ],
+  },
+  {
+    no: "02",
+    en: "Grow People, Not Just Performance",
+    stanzas: [
+      `私たちは、今すぐ成果を出せる人だけを求めない。`,
+      `人は、環境によって成長する。\nだから私たちは、即戦力を探す前に、\n人が成長できる環境をつくる。`,
+      `目の前の成果だけではなく、\nその人が将来どこまで成長できるのかを見る。`,
+      `人を育てることは、組織を強くすること。`,
+    ],
+  },
+  {
+    no: "03",
+    en: "Different People, One Purpose",
+    stanzas: [
+      `私たちは、全員が同じである必要はない。`,
+      `考え方も、得意なことも、経験も違っていい。`,
+      `むしろ、その違いこそが組織の強さになる。`,
+      `一人ではできないことも、\n異なる才能を持つ人たちが互いを補えばできる。`,
+      `違いをなくすのではなく、\n違いを力に変える。`,
+    ],
+  },
+  {
+    no: "04",
+    en: "People First, Value Follows",
+    stanzas: [
+      `お客様に最高の価値を届けたいなら、\nまず働く人が最高の状態でなければならない。`,
+      `幸せに働けること。\n自分の仕事に誇りを持てること。\n成長を実感できること。`,
+      `それは成果の妨げではない。`,
+      `人が幸せに働ける組織だからこそ、\nお客様を幸せにできる。`,
+      `人を大切にすることから、価値は生まれる。`,
+    ],
+  },
+  {
+    no: "05",
+    en: "Change the Perspective",
+    stanzas: [
+      `問題に直面したとき、\n私たちは一つの答えに固執しない。`,
+      `「できない」のではなく、\n「別のやり方ならできるのではないか」。`,
+      `「向いていない」のではなく、\n「向いている場所が別にあるのではないか」。`,
+      `「失敗した」のではなく、\n「別の視点から見れば何が得られたのか」。`,
+      `私たちは、視点を変えることで可能性を見つける。`,
+      `答えを変える前に、\n視点を変える。`,
+    ],
+  },
+  {
+    no: "06",
+    en: "Build the Environment, Unlock the Potential",
+    stanzas: [
+      `人の能力には、環境によって引き出されるものがある。`,
+      `だから私たちは、\n「もっと頑張れ」と言う前に、\n「もっと力を発揮できる環境はないか」と考える。`,
+      `人を変えるのではなく、\n環境を変える。`,
+      `才能を探すだけではなく、\n才能が生まれ、育ち、発揮される場所をつくる。`,
+      `可能性は、人の中だけにあるのではない。\n人と環境の間にある。`,
+    ],
+  },
+  {
+    no: "07",
+    en: "Orchestrate, Don't Control",
+    stanzas: [
+      `私たちは、人を細かく管理するのではなく、\nそれぞれが力を発揮できるように全体を設計する。`,
+      `誰か一人がすべてを担う必要はない。`,
+      `それぞれの得意分野を活かし、\n役割を分け、互いの能力を組み合わせる。`,
+      `指揮者がすべての楽器を演奏する必要がないように、\nリーダーがすべてを決める必要もない。`,
+      `人を動かすのではなく、\n人が自然と力を発揮できるオーケストレーションをつくる。`,
+    ],
+  },
+  {
+    no: "08",
+    en: "Continuity Creates Strength",
+    stanzas: [
+      `継続は力なり。`,
+      `大きな変化は、\n一度の努力から生まれるものではない。`,
+      `小さな一歩を積み重ねる。\n昨日より少し前へ進む。\n失敗しても、また挑戦する。`,
+      `すぐに結果が出なくても、\n続けることで経験が積み重なり、\nやがて大きな力になる。`,
+      `才能だけが、人を成長させるのではない。`,
+      `続けることそのものが、\n新しい才能を生み出していく。`,
+      `だから私たちは、\n一歩一歩を大切にする。`,
+      `継続は、未来を変える力になる。`,
+    ],
+  },
+  {
+    no: "09",
+    en: "Change Yourself",
+    stanzas: [
+      `私たちは、変化を恐れない。`,
+      `環境が変わるのを待つのではなく、\n自ら考え、自ら選び、自ら変わる。`,
+      `うまくいかないとき、\n自分を否定する必要はない。`,
+      `視点を変える。\nやり方を変える。\n環境を変える。\n時には、自分自身を変える。`,
+      `変わることは、過去の自分を否定することではない。`,
+      `昨日の自分を超え、\nまだ見えていない可能性を見つけることだ。`,
+      `誰かに変えられるのではなく、\n自分の意思で変わる。`,
+    ],
+  },
+];
+---
+
+<main class="app-page">
+  <section class="section philosophy-hero">
+    <div class="hero-backdrop" aria-hidden="true"></div>
+    <div class="section-content">
+      <div class="hero-inner reveal">
+        <p class="hero-eyebrow">He-ro</p>
+        <h1 class="philosophy-main-title">OUR PHILOSOPHY</h1>
+        <p class="philosophy-subtitle">
+          人を、最も輝く場所へ。<br />
+          私たちが大切にしている9つの考え方。
+        </p>
+        <a href="#principle-01" class="hero-scroll-cue" aria-label="理念を読む">
+          <span>Scroll</span>
+          <span class="hero-scroll-line" aria-hidden="true"></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section principles-section">
+    <div class="hero-backdrop" aria-hidden="true"></div>
+    <div class="section-content">
+      <ol class="principle-list">
+        {
+          principles.map((principle) => (
+            <li
+              class="principle reveal"
+              id={`principle-${principle.no}`}
+              data-index={principle.no}
+            >
+              <div class="principle-index" aria-hidden="true">
+                <span class="principle-no">{principle.no}</span>
+                <span class="principle-rule" />
+              </div>
+              <div class="principle-body">
+                <h2 class="principle-title">{principle.en}</h2>
+                <div class="principle-text">
+                  {principle.stanzas.map((stanza) => (
+                    <p class="stanza">{stanza}</p>
+                  ))}
+                </div>
+              </div>
+            </li>
+          ))
+        }
+      </ol>
+    </div>
+  </section>
+
+  <section class="section closing-section">
+    <div class="hero-backdrop" aria-hidden="true"></div>
+    <div class="section-content">
+      <div class="closing-card reveal">
+        <p class="closing-lead">Change Yourself.</p>
+        <div class="closing-text">
+          <p class="stanza">自分を変えれば、<br />見える世界が変わる。</p>
+          <p class="stanza">見える世界が変われば、<br />できることが変わる。</p>
+          <p class="stanza">そして、自分が変われば、<br />世界も変えられる。</p>
+        </div>
+        <div class="closing-actions">
+          <a href="/about" class="cta-button primary">He-roについて</a>
+          <a href="/contact" class="cta-button secondary">お問い合わせ</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script>
+  const setupReveal = () => {
+    const targets = document.querySelectorAll<HTMLElement>(".reveal");
+    if (targets.length === 0) return;
+
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
+
+    if (prefersReducedMotion || !("IntersectionObserver" in window)) {
+      targets.forEach((target) => target.classList.add("is-visible"));
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        });
+      },
+      { threshold: 0.15, rootMargin: "0px 0px -10% 0px" }
+    );
+
+    targets.forEach((target) => observer.observe(target));
+  };
+
+  document.addEventListener("DOMContentLoaded", setupReveal);
+  document.addEventListener("astro:page-load", setupReveal);
+</script>
+
+<style>
+  :global(html) {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    :global(html) {
+      scroll-behavior: auto;
+    }
+  }
+
+  .app-page {
+    background: var(--bg-body);
+    color: var(--text-main);
+    transition:
+      background-color 0.4s ease,
+      color 0.4s ease;
+    min-height: 100vh;
+  }
+
+  .section {
+    position: relative;
+    padding: 6rem 1.5rem;
+    overflow: hidden;
+  }
+
+  .section-content {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+  }
+
+  /* Reveal animation */
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition:
+      opacity 0.7s cubic-bezier(0.25, 1, 0.5, 1),
+      transform 0.7s cubic-bezier(0.25, 1, 0.5, 1);
+  }
+
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+  }
+
+  /* Hero */
+  .philosophy-hero {
+    min-height: 100svh;
+    display: flex;
+    align-items: center;
+    padding-top: 160px;
+    padding-bottom: 6rem;
+  }
+
+  .hero-inner {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .hero-eyebrow {
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.5em;
+    text-indent: 0.5em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin: 0;
+  }
+
+  .philosophy-main-title {
+    font-size: clamp(2.5rem, 8vw, 5.5rem);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: 0.02em;
+    margin: 0;
+    padding-bottom: 0.1em;
+    background: var(--title-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .philosophy-subtitle {
+    font-size: clamp(1rem, 2.2vw, 1.25rem);
+    line-height: 2;
+    color: var(--text-muted);
+    margin: 0;
+  }
+
+  .hero-scroll-cue {
+    margin-top: 1.5rem;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+    text-indent: 0.3em;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+  }
+
+  .hero-scroll-cue:hover {
+    color: var(--text-main);
+  }
+
+  .hero-scroll-line {
+    width: 1px;
+    height: 56px;
+    background: linear-gradient(180deg, currentColor, transparent);
+  }
+
+  /* Principles */
+  .principles-section {
+    border-top: 1px solid var(--border-color);
+    padding-top: 5rem;
+  }
+
+  .principle-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .principle {
+    display: grid;
+    grid-template-columns: 140px minmax(0, 1fr);
+    gap: 2.5rem;
+    align-items: start;
+    background: var(--panel-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 32px;
+    padding: 3rem;
+    backdrop-filter: var(--glass-blur);
+    scroll-margin-top: 140px;
+    transition:
+      transform var(--transition-base),
+      background-color var(--transition-base),
+      border-color var(--transition-base),
+      box-shadow var(--transition-base),
+      opacity 0.7s cubic-bezier(0.25, 1, 0.5, 1);
+  }
+
+  .principle:hover {
+    transform: translateY(-6px);
+    background: var(--card-hover-bg);
+    border-color: var(--text-main);
+    box-shadow: 0 20px 45px -20px rgba(0, 0, 0, 0.3);
+  }
+
+  :global([data-theme="dark"]) .principle:hover {
+    box-shadow: 0 20px 50px -20px rgba(0, 0, 0, 0.8);
+  }
+
+  .principle-index {
+    position: sticky;
+    top: 140px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .principle-no {
+    font-size: clamp(2.75rem, 6vw, 4rem);
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    background: var(--title-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .principle-rule {
+    display: block;
+    width: 48px;
+    height: 2px;
+    border-radius: 2px;
+    background: var(--text-muted);
+    opacity: 0.5;
+  }
+
+  .principle-title {
+    font-size: clamp(1.4rem, 3vw, 2.1rem);
+    font-weight: 700;
+    line-height: 1.3;
+    margin: 0 0 1.75rem;
+    color: var(--text-main);
+    letter-spacing: 0.01em;
+  }
+
+  .principle-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+  }
+
+  .stanza {
+    margin: 0;
+    white-space: pre-line;
+    font-size: 1.05rem;
+    line-height: 2;
+    color: var(--text-muted);
+  }
+
+  .principle-text .stanza:first-child {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-main);
+  }
+
+  /* Closing */
+  .closing-section {
+    background: var(--contact-bg);
+    border-top: 1px solid var(--border-color);
+    padding-top: 6rem;
+    padding-bottom: 7rem;
+  }
+
+  .closing-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 34px;
+    padding: 3.5rem 2.6rem;
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
+    backdrop-filter: blur(22px);
+    box-shadow: 0 28px 70px rgba(0, 0, 0, 0.1);
+  }
+
+  :global([data-theme="dark"]) .closing-card {
+    box-shadow: 0 28px 70px rgba(0, 0, 0, 0.4);
+  }
+
+  .closing-lead {
+    font-size: clamp(2rem, 6vw, 3.5rem);
+    font-weight: 800;
+    line-height: 1.2;
+    margin: 0 0 2rem;
+    padding-bottom: 0.1em;
+    background: var(--title-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .closing-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .closing-text .stanza {
+    white-space: normal;
+    text-align: center;
+  }
+
+  .closing-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    padding: 0.9rem 1.9rem;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease,
+      background-color 0.2s ease,
+      border-color 0.2s ease;
+    border: 1px solid transparent;
+  }
+
+  .cta-button.primary {
+    background: var(--text-main);
+    color: var(--bg-body);
+    box-shadow: 0 20px 44px rgba(0, 0, 0, 0.1);
+  }
+
+  .cta-button.primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.2);
+  }
+
+  .cta-button.secondary {
+    background: transparent;
+    color: var(--text-main);
+    border-color: var(--border-color);
+  }
+
+  .cta-button.secondary:hover {
+    background: var(--card-hover-bg);
+    border-color: var(--text-main);
+    transform: translateY(-2px);
+  }
+
+  @media (max-width: 900px) {
+    .principle {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      padding: 2.5rem 2rem;
+    }
+    .principle-index {
+      position: static;
+      flex-direction: row;
+      align-items: center;
+      gap: 1rem;
+    }
+    .principle-rule {
+      width: 32px;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .section {
+      padding: 4rem 1.25rem;
+    }
+    .philosophy-hero {
+      padding-top: 150px;
+    }
+    .principles-section {
+      padding-top: 3.5rem;
+    }
+    .principle {
+      padding: 2rem 1.5rem;
+      border-radius: 24px;
+    }
+    .principle-title {
+      margin-bottom: 1.25rem;
+    }
+    .stanza {
+      font-size: 1rem;
+      line-height: 1.95;
+    }
+    .principle-text .stanza:first-child {
+      font-size: 1.1rem;
+    }
+    .closing-card {
+      padding: 2.5rem 1.5rem;
+      border-radius: 24px;
+    }
+    .cta-button {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+</style>
