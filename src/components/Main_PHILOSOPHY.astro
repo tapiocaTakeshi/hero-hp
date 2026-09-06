@@ -130,6 +130,188 @@ const principles: Principle[] = [
     ],
   },
 ];
+
+type Dont = {
+  no: string;
+  title: string;
+  items: string[];
+  note: string[];
+};
+
+const donts: Dont[] = [
+  {
+    no: "01",
+    title: "人格を否定してはいけない",
+    items: [
+      "「お前はダメな人間だ」など、人そのものを否定する",
+      "能力や性格を決めつける",
+      "人格と仕事上の問題を混同する",
+      "一度の失敗で、その人の価値を判断する",
+    ],
+    note: ["問題を指摘しても、人の価値を否定しない。"],
+  },
+  {
+    no: "02",
+    title: "人前で人を追い詰めてはいけない",
+    items: [
+      "大声で怒鳴る",
+      "人前で恥をかかせる",
+      "みんなの前で責め続ける",
+      "失敗を見せしめにする",
+    ],
+    note: ["指導は、人を傷つけるためではなく、成長させるために行う。"],
+  },
+  {
+    no: "03",
+    title: "教えるときに威圧してはいけない",
+    items: [
+      "怒鳴ったり、大声を出したりして教える",
+      "恐怖を与えて言うことを聞かせる",
+      "「こんなことも分からないのか」と相手を萎縮させる",
+      "質問や意見を言いにくい空気をつくる",
+      "威圧することを「厳しい指導」「教育」と正当化する",
+    ],
+    note: [
+      "教えるとは、相手を怖がらせることではない。",
+      "相手が安心して質問し、理解し、成長できる環境をつくることである。",
+    ],
+  },
+  {
+    no: "04",
+    title: "「できない」で人を切り捨ててはいけない",
+    items: [
+      "「できないからダメ」と決めつける",
+      "教えずに結果だけを求める",
+      "「即戦力」を理由に育成を放棄する",
+      "一度できなかっただけで可能性を否定する",
+    ],
+    note: ["できないなら、まず「なぜできないのか」を理解する。"],
+  },
+  {
+    no: "05",
+    title: "理解せずに決めつけてはいけない",
+    items: [
+      "話を最後まで聞かずに判断する",
+      "相手の意図を勝手に決めつける",
+      "表面的な行動だけで人を評価する",
+      "自分の価値観だけを正解にする",
+    ],
+    note: ["理解に徹する。", "理解できていないなら、判断を急がない。"],
+  },
+  {
+    no: "06",
+    title: "失敗を責めるだけにしてはいけない",
+    items: [
+      "「なんで失敗した？」だけで終わる",
+      "失敗した人だけに責任を押しつける",
+      "失敗を隠したくなる環境をつくる",
+      "同じ失敗を防ぐ仕組みを考えない",
+    ],
+    note: ["失敗を責めるのではなく、失敗から学び、次に活かす。"],
+  },
+  {
+    no: "07",
+    title: "人を比較して優劣をつけてはいけない",
+    items: [
+      "「あの人のほうが優秀」と言って人を下げる",
+      "全員に同じ能力を求める",
+      "苦手なことだけを見て評価する",
+      "一つの尺度だけで人の価値を決める",
+    ],
+    note: [
+      "人にはそれぞれの強みがある。",
+      "優劣ではなく、適材適所を考える。",
+    ],
+  },
+  {
+    no: "08",
+    title: "権力を使って人を従わせてはいけない",
+    items: [
+      "立場の強さを利用して威圧する",
+      "反論できない状況を利用する",
+      "「上司だから正しい」と考える",
+      "恐怖によって人を動かす",
+    ],
+    note: ["人を動かすのは、恐怖ではなく信頼である。"],
+  },
+  {
+    no: "09",
+    title: "意見を言えない環境をつくってはいけない",
+    items: [
+      "反対意見を否定する",
+      "質問を馬鹿にする",
+      "「そんなことも分からないのか」と言う",
+      "上司の意見に従うことを「協調性」とする",
+    ],
+    note: ["違う意見は、組織を強くする。"],
+  },
+  {
+    no: "10",
+    title: "人の成長を他人任せにしてはいけない",
+    items: [
+      "「本人の努力不足」で終わらせる",
+      "教育する責任を放棄する",
+      "成長の機会を与えない",
+      "育てる仕組みを作らない",
+    ],
+    note: ["人を採用するだけではなく、人が成長できる環境をつくる。"],
+  },
+  {
+    no: "11",
+    title: "合わない人を無理に変えようとしてはいけない",
+    items: [
+      "自分の理想の人間にしようとする",
+      "個性を消そうとする",
+      "強みではなく弱みに合わせて評価する",
+      "「普通はこうする」と押しつける",
+    ],
+    note: ["変えるべきなのは、その人自身ではなく、必要な行動と環境である。"],
+  },
+  {
+    no: "12",
+    title: "人を守ることを「甘やかし」と考えてはいけない",
+    items: [
+      "厳しくすることを教育だと勘違いする",
+      "傷つけることを「成長のため」と正当化する",
+      "我慢させることを「強くすること」と考える",
+      "助けを求める人を弱いと判断する",
+    ],
+    note: ["人を守ることと、人を甘やかすことは違う。"],
+  },
+  {
+    no: "13",
+    title: "問題を放置してはいけない",
+    items: [
+      "パワハラを見て見ぬふりをする",
+      "「本人同士の問題」として片づける",
+      "被害を受けている人に我慢させる",
+      "問題が大きくなるまで何もしない",
+    ],
+    note: ["人を守るために、必要なときは組織が介入する。"],
+  },
+  {
+    no: "14",
+    title: "「継続は力なり」を忘れてはいけない",
+    items: [
+      "一度の努力で結果を求める",
+      "短期的な結果だけで人を評価する",
+      "成長の途中にいる人を見捨てる",
+      "挑戦を続けている人を否定する",
+    ],
+    note: ["成長には時間がかかる。", "継続できる環境をつくる。"],
+  },
+  {
+    no: "15",
+    title: "自分だけが正しいと思ってはいけない",
+    items: [
+      "自分の経験を絶対視する",
+      "「昔はこうだった」を正解にする",
+      "若い人の意見を軽視する",
+      "新しい考えを最初から否定する",
+    ],
+    note: ["自分自身も変わり続ける。"],
+  },
+];
 ---
 
 <main class="app-page">
@@ -141,8 +323,13 @@ const principles: Principle[] = [
         <h1 class="philosophy-main-title">OUR PHILOSOPHY</h1>
         <p class="philosophy-subtitle">
           人を、最も輝く場所へ。<br />
-          私たちが大切にしている10の考え方。
+          私たちが大切にしている10の考え方と、<br />
+          決してやってはいけない15のこと。
         </p>
+        <nav class="hero-links" aria-label="ページ内リンク">
+          <a href="#principle-01" class="hero-link">10の考え方</a>
+          <a href="#donts" class="hero-link">やってはいけないこと</a>
+        </nav>
         <a href="#principle-01" class="hero-scroll-cue" aria-label="理念を読む">
           <span>Scroll</span>
           <span class="hero-scroll-line" aria-hidden="true"></span>
@@ -178,6 +365,81 @@ const principles: Principle[] = [
           ))
         }
       </ol>
+    </div>
+  </section>
+
+  <section class="section donts-section" id="donts">
+    <div class="hero-backdrop" aria-hidden="true"></div>
+    <div class="section-content">
+      <div class="donts-header reveal">
+        <p class="hero-eyebrow">Don'ts</p>
+        <h2 class="donts-title">やってはいけないこと</h2>
+        <p class="donts-subtitle">
+          人を傷つけないために。<br />
+          人の可能性を決めつけないために。<br />
+          私たちが決してやらない15のこと。
+        </p>
+      </div>
+
+      <ol class="dont-list">
+        {
+          donts.map((dont) => (
+            <li class="dont reveal" id={`dont-${dont.no}`}>
+              <div class="dont-head">
+                <span class="dont-no" aria-hidden="true">
+                  {dont.no}
+                </span>
+                <h3 class="dont-title">{dont.title}</h3>
+              </div>
+              <ul class="dont-items">
+                {dont.items.map((item) => (
+                  <li class="dont-item">{item}</li>
+                ))}
+              </ul>
+              <div class="dont-note">
+                {dont.note.map((line) => (
+                  <p class="dont-note-line">{line}</p>
+                ))}
+              </div>
+            </li>
+          ))
+        }
+      </ol>
+
+      <div class="most-important reveal">
+        <p class="hero-eyebrow">最も大切なこと</p>
+        <p class="most-important-lead">人を傷つけてはいけない。</p>
+        <p class="most-important-bridge">しかし、それ以上に、</p>
+        <p class="most-important-lead">人の可能性を決めつけてはいけない。</p>
+        <div class="most-important-text">
+          <p class="stanza">
+            できない人を切り捨てるのではなく、<br />
+            なぜできないのかを理解する。
+          </p>
+          <p class="stanza">
+            合わない人を否定するのではなく、<br />
+            どこならその人が輝けるのかを考える。
+          </p>
+          <p class="stanza">
+            失敗した人を責めるのではなく、<br />
+            次に成功できる仕組みを考える。
+          </p>
+          <p class="stanza">
+            教えるときは、威圧するのではなく、<br />
+            相手が安心して理解できる環境をつくる。
+          </p>
+          <p class="stanza">
+            そして、自分自身も、<br />
+            「自分が正しい」と思った瞬間に、もう一度考える。
+          </p>
+          <p class="stanza">人を変えようとする前に、自分を変える。</p>
+        </div>
+        <p class="most-important-lead most-important-en">Change Your Self.</p>
+        <p class="most-important-outro">
+          人が輝けば、組織が輝く。<br />
+          組織が輝けば、お客様も輝く。
+        </p>
+      </div>
     </div>
   </section>
 
@@ -463,6 +725,243 @@ const principles: Principle[] = [
     color: var(--text-main);
   }
 
+  .hero-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+  }
+
+  .hero-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.55rem 1.25rem;
+    border-radius: 999px;
+    border: 1px solid var(--border-color);
+    color: var(--text-main);
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition:
+      background-color 0.2s ease,
+      border-color 0.2s ease,
+      transform 0.2s ease;
+  }
+
+  .hero-link:hover {
+    background: var(--card-hover-bg);
+    border-color: var(--text-main);
+    transform: translateY(-2px);
+  }
+
+  /* Don'ts */
+  .donts-section {
+    border-top: 1px solid var(--border-color);
+    padding-top: 6rem;
+    scroll-margin-top: 100px;
+  }
+
+  .donts-header {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+    margin-bottom: 3.5rem;
+  }
+
+  .donts-title {
+    font-size: clamp(2rem, 6vw, 3.5rem);
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    margin: 0;
+    padding-bottom: 0.1em;
+    background: var(--title-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .donts-subtitle {
+    font-size: clamp(1rem, 2.2vw, 1.15rem);
+    line-height: 2;
+    color: var(--text-muted);
+    margin: 0;
+  }
+
+  .dont-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+
+  .dont {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    background: var(--panel-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 28px;
+    padding: 2.25rem 2rem;
+    backdrop-filter: var(--glass-blur);
+    scroll-margin-top: 140px;
+    transition:
+      transform var(--transition-base),
+      background-color var(--transition-base),
+      border-color var(--transition-base),
+      box-shadow var(--transition-base),
+      opacity 0.7s cubic-bezier(0.25, 1, 0.5, 1);
+  }
+
+  .dont:hover {
+    transform: translateY(-6px);
+    background: var(--card-hover-bg);
+    border-color: var(--text-main);
+    box-shadow: 0 20px 45px -20px rgba(0, 0, 0, 0.3);
+  }
+
+  :global([data-theme="dark"]) .dont:hover {
+    box-shadow: 0 20px 50px -20px rgba(0, 0, 0, 0.8);
+  }
+
+  .dont-head {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+  }
+
+  .dont-no {
+    flex-shrink: 0;
+    font-size: 1.9rem;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    background: var(--title-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .dont-title {
+    font-size: clamp(1.15rem, 2.2vw, 1.4rem);
+    font-weight: 700;
+    line-height: 1.45;
+    margin: 0;
+    color: var(--text-main);
+  }
+
+  .dont-items {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .dont-item {
+    position: relative;
+    padding-left: 1.5rem;
+    font-size: 0.98rem;
+    line-height: 1.8;
+    color: var(--text-muted);
+  }
+
+  .dont-item::before {
+    content: "";
+    position: absolute;
+    left: 0.25rem;
+    top: 0.85em;
+    width: 0.6rem;
+    height: 2px;
+    border-radius: 2px;
+    background: var(--text-muted);
+    opacity: 0.6;
+  }
+
+  .dont-note {
+    margin-top: auto;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .dont-note-line {
+    margin: 0;
+    font-size: 1.02rem;
+    font-weight: 600;
+    line-height: 1.8;
+    color: var(--text-main);
+  }
+
+  .most-important {
+    margin-top: 3.5rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 34px;
+    padding: 3.5rem 2.6rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    backdrop-filter: blur(22px);
+    box-shadow: 0 28px 70px rgba(0, 0, 0, 0.1);
+  }
+
+  :global([data-theme="dark"]) .most-important {
+    box-shadow: 0 28px 70px rgba(0, 0, 0, 0.4);
+  }
+
+  .most-important-lead {
+    font-size: clamp(1.5rem, 4.5vw, 2.4rem);
+    font-weight: 800;
+    line-height: 1.35;
+    margin: 0;
+    padding-bottom: 0.1em;
+    background: var(--title-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .most-important-bridge {
+    margin: 0;
+    font-size: 1rem;
+    color: var(--text-muted);
+  }
+
+  .most-important-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    margin: 1.75rem 0;
+    max-width: 640px;
+  }
+
+  .most-important-text .stanza {
+    white-space: normal;
+    text-align: center;
+  }
+
+  .most-important-en {
+    margin-top: 0.5rem;
+  }
+
+  .most-important-outro {
+    margin: 0.5rem 0 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    line-height: 2;
+    color: var(--text-main);
+  }
+
   /* Closing */
   .closing-section {
     background: var(--contact-bg);
@@ -573,6 +1072,9 @@ const principles: Principle[] = [
     .principle-rule {
       width: 32px;
     }
+    .dont-list {
+      grid-template-columns: 1fr;
+    }
   }
 
   @media (max-width: 640px) {
@@ -598,6 +1100,21 @@ const principles: Principle[] = [
     }
     .principle-text .stanza:first-child {
       font-size: 1.1rem;
+    }
+    .donts-section {
+      padding-top: 4rem;
+    }
+    .donts-header {
+      margin-bottom: 2.5rem;
+    }
+    .dont {
+      padding: 1.75rem 1.4rem;
+      border-radius: 22px;
+    }
+    .most-important {
+      margin-top: 2.5rem;
+      padding: 2.5rem 1.5rem;
+      border-radius: 24px;
     }
     .closing-card {
       padding: 2.5rem 1.5rem;
