@@ -1,6 +1,37 @@
 ---
 import "../styles/style.css";
 
+const visionStanzas = [
+  "he-roが目指すのは、\n一人ひとりが自分らしく輝きながら、仲間とともに成長できる組織。",
+  "誰か一人がすべてをできる必要はない。",
+  "人にはそれぞれ、強みがあり、弱みがある。\nだからこそ、お互いの強みを活かし、弱みを補い合う。",
+  "誰が一番優秀かではなく、誰をどこに置けば一番輝けるのか。",
+  "人を競わせて順位をつけるのではなく、\n一人ひとりが自分の能力を最大限発揮できる場所をつくる。",
+  "そして、仲間だからこそ遠慮するのではなく、\n時には意見がぶつかり合っても、お互いをリスペクトしながら、切磋琢磨する。",
+  "相手の成功を喜び、相手の成長から学び、\n自分ももっと成長しようと思える関係をつくる。",
+  "困っている仲間がいれば支え、\n自分にできないことがあれば仲間を頼る。",
+  "「助けてもらうこと」も「助けること」も、チームの強さである。",
+  "he-roは、最初から完璧な人を求めない。",
+  "「即戦力かどうか」で人の可能性を決めるのではなく、\nその人がこれからどれだけ成長できるのかを大切にする。",
+  "人を見抜くことより、\n人を育てられる組織であること。",
+  "教えるときに威圧しない。\n失敗した人を責めるのではなく、なぜそうなったのかを一緒に考える。",
+  "すぐに答えを出すことよりも、\n時間がかかっても理解に徹する。",
+  "分からないことを恥ずかしいことにしない。\n質問できること、挑戦できること、失敗できることを強さにする。",
+  "そして、一度の成功よりも継続を大切にする。",
+  "継続は力なり。",
+  "小さな努力でも積み重ねれば、大きな力になる。\n昨日の自分より今日の自分、今日の自分より明日の自分へ。",
+  "仲間同士で支え合い、刺激し合い、成長し続ける。",
+  "会社が人を輝かせ、\n輝いた人が会社を強くする。",
+  "会社のために人がいるのではなく、\n人が輝くために会社がある。",
+  "一人ではできないことを、チームならできる。",
+  "強みを掛け合わせ、弱みを補い合い、\n互いを尊敬し、互いを高め合う。",
+  "そして、自分自身も変わり続ける。",
+  "Change Yourself.",
+  "他人を変えることから始めるのではなく、\nまず自分から変わる。",
+  "その一人ひとりの変化が、\nチームを変え、会社を変え、未来を変えていく。",
+  "それが、he-roの理想の姿。"
+];
+
 type Principle = {
   no: string;
   en: string;
@@ -323,17 +354,35 @@ const donts: Dont[] = [
         <h1 class="philosophy-main-title">OUR PHILOSOPHY</h1>
         <p class="philosophy-subtitle">
           人を、最も輝く場所へ。<br />
-          私たちが大切にしている10の考え方と、<br />
+          私たちが目指す理想の姿。<br />
+          大切にしている10の考え方と、<br />
           決してやってはいけない15のこと。
         </p>
         <nav class="hero-links" aria-label="ページ内リンク">
+          <a href="#vision" class="hero-link">理想の姿</a>
           <a href="#principle-01" class="hero-link">10の考え方</a>
           <a href="#donts" class="hero-link">やってはいけないこと</a>
         </nav>
-        <a href="#principle-01" class="hero-scroll-cue" aria-label="理念を読む">
+        <a href="#vision" class="hero-scroll-cue" aria-label="理念を読む">
           <span>Scroll</span>
           <span class="hero-scroll-line" aria-hidden="true"></span>
         </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section vision-section" id="vision" aria-labelledby="vision-title">
+    <div class="section-content vision-content">
+      <div class="vision-header">
+        <p class="hero-eyebrow">Our Vision</p>
+        <h2 class="vision-title" id="vision-title">he-roの理想の姿</h2>
+      </div>
+      <div class="vision-text">
+        {visionStanzas.map((stanza) => (
+          <p class:list={["stanza", { "vision-change": stanza === "Change Yourself." }]}>
+            {stanza}
+          </p>
+        ))}
       </div>
     </div>
   </section>
@@ -621,6 +670,46 @@ const donts: Dont[] = [
     width: 1px;
     height: 56px;
     background: linear-gradient(180deg, currentColor, transparent);
+  }
+
+  /* Vision: readable at every screen size and without JavaScript. */
+  .vision-section {
+    border-top: 1px solid var(--border-color);
+    scroll-margin-top: 100px;
+  }
+
+  .vision-content {
+    max-width: 760px;
+  }
+
+  .vision-header {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    margin-bottom: 3rem;
+  }
+
+  .vision-title {
+    margin: 0;
+    font-size: clamp(1.8rem, 5vw, 3rem);
+    font-weight: 800;
+    line-height: 1.5;
+    color: var(--text-main);
+  }
+
+  .vision-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    overflow-wrap: anywhere;
+  }
+
+  .vision-text .stanza:first-child,
+  .vision-text .stanza:last-child,
+  .vision-text .vision-change {
+    color: var(--text-main);
+    font-weight: 600;
+    font-size: clamp(1.1rem, 2.5vw, 1.3rem);
   }
 
   /* Principles */
