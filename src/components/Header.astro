@@ -7,13 +7,15 @@ const { pathname } = Astro.url;
 <header id="main-header" class="header">
   <div class="header-content">
     <div class="logo">
-      <a href="/" aria-label="Hero HP ホームページ">
-        <img class="icon icon-light" src="/He-ro_icon.png" alt="Hero Logo" />
+      <a href="/" class="brand-lockup" aria-label="He-ro ホームページ">
+        <img class="icon icon-light" src="/He-ro_icon.png" alt="" aria-hidden="true" />
         <img
           class="icon icon-dark"
           src="/He-ro_icon_white.png"
-          alt="Hero Logo"
+          alt=""
+          aria-hidden="true"
         />
+        <span class="brand-name">He-ro</span>
       </a>
     </div>
 
@@ -190,9 +192,12 @@ const { pathname } = Astro.url;
     margin: 0 auto;
   }
 
-  .logo a {
-    display: flex;
+  .brand-lockup {
+    display: inline-flex;
     align-items: center;
+    gap: 0.7rem;
+    color: inherit;
+    text-decoration: none;
   }
 
   .icon {
@@ -215,8 +220,25 @@ const { pathname } = Astro.url;
     display: block;
   }
 
-  .logo:hover .icon {
+  .brand-name {
+    color: var(--brand-name-color, #111111);
+    font-size: clamp(1.25rem, 2.2vw, 1.65rem);
+    font-weight: 800;
+    letter-spacing: -0.045em;
+    line-height: 1;
+    white-space: nowrap;
+  }
+
+  :global([data-theme="dark"]) .brand-name {
+    --brand-name-color: #ffffff;
+  }
+
+  .brand-lockup:hover .icon {
     transform: scale(1.05);
+  }
+
+  .brand-lockup:hover .brand-name {
+    opacity: 0.78;
   }
 
   .nav-list {
@@ -280,6 +302,15 @@ const { pathname } = Astro.url;
       gap: 1rem;
       justify-content: center;
       flex-wrap: wrap;
+    }
+    .brand-lockup {
+      gap: 0.55rem;
+    }
+    .icon {
+      width: 36px;
+    }
+    .brand-name {
+      font-size: 1.25rem;
     }
     .nav-link {
       font-size: 0.9rem;
