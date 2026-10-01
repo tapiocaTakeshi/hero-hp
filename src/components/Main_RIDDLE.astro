@@ -65,6 +65,29 @@
     </div>
   </section>
 
+  <section class="section video-section" id="video">
+    <div class="section-content">
+      <div class="section-header">
+        <h2 class="apps-title">Riddle紹介動画</h2>
+        <p class="apps-subtitle">
+          1分でわかるRiddleの魅力。ひらめきの瞬間を体験してください。
+        </p>
+      </div>
+      <div class="video-frame">
+        <video
+          class="promo-video"
+          src="/Riddle_promo.mp4"
+          poster="/Riddle_promo_poster.jpg"
+          controls
+          playsinline
+          preload="metadata"
+        >
+          お使いのブラウザは動画の再生に対応していません。
+        </video>
+      </div>
+    </div>
+  </section>
+
   <section class="section apps-section" id="features">
     <div class="hero-backdrop" aria-hidden="true"></div>
     <div class="section-content">
@@ -345,6 +368,29 @@
     background: var(--card-hover-bg);
     transform: translateY(-2px);
     border-color: var(--text-main);
+  }
+
+  /* Video Section */
+  .video-section {
+    background: var(--bg-body);
+    border-top: 1px solid var(--border-color);
+  }
+
+  .video-frame {
+    max-width: 960px;
+    margin: 0 auto;
+    border-radius: 24px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    background: #000;
+    box-shadow: 0 30px 60px -20px var(--color-riddle-glow);
+  }
+
+  .promo-video {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    height: auto;
   }
 
   /* Apps Section styling from HOME */
