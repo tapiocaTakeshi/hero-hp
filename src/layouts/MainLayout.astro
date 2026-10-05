@@ -2,8 +2,22 @@
 import Header from "../components/Header.astro";
 import "../styles/global.css";
 
+interface Props {
+  title?: string;
+  description?: string;
+  favicon?: string;
+  lang?: string;
+  variant?: "light" | "dark";
+  bodyClass?: string;
+  headerClass?: string;
+  mainClass?: string;
+  bodyStyle?: string;
+}
+
 const {
   title = "He-ro",
+  description = "He-roは、Riddle・Prompty・PlayHub・Summariesなどのアプリを開発しています。",
+  favicon = "/Hero/favicon.ico",
   lang = "ja",
   variant = "light",
   bodyClass = "",
@@ -26,9 +40,12 @@ const mainClasses = ["layout-main", mainClass].filter(Boolean).join(" ");
 <html lang={lang}>
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/x-icon" href="/Hero/favicon.ico" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
     <meta name="generator" content={Astro.generator} />
+    <link rel="icon" href={favicon} />
+    <link rel="apple-touch-icon" href="/apple-touch-icon-180x180.png" />
+    <link rel="manifest" href="/manifest.json" />
     <title>{title}</title>
     <slot name="head" />
   </head>
