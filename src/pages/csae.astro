@@ -6,33 +6,4 @@ import Main_CSAE from "../components/Main_CSAE.astro";
 
 <MainLayout title="CSAE - 児童の性的虐待と搾取" lang="ja">
   <Main_CSAE />
-  <script>
-    // It's best to inline this in `head` to avoid FOUC (flash of unstyled content) when anything is importing `global.css`.
-    if (localStorage.getItem("hs_theme") === "dark") {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-
-    const getThemePreference = () => {
-      if (typeof localStorage !== "undefined" && localStorage.getItem("hs_theme")) {
-        return localStorage.getItem("hs_theme");
-      }
-      return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-    };
-
-    const isDark = getThemePreference() === "dark";
-    document.documentElement.classList[isDark ? "add" : "remove"]("dark");
-
-    if (typeof localStorage !== "undefined") {
-      const observer = new MutationObserver(() => {
-        const isDark = document.documentElement.classList.contains("dark");
-        localStorage.setItem("hs_theme", isDark ? "dark" : "light");
-      });
-      observer.observe(document.documentElement, {
-        attributes: true,
-        attributeFilter: ["class"],
-      });
-    }
-  </script>
 </MainLayout>
