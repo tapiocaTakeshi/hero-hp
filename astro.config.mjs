@@ -7,6 +7,10 @@ import lottie from "astro-integration-lottie";
 import node from "@astrojs/node";
 import partytown from "@astrojs/partytown";
 
+// Vercel sets VERCEL=1 during builds. The Node standalone server can't run there,
+// and every page is static, so emit plain HTML for Vercel instead.
+const isVercel = !!process.env.VERCEL;
+
 export default defineConfig({
   // Enable React to support React JSX components.
   integrations: [react(), tailwind(),lottie(),
@@ -17,8 +21,8 @@ export default defineConfig({
       },
     }),
   ],
-  output: 'server',
-  adapter: node({
+  output: isVercel ? 'static' : 'server',
+  adapter: isVercel ? undefined : node({
     mode: "standalone"
   }),
   server: {
