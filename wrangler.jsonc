@@ -1,0 +1,9 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "hero-hp",
+  "compatibility_date": "2026-10-01",
+  // Every page is prerendered (see astro.config.mjs), so deploy dist/ as static assets only.
+  "assets": {
+    "directory": "./dist"
+  }
+}
